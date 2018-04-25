@@ -1,0 +1,29 @@
+---
+layout: main
+title: Stephen Baden
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    {% include pullout.html %}
+    <br><br><br><br>
+
+    
+    <h1>Master Puppeteer</h1>
+    <p>Controlling schedules and getting free websites</p>
+
+    {% for project in site.projects %}
+      <div class="project-card">
+          <a href="{{ site.baseurl }}{{ project.url }}" class="portfolio-box">
+              <h2>{{ project.title }}</h2>
+              <p>{{ project.type }}</p>
+              <p>{{ project.description }}</p>
+          </a>
+      </div>
+    {% endfor %}
+
+</body>
+
+</html>

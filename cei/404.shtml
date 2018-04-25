@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+        <meta charset = "UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Not Found - Classic Elevator Interiors Ltd.</title>
+    <meta name="description" content="Classic Elevator Interiors Ltd specializes in new construction, renovation and servicing of elevator interiors in Alberta, Saskatchewan and Northwest Territories." />
+    <meta name="keywords" content="classic, custom, elevator, interiors, John Blackstock, contracted, wall panels, visuals, a-look, modernization, light weight, cab, cabs, renovation, servicing, design, paneling, handrail, a look, alook, a-look, alookcabs, alberta, edmonton, saskatchewan, northwest, territories" />
+    <meta name="author" content="Jordan Anderson - Esten Creative" />
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/app.css">
+
+        <link rel="apple-touch-icon" href="icon/touch-icon-180.png" sizes="180x180">
+        <link rel="apple-touch-icon" href="icon/touch-icon-152.png" sizes="152x152">
+        <link rel="apple-touch-icon" href="icon/touch-icon-144.png" sizes="144x144">
+        <link rel="apple-touch-icon" href="icon/touch-icon-120.png" sizes="120x120">
+        <link rel="apple-touch-icon" href="icon/touch-icon-114.png" sizes="114x114">
+        <link rel="apple-touch-icon" href="icon/touch-icon-76.png" sizes="76x76">
+        <link rel="apple-touch-icon" href="icon/touch-icon-72.png" sizes="72x72">
+        <link rel="apple-touch-icon" href="icon/touch-icon-60.png" sizes="60x60">
+        <link rel="apple-touch-icon" href="icon/touch-icon-57.png" sizes="57x57">
+        <link rel="apple-touch-icon" href="icon/touch-icon-iphone.png">
+        <link rel="icon" href="icon/favicon-16.png" sizes="16x16">
+        <link rel="icon" href="icon/favicon-32.png" sizes="32x32">
+        <link rel="icon" href="icon/favicon-48.png" sizes="48x48">
+        <link rel="icon" href="icon/favicon-64.png" sizes="64x64">
+        <link rel="icon" href="icon/favicon-96.png" sizes="96x96">
+        <link rel="icon" href="icon/favicon-128.png" sizes="128x128">
+        <link rel="icon" href="icon/favicon-192.png" sizes="192x192">
+        <link rel="icon" href="icon/favicon-194.png" sizes="194x194">
+        <link rel="shortcut icon" href="icon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#fff">
+        <meta name="msapplication-TileImage" content="icon/tileicon.png">
+        <meta name="theme-color" content="#fff">
+        <link rel="canonical" href="http://classicelevatorinteriors.ca">
+
+        <link href='http://fonts.googleapis.com/css?family=Maven+Pro:500,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+      <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68588979-1', 'auto');
+  ga('send', 'pageview');
+
+        </script>
+
+  </head>
+  <body>
+        <a id="topancor">ancor</a>
+        <div class="se-pre-con">
+          <div id="loadercon">
+            <div id="frontloader">
+              <div id="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div id="headerwrap">
+           <header class="clearfix cd-main-header">
+           <div id="logo">
+                <a href="/">Classic Elevator Interiors Logo</a>
+            </div>
+            <nav class="topnav">
+              <ul id="topnavigation">
+                <li><a href="/cei/">Home</a></li>
+                <li><a href="/fullcabs">Full Cabs</a></li>
+                <li><a href="/servicing">Servicing</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+              </ul> <!-- primary-nav -->
+            </nav> <!-- nav -->
+              <ul class="cd-header-buttons">
+                <li><a class="cd-nav-trigger" href="#">Menu<span></span></a></li>
+              </ul> <!-- cd-header-buttons -->
+            </header>
+        </div>
+        <main class="cd-main-content">
+        <div class="container">
+    <div class="error">
+      <h1>File not found (404 error)</h1>
+      <p class="lead">Sorry we could not find what you were looking for, please contact the site owner.</p>
+    </div>
+        </div><!-- Container closes -->
+
+            <div id="footcolor">
+            <div class="fullrow footerwrap">
+                <footer class="clearfix">
+                  <div class="prefooter-wrap">
+                    <div id="leftfoot">
+                        <p><a class="footlink" href="tel:780.478.4014">1.780.478.4014</br><a class="footlink" href="mailto:sales@classicelevatorinteriors.ca">sales@classicelevatorinteriors.ca</a></br><a class="footlink" target="_blank" href="https://goo.gl/SbdboR">7215-77 Ave Edmonton, AB T6B 0B5</a></p>
+                    </div>
+                    <div id="upancor">
+                      <a href="#topancor" id="minilogo">
+                      </a>
+                    </div>
+                    <div id="rightfoot">
+                        <p>We Service Alberta</br>Saskatchewan &amp; </br>Northwest Territories</p>
+
+                    </div>
+                  </div>
+                </footer>
+                <div class="bottomfooter footerwrap">
+                    <p id="copyrighttext">Copyright &copy; Classic Elevator Interiors</p>
+                </div>
+            </div><!--footwrapcloses-->
+            </div>
+
+            </main>
+
+            <div class="cd-overlay"></div>
+
+            <nav class="cd-nav row">
+              <ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+                <li><a href="/cei/">Home</a></li>
+                <li><a href="/fullcabs">Full Cabs</a></li>
+                <li><a href="/servicing">Servicing</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul> <!-- primary-nav -->
+            </nav> <!-- cd-nav -->
+
+      <script src="js/classie.js"></script>
+      <script src="js/jquery-2.1.1.js"></script>
+      <script src="js/jquery.mobile.custom.min.js"></script>
+      <script src="js/main.js"></script> <!-- Resource jQuery -->
+  </body>
+</html>
