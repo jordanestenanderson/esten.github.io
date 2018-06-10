@@ -1,7 +1,7 @@
 # Site settings
 title:              Portfolio
 email:              jordan@estencreative.com
-description:        "EstenCreative"
+description:        "Esten.co"
 url:                "http://localhost:4000"
 # baseurl:            /main
 baseurl:
