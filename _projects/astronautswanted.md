@@ -4,7 +4,7 @@ order: 4
 metatitle: Astronauts Wanted ✕ Esten.co
 metadescription: A youth content development and production company dedicated to challenging tradition.
 title: Astronauts Wanted
-headline: Creators and innovators of untraditional media targeted at generation X.
+headline: Creators of untraditional media targeted at generation X.
 hyperlink: https://www.astronautswanted.com/
 hex: "6B5278"
 agency: Lift Interactive
