@@ -27,8 +27,9 @@ html.js #barba-wrapper {
 }
 @media only screen and (max-width: 1600px) {
 	body, .overlay-contents {
-		margin-left:5%;
-		margin-right:5%;
+		padding-left:5%;
+		padding-right:5%;
+		overflow: hidden;
 	}
 	#wrapper, .overlay-contents {
 		padding-left:0;
