@@ -215,6 +215,11 @@ header nav .menu-brand {
       li {
         padding-bottom: 16px;
         margin-bottom: 16px;
+        width: 47%;
+        display: inline-block;
+        &:nth-child(odd) {
+          margin-right: 6%;
+        }
       }
     }
   }

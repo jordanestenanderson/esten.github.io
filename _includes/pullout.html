@@ -95,9 +95,7 @@
 			<h2>View My Work</h2>
 			<ul class="projects-list">
 				{% assign site_projects = site.projects | sort:"order" %}
-				{% for project in site_projects %}
-				  <li><a class="menu-link loader-link" style="border-color:#{{ project.hex }};" href="{{ site.baseurl }}{{ project.url }}" data-wipe="#{{ project.hex }}">{{ project.title }}</a></li>
-				{% endfor %}
+				{% for project in site_projects %}<li><a class="menu-link loader-link" style="border-color:#{{ project.hex }};" href="{{ site.baseurl }}{{ project.url }}" data-wipe="#{{ project.hex }}">{{ project.title }}</a></li>{% endfor %}
 			</ul>
 		</div>
 	</div>
