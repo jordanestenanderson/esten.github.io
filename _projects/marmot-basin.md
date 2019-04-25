@@ -4,7 +4,7 @@ order: 3
 metatitle: Marmot Basin ✕ Esten.co
 metadescription: Unparalleled ski & snowboard resort based in Jasper National Park.
 title: Marmot Basin
-headline: Unparalleled ski & snowboard resort based in Jasper National Park.
+headline: Unparalleled ski & snowboard resort in Jasper National Park.
 hyperlink: https://www.skimarmot.com/
 hex: "D02139"
 agency: Lift Interactive
