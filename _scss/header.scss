@@ -1,0 +1,82 @@
+/****STRUCTURE****/
+header nav {
+	.brand, .menutrigger {
+		position:relative;
+		width:50%;
+		display:inline-block;
+		vertical-align: top;
+	}
+
+	.brand, .menutrigger {
+		margin: 50px 0;
+	}
+	.brand {
+    .brand-animation {
+      width:120px;
+      path {
+        fill:$black;
+        @include transition(200ms);
+      }
+    }
+    .brand-animation:hover {
+      path {
+        fill:$darkgrey;
+      }
+    }
+	}
+}
+
+@-webkit-keyframes menu-slide {
+  from {top: -124px;}
+  to {top: 0px;}
+}
+@-moz-keyframes menu-slide {
+  from {top: -124px;}
+  to {top: 0px;}
+}
+@-o-keyframes menu-slide {
+  from {top: -124px;}
+  to {top: 0px;}
+}
+@keyframes menu-slide {
+  from {top: -124px;}
+  to {top: 0px;}
+}
+
+/****BURGER****/
+.burger {
+  display: none;
+}
+html.js .burger {
+  display: block;
+  position: relative;
+  height: 18px;
+  width: 35px;
+  cursor: pointer;
+  margin:3px 0 3px auto;
+  span {
+  background: $black;
+  border: none;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include transition(350ms);
+  cursor: pointer;
+    &:nth-of-type(2) {
+      top: 8px;
+      width: 80%;
+    }
+    
+    &:nth-of-type(3) {
+      top: 16px;
+      width: 100%;
+    }
+  }
+  &:hover {
+    span {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+#project-end {
+	text-align:center;
+	img {
+		padding-top:20px;
+		width:100px;
+	}
+}
+#related-projects {
+	padding-top:$desktopspace;
+	.related-card {
+		display:inline-block;
+		width: calc(50% - 25px);
+		background-color: $white;
+		margin-right:$tabletspace;
+		vertical-align:top;
+		background-size: contain;
+	    background-position: bottom right;
+	    background-repeat: no-repeat;
+	    background-blend-mode: multiply;
+		@include transition(350ms);
+		&:hover {
+			@include scale(1.02);
+			@include shadowbig(rgba(0,0,0,0.2));
+		}
+		.related-spread {
+			height:250px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.related-svg {
+				fill: $white;
+				height: 60px;
+			}
+			.related-info {
+				@include transition(350ms);
+			}
+		}
+		&:nth-child(even) {
+			margin-right:0;
+		}
+		&:nth-child(2n+1),&:nth-child(2n+2) {
+			margin-top:$tabletspace;
+		}
+		&:nth-child(1),&:nth-child(2) {
+			margin-top:0;
+		}
+	}
+}
+
+@media only screen and (max-width:1000px) {
+	#project-end {
+		img {
+			padding-top:20px;
+			width:80px;
+		}
+	}
+	#related-projects {
+		padding-top:$mobilebottom;
+		.related-card {
+			width:100%;
+			display:block;
+			margin-right:0;
+			margin-top:$mobilebottom !important;
+			.related-svg {
+				height: 50px !important;
+			}
+		}
+	}
+}

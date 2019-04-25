@@ -1,0 +1,103 @@
+.hero-messaging {
+	padding:100px 0 140px 0;
+	width:66.666666668%;
+	text-align: left;
+	margin: 0 0 0 160px;
+	max-width: 700px;
+	p {
+		text-transform:uppercase;
+	}
+}
+.home-grid {
+	.project-card-wrap {
+		margin-bottom: $desktopspace;
+	}
+	.project-card {
+	    height: 420px;
+	    position: relative;
+	    padding:40px;
+	    background-repeat: no-repeat;
+	    background-position:bottom right;
+	    background-size:contain;
+	    background-blend-mode:multiply;
+	    @include transition(350ms);
+	    &:hover {
+	    	@include shadowbig(rgba(0,0,0,0.2));
+	    	@include scale(1.01);
+	    	.project-visuals img {
+	    		@include scale(1.04);
+	    		@include transition(5000ms);
+	    	}
+	    }
+	}
+	&:last-child {
+		margin-bottom:0;
+	}
+	.project-info {
+		width:50%;
+		height:100%;
+		display:inline-block;
+		vertical-align:top;
+		position:relative;
+	}
+	.project-info {
+		.project-svg {
+			height: 50px;
+			fill: #fff;
+		}
+		h2, p {
+			margin: 0;
+			color: $white;
+			position:absolute;
+		}
+		h2 {
+			top: 50%;
+			@include translateY(-50%);
+		}
+		p {
+			bottom:0;
+			text-transform:uppercase;
+		}
+	}
+
+}
+.project-card:last-child {
+	margin-bottom:0;
+}
+
+@media only screen and (max-width:1000px) {
+	.hero-messaging {
+		padding:0;
+		width:auto;
+		max-width: initial;
+		text-align: left;
+		margin: 1% 0 8% 0;
+	}
+	.home-grid {
+		.project-card-wrap {
+			margin-bottom: $mobilebottom;
+		}
+		.project-card {
+			padding:30px 20px;
+			height: 240px;
+		    .project-info {
+		    	position:relative;
+		    	z-index: 100;
+		    }
+		 }
+		.project-info {
+			width:100%;
+			display:block;
+		}
+		.project-info {
+			.project-svg {
+				height: 45px;
+			}
+			h2 {
+				font-size: 22px;
+				top: 54%;
+			}
+		}
+	}
+}
+

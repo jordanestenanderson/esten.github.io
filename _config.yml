@@ -1,7 +1,7 @@
 # Site settings
-title:              Portfolio
-email:              jordan@estencreative.com
-description:        "Esten.co"
+title:              Esten.co
+email:              jordan@esten.co
+description:        "Growing businesses with creative solutions as an independent contractor based in Canada. We solve unique visual problems with creative"
 url:                "http://localhost:4000"
 # baseurl:            /main
 baseurl:
@@ -18,3 +18,8 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+
+# Sass
+sass:
+  sass_dir:          _scss
+  style:            :compressed

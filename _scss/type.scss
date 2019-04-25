@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("../assets/fonts/Inter-UI-Regular.woff2") format("woff2"),
+       url("../assets/fonts/Inter-UI-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 500;
+  src: url("../assets/fonts/Inter-UI-Medium.woff2") format("woff2"),
+       url("../assets/fonts/Inter-UI-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 700;
+  src: url("../assets/fonts/Inter-UI-Bold.woff2") format("woff2"),
+       url("../assets/fonts/Inter-UI-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 900;
+  src: url("../assets/fonts/Inter-UI-Black.woff2") format("woff2"),
+       url("../assets/fonts/Inter-UI-Black.woff") format("woff");
+}
+@font-face {
+  font-family: 'Tiempos Light';
+  font-style:  normal;
+  font-weight: 100;
+  src: url("../assets/fonts/TiemposHeadline-Light.otf") format("opentype");
+}
+h1, h2, h3 {
+  font-family: 'Tiempos Light', sans-serif;
+  font-weight: 100;
+}
+h1 {
+  font-size:50px;
+  margin:0;
+  color: $black;
+  line-height: 1.3em;
+}
+h2 {
+	font-size:34px;
+  margin:0;
+  line-height: 1.3em;
+}
+#project-content h2:after {
+  content: "";
+  display: block;
+  width: 60px;
+  border-bottom: solid 2px;
+  border-color:inherit;
+  padding-top: 10px;
+}
+p, li {
+	font-family:"Inter UI", sans-serif;
+  font-size:18px;
+  line-height: 1.4em;
+  color:$darkgrey;
+}
+ul {
+  font-family:"Inter UI", sans-serif;
+  list-style: none;
+}
+a {
+  @include transition(350ms);
+  text-decoration: none;
+  color:$black;
+  &:hover {
+    color:$primaryhover;
+  }
+}
+.btn-sml {
+  text-transform:uppercase;
+  position:relative;
+  padding-bottom:8px;
+  border-bottom: 2px solid;
+  border-color:inherit;
+  @include transition(200ms);
+  &:hover {
+    color:inherit;
+    padding-bottom:5px;
+  }
+}
+::-moz-selection {
+  color: $white;
+  background: $black;
+}
+::selection {
+  color: $white; 
+  background: $black;
+}
+.whitetext *::-moz-selection {
+  color: $black;
+  background: rgba(255,255,255,0.99);
+}
+.whitetext *::selection {
+  color: $black; 
+  background: rgba(255,255,255,0.99);
+}
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size:40px;
+  }
+  h2 {
+    font-size:26px;
+  }
+  p, li {
+    font-size:16px;
+    line-height: 1.4em;
+  }
+}
+
+
+@media only screen and (max-width: 540px) {
+  h1 {
+    font-size:30px;
+  }
+  h2 {
+    font-size:24px;
+  }
+}

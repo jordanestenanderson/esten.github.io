@@ -1,0 +1,221 @@
+header nav .menu-brand {
+  opacity: 1 !important;
+  .brand-animation {
+    path {
+      fill:#fff;
+    }
+    &:hover {
+      path {
+        fill:#b7b7b7;
+      }
+    }
+  }
+}
+.close {
+  position: relative;
+  height: 18px;
+  width: 35px;
+  cursor: pointer;
+  margin:3px 0 3px auto;
+  opacity: 0.7;
+  @include transition(200ms);
+  &:hover {
+    @include scale(0.9);
+    transform-origin: 50% 50%;
+    opacity: 1;
+  }
+  
+  .top {
+    -webkit-transform: translateY(8px) translateX(0) rotate(45deg);
+    -moz-transform: translateY(8px) translateX(0) rotate(45deg);
+    -o-transform: translateY(8px) translateX(0) rotate(45deg);
+    transform: translateY(8px) translateX(0) rotate(45deg);
+    background: $white;
+  }
+  .middle {
+    opacity: 0;
+    background: $white;
+  }
+  .bottom {
+    transform: translateY(-8px) translateX(0) rotate(-45deg);
+    -webkit-transform: translateY(-8px) translateX(0) rotate(-45deg);
+    -moz-transform: translateY(-8px) translateX(0) rotate(-45deg);
+    -o-transform: translateY(-8px) translateX(0) rotate(-45deg);
+    transform: translateY(-8px) translateX(0) rotate(-45deg);
+    background: $white;
+  }
+  
+  span {
+  background: $white;
+  border: none;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include transition(350ms);
+  cursor: pointer;
+    
+    &:nth-of-type(2) {
+      top: 8px;
+    }
+    
+    &:nth-of-type(3) {
+      top: 16px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background: #1b1b1b;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index:2;
+  height: 0;
+  visibility: hidden;
+  @include transition(550ms);
+  @include eases(ease-in);
+  @include delay(350ms);
+  .overlay-contents {
+    opacity: 0;
+    @include transition(350ms);
+    @include delay(0s);
+  }
+  &.open {
+    visibility: visible;
+    @include eases(ease-out);
+    @include delay(0s);
+    top:0;
+    height: 100vh;
+    .overlay-contents {
+      @include delay(450ms);
+      opacity:1;
+    }
+  }
+}
+
+.overlay-contents {
+  position:relative;
+  color:#fff;
+  .overlay-inner {
+    display: flex;
+    margin-top: 20px;
+    .overlay-contact, .overlay-projects {
+      flex: 1;
+      h2 {
+        height: 40px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  a {
+    opacity: 0.7;
+    color:#fff;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.overlay-projects {
+  h2 {
+    padding-left:60px;
+  }
+  .projects-list {
+    margin-top:50px;
+    padding-left:60px;
+    li {
+      padding-bottom: 22px;
+      margin-bottom: 22px;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}
+.overlay-contact {
+  .overlay-contact-background {
+    background-color:#000;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    height: calc(100% - 80px);
+  }
+  .overlay-details {
+    position:absolute;
+    bottom:20px;
+    left: 30px;
+    p, .menu-social {
+      margin-top:0;
+    }
+    .menu-social {
+      margin-top: 12px;
+      div {
+        display:inline-block;
+        vertical-align: top;
+        a {
+          padding:0 4px;
+          svg {
+            width:16px;
+          }
+        }
+      }
+      div:first-child {
+        a {
+          padding-left:0;
+        }
+      }
+      svg path {
+        fill:#fff;
+      }
+    }
+  }
+}
+@media only screen and (max-width:1000px) {
+  .overlay-contents {
+    .overlay-inner {
+      display: block;
+      margin-top: 0;
+      .overlay-contact, .overlay-projects {
+        h2 {
+          height: 40px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .overlay-contact {
+    .overlay-contact-background {
+      height: 100px;
+    }
+    .overlay-details {
+        bottom: 20px;
+        left: 25px;
+    }
+  }
+
+  .overlay-projects {
+    h2 {
+      padding-left:0;
+      padding-top:40px;
+    }
+    .projects-list {
+      padding-left:0;
+      margin-top:0;
+      li {
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

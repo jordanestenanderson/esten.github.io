@@ -1,14 +1,100 @@
 ---
 layout: main
 ---
-<main class="project">
-	<section id="contact-content">
-		<h1 id="project-title">{{ page.title }}</h1>
-		<p>Agency: {{ page.agency }}</p>
-		<p>Role: {{ page.role }}</p>
+<style>h2 {border-color:#{{ page.hex }};}.btn-sml:hover {color:#{{ page.hex }};}::-moz-selection {background:#{{ page.hex }};}::selection {background:#{{ page.hex }};}.whitetext *::-moz-selection {color:#{{ page.hex }} !important;}.whitetext *::selection {color:#{{ page.hex }} !important;}</style>
+<main class="project {{ page.title | slugify }}">
+	<section id="project-hero">
+		<div class="project-meta slide-left">
+			<div class="project-metainner">
+				<div>
+					<h1 class="title">{{ page.title }}</h1>
+					<p class="project-intro">{{ page.metadescription }}</p>
+					<p class="project-detail" style="color:#{{ page.hex }};">Agency<span>{{ page.agency }}</span></p>
+					<p class="project-detail" style="color:#{{ page.hex }};">Role<span>{{ page.role }}</span></p>
+					<p class="project-link"><a href="{{ page.hyperlink }}" target="_blank" class="btn-sml" style="border-color:#{{ page.hex }};">Launch The Site</a></p>
+				</div>
+			</div>
+		</div><!--MAGICFLOAT
+		--><div class="project-visual slide-right {{ page.herotype }}">
+			<div class="project-colorblock" style="background-color:#{{ page.hex }};"></div>
+			<div class="project-visualinner">
+				<div>
+					<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.herographic }}" alt="{{ page.title }} Visual">
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<section id="project-content">
+		<div class="intro-stream bigimage-streamfield whitetext" style="background-color:#{{ page.hex }};">
+			<!--BREAK-->
+			<div class="image-bleed" style="background-image:url('{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.introimg }}');">
+			</div>
+			<div class="corner-message" style="background-color:#{{ page.hex }};">
+				<div class="corner-message-inner">
+					<h2>{{ page.introtitle }}</h2>
+					<p>{{ page.introdescription }}</p>
+				</div>
+			</div>
+		</div>
 		{{ content }}
+	</section>
 
+	<section id="project-end">
+		<p><a href="{{ page.hyperlink }}" target="_blank" class="btn-sml" style="border-color:#{{ page.hex }};">
+			Launch The Site
+		</a>
+		</p>
+		<div>
+			<a href="{{ page.hyperlink }}" target="_blank">
+			<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.bug }}" alt="{{ page.title }} Brand Visual">
+			</a>
+		</div>
+	</section>
+
+	{% if page.collection %}
+	    {% assign links = site[page.collection] | sort:"order"  %}
+	{% endif %}
+
+	{% for link in links %}
+	{% if link.title == page.title %}
+
+	{% if forloop.first %}
+	{% assign prev_index = forloop.length|minus:1 %}
+	{% assign next_index = forloop.index0|plus:1 %}
+	{% elsif forloop.last %}
+	{% assign prev_index = forloop.index0|minus:1 %}
+	{% assign next_index = 0 %}
+	{% else %}
+	{% assign prev_index = forloop.index0|minus:1 %}
+	{% assign next_index = forloop.index0|plus:1 %}
+	{% endif %}
+
+
+
+	{% assign next = links[next_index] %}
+	{% assign prev = links[prev_index] %}
+
+	{% endif %}
+	{% assign tmpprev = link %}
+	{% endfor %}
+
+
+	<section id="related-projects">
+		{% if prev %}<div class="related-card" style="background-color:#{{ prev.hex }};background-image:url('{{ site.baseurl }}/assets/portfolio/{{ prev.title | slugify }}/{{ prev.cardbackground }}');">
+    	        <a href="{{ site.baseurl }}{{ prev.url }}" class="related-spread loader-link" data-wipe="#{{ prev.hex }}">
+    	            <div class="related-info">
+    	                <svg class="related-svg" viewBox="{{ prev.svg-box }}"><use xlink:href="#{{ prev.title | slugify }}-brand" /></svg>
+    	            </div>
+    	        </a>
+    	 	</div>{% endif %}<!--MAGICFLOAT
+		-->{% if next %}<div class="related-card" style="background-color:#{{ next.hex }};background-image:url('{{ site.baseurl }}/assets/portfolio/{{ next.title | slugify }}/{{ next.cardbackground }}');">
+	    	        <a href="{{ site.baseurl }}{{ next.url }}" class="related-spread loader-link" data-wipe="#{{ next.hex }}">
+	    	            <div class="related-info">
+	    	                <svg class="related-svg" viewBox="{{ next.svg-box }}"><use xlink:href="#{{ next.title | slugify }}-brand" /></svg>
+	    	            </div>
+	    	        </a>
+	    	</div>{% endif %}
 	</section>
 
 </main>

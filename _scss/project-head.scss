@@ -1,0 +1,95 @@
+#project-hero {
+	position:relative;
+}
+
+.project-meta, .project-visual {
+	width:50%;
+	display:inline-block;
+	vertical-align:top;
+	position:relative;
+	.project-metainner, .project-visualinner {
+		height:550px;
+		display: flex;
+	  	flex-direction: column;
+	  	justify-content: center;
+	  	img {
+	  		width:calc(100% - 100px);
+	  		position:relative;
+	  		z-index:1;
+	  		margin:50px;
+	  		@include shadow(rgba(0,0,0,0.12));
+	  	}
+	}
+}
+.project-meta {
+	.project-intro {
+		max-width: 85%;
+	}
+}
+.project-visual {
+	background-color:none;
+	position:relative;
+}
+.project-colorblock {
+    content: "";
+    width: 66.666666666%;
+    height: 100%;
+    position: absolute;
+    right:0;
+}
+.project-metainner .project-link {
+	margin-top: 22px;
+}
+.project-detail {
+	text-transform:uppercase;
+	span {
+		text-transform:initial;
+		display:block;
+		color:$darkgrey;
+	}
+}
+
+@media only screen and (max-width:1000px) {
+	.project-meta, .project-visual {
+		width:100%;
+		.project-metainner {
+			height:auto;
+			margin-bottom: $mobilebottom;
+			margin-top: 1%;
+		}
+		.project-visualinner {
+			height:auto;
+			img {
+				width:100%;
+				margin:0;
+			}
+		}
+	}
+	.project-visual:before {
+		width:100%;
+		height:25%;
+		bottom:0;
+	}
+	.project-meta {
+		.project-intro {
+			max-width: 65%;
+		}
+	}
+	.project-colorblock {
+	    width: 112%;
+	    height: 76%;
+	    left: -6%;
+	    bottom: -22%;
+	}
+	.intro-stream.bigimage-streamfield {
+		margin-top: 10%;
+	}
+}
+@media only screen and (max-width:768px) {
+	.project-meta {
+		.project-intro {
+			max-width: 100%;
+		}
+	}
+
+}
