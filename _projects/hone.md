@@ -9,7 +9,7 @@ hyperlink: https://honehq.com/
 hex: "EF4A81"
 agency: Lift Interactive
 role: Designer
-type: Website & Collateral
+type: Website
 bug: hone-bug.png
 cardbackground: hone-background.png
 herographic: hone-herographic.jpg

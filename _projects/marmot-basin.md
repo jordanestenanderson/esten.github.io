@@ -9,7 +9,7 @@ hyperlink: https://www.skimarmot.com/
 hex: "D02139"
 agency: Lift Interactive
 role: Designer
-type: Website & Marketing
+type: Website
 bug: marmot-bug.png
 cardbackground: marmot-background.png
 herographic: marmot-herographic.jpg
