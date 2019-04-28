@@ -20,6 +20,8 @@
 	    background-position:bottom right;
 	    background-size:contain;
 	    background-blend-mode:multiply;
+	    -webkit-backface-visibility: hidden;
+	    backface-visibility: visible;
 	    @include transition(350ms);
 	    &:hover {
 	    	@include shadowbig(rgba(0,0,0,0.2));
@@ -71,7 +73,7 @@
 		width:auto;
 		max-width: initial;
 		text-align: left;
-		margin: 1% 0 8% 0;
+		margin: 4% 0 8% 0;
 	}
 	.home-grid {
 		.project-card-wrap {

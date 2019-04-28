@@ -17,6 +17,8 @@
 	    background-position: bottom right;
 	    background-repeat: no-repeat;
 	    background-blend-mode: multiply;
+	    -webkit-backface-visibility: hidden;
+	    backface-visibility: visible;
 		@include transition(350ms);
 		&:hover {
 			@include scale(1.02);
