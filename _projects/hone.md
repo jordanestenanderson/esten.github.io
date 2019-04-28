@@ -2,7 +2,7 @@
 layout: project
 order: 2
 metatitle: Hone ✕ Esten.co
-metadescription: An all-in-one solution that helps companies develop their leaders, no matter who or where they are.
+metadescription: An all-in-one solution that helps companies develop their leaders, no matter where they are.
 title: Hone
 headline: Leadership development tools for modern distributed teams.
 hyperlink: https://honehq.com/
@@ -27,7 +27,7 @@ svg-path: "M124,248 C55.516691,248 0,192.483309 0,124 C0,55.516691 55.516691,0 1
 		<!--BREAK-->
 		<div class="centered-text aligned-center">
 			<h2>Always Growing</h2>
-			<p>As a growing business, Hone recognized value in continually refining their site.</p>
+			<p>As a growing business, Hone recognized value in an ongoing relationship to continually refine their site.</p>
 		</div>
 		<!--BREAK-->
 	</div>
@@ -45,7 +45,7 @@ svg-path: "M124,248 C55.516691,248 0,192.483309 0,124 C0,55.516691 55.516691,0 1
 			<div class="bustout-image" style="background-image:url('{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/hone-bigimage.jpg');"></div><!--MAGICFLOAT
 			--><div class="bustout-content">
 				<div class="bustout-inner">
-					<h2>Visual Identity</h2>
+					<h2>Identity</h2>
 					<p>Working collaboratively, we refined and developed a visual system to cohesively propel their brand. A system that defined everthing from typography to graphics and image treatment.</p>
 				</div>
 			</div>

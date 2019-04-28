@@ -2,7 +2,7 @@
 layout: project
 order: 1
 metatitle: Handful of Films ✕ Esten.co
-metadescription: An award winning production company devoted to creating exquisite, impactful and timeless fiction films.
+metadescription: An award winning production company devoted to creating exquisite and timeless films.
 title: Handful of Films
 headline: Crafting a great film is hard, there’s only time for a handful.
 hyperlink: https://handfuloffilms.ca/
@@ -85,7 +85,7 @@ svg-path: "M29.57,25.1 L15.16,25.11 L15.16,35 L2.48689958e-14,35 L2.48689958e-14
 			</div>
 			<div class="corner-message testimonial right-corner" style="background-color:#{{ page.hex }};">
 				<div class="corner-message-inner">
-					<h2>"Our new site combines functionality with the perfect dose of design elegance and sophistication. We only achieved this by how thorough and responsive your team was in consulting with intelligent and constructive suggestions."</h2>
+					<h2>"Our new site combines functionality with the perfect dose of design elegance and sophistication. We only achieved this by how thorough your team was in consulting with intelligent and constructive suggestions."</h2>
 					<p>Niobe Thompson, Owner</p>
 				</div>
 			</div>
