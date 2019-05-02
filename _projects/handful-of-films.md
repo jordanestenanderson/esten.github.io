@@ -46,7 +46,7 @@ svg-path: "M29.57,25.1 L15.16,25.11 L15.16,35 L2.48689958e-14,35 L2.48689958e-14
 			--><div class="bustout-content">
 				<div class="bustout-inner">
 					<h2>Hand Crafted</h2>
-					<p>Our design placed an emphasis on showcasing their gripping content, videography and photography through modular layouts that give each film’s brand, story and visuals the spotlight.</p>
+					<p>Our design placed an emphasis on showcasing their gripping content, cinematography and photography through modular layouts that give each film’s brand, story and visuals the spotlight.</p>
 				</div>
 			</div>
 		</div>
