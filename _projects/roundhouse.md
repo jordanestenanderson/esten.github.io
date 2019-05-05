@@ -4,7 +4,7 @@ order: 6
 metatitle: Roundhouse ✕ Esten.co
 metadescription: A space that encourages innovation and creative collision among like-minded changemakers.
 title: Roundhouse
-headline: Empowering changemakers to make a positive impact on the world.
+headline: Empowering changemakers to make an impact on the world.
 hyperlink: https://roundhouse.net/
 hex: "027177"
 agency: Lift Interactive
@@ -58,7 +58,7 @@ svg-path: "M13.9735034,5.06819211 L25.6251316,0.366459627 C26.3778752,0.06277809
 		<!--BREAK-->
 		<div class="centered-text aligned-center">
 			<h2>Aesthetics</h2>
-			<p>The design focuses on accentuating the Roundhouse brand through shape, colour and form.</p>
+			<p>The design focuses on accentuating their brand through shape, colour and form.</p>
 		</div>
 		<!--BREAK-->
 	</div> 
