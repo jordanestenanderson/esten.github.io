@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 2
+order: 6
 metatitle: Hone ✕ Esten.co
 metadescription: An all-in-one solution that helps companies develop their leaders, no matter where they are.
 title: Hone
