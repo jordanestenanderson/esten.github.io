@@ -1,6 +1,6 @@
 ---
 layout: project-app
-order: 1
+order: 2
 metatitle: Commonwealth Walkway ✕ Esten.co
 metadescription: Discover stories and venture through the 10 kilometre walkway along Edmonton's river valley. 
 title: Commonwealth Walkway
