@@ -2,7 +2,7 @@
 layout: project
 order: 2
 metatitle: Foosh ✕ Esten.co
-metadescription: A space that has successfully combined sneakers, streetwear, music and art culture since 1999. 
+metadescription: A space that has combined sneakers, streetwear, music and art culture since 1999. 
 title: Foosh
 headline: Pushing apparel, sneakers & collectables since 1999.
 hyperlink: https://www.foosh.ca/
@@ -47,7 +47,7 @@ svg-path: "M234.00507,53.7347701 C237.800603,52.506787 241.218424,46.5889237 241
 		<!--BREAK-->
 		<div class="centered-text aligned-center">
 			<h2>Commerce</h2>
-			<p>Besides enforcing the Foosh brand, the focus of this project was to promote customers to discover products through new arrivals and seasonal features. Further, we integrated their store's POS system to support online sales with a shared inventory.</p>
+			<p>Besides enforcing the Foosh brand, the biggest focus of this project was to promote customers to discover products through new arrivals and seasonal features. Further, we integrated their store's POS system to support online sales with a shared inventory.</p>
 		</div>
 		<!--BREAK-->
 	</div>

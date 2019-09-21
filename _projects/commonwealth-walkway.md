@@ -57,7 +57,7 @@ svg-path: "M87.415,74.3974 C84.209,79.2454 72.637,94.6264 52.519,96.2354 C25.868
 			--><div class="bustout-content">
 				<div class="bustout-inner">
 					<h2>Start Anywhere</h2>
-					<p>Utilizing the Google Maps API and geofencing, users can stop and start their journey seamlessly no matter where they enter the walkway.</p>
+					<p>Utilizing the Google Maps API and geofencing, users can stop and start their journey seamlessly no matter where they entered the walkway.</p>
 				</div>
 			</div>
 		</div>
