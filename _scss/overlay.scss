@@ -219,14 +219,11 @@ header nav .menu-brand {
       padding-left:0;
       margin-top:0;
       li {
-        font-size: 13px;
+        font-size: 12px;
         padding-bottom: 16px;
         margin-bottom: 16px;
-        width: 47%;
+        width: 60%;
         display: inline-block;
-        &:nth-child(odd) {
-          margin-right: 6%;
-        }
       }
     }
   }
