@@ -1,10 +1,10 @@
 ---
 layout: project
-order: 2
+order: 4
 metatitle: Flagstaff Crafted ✕ Esten.co
 metadescription: A platform that enhances the exposure of makers, artisans, and retailers of local products.
 title: Flagstaff Crafted
-headline: Helping Support makers, artisans, and retailers of local products.
+headline: Helping support makers, artisans, and retailers of local products.
 hyperlink: https://www.flagstaffcrafted.ca/
 hex: "7CA7AE"
 agency: Lift Interactive

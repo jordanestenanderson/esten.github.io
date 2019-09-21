@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 1
+order: 3
 metatitle: Handful of Films ✕ Esten.co
 metadescription: An award winning production company devoted to creating exquisite and timeless films.
 title: Handful of Films

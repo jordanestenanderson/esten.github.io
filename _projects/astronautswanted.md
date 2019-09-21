@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 4
+order: 6
 metatitle: Astronauts Wanted ✕ Esten.co
 metadescription: A youth content development and production company dedicated to challenging tradition.
 title: Astronauts Wanted

@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 5
+order: 8
 metatitle: Jireh Industries ✕ Esten.co
 metadescription: Designers and manufacturers of scanners that assist with testing in the oil & gas, power generation, and aerospace industries.
 title: Jireh Industries

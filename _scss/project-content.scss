@@ -67,16 +67,33 @@
 	h2:after {
 		margin: 0 2px;
 	}
+	&.iframe-streamfield {
+		max-width: 60%;
+	}
 	.centered-text {
 		max-width:48%;
 		margin:0 0 0 150px;
 		position: relative;
+		iframe {
+			position: absolute;
+			top:0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
 		&.aligned-center {
 			margin: 0 auto;
 			text-align: center;
 			h2:after {
 				margin: 0 auto;
 			}
+		}
+		&.youtube-embed {
+			max-width: 100% !important;
+			position: relative !important;
+			width: 100% !important;
+			padding-bottom: 56.25% !important;
+			height: 0 !important;
 		}
 	}
 }
@@ -85,6 +102,9 @@
 		padding-top: $mobiletop;
 	}
 	.project-group-item.content-streamfield {
+		&.iframe-streamfield {
+			max-width: 100%;
+		}
 		.centered-text {
 			max-width:60%;
 			margin:0;

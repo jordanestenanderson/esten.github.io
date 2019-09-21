@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 3
+order: 5
 metatitle: Marmot Basin ✕ Esten.co
 metadescription: Unparalleled ski and snowboard resort in Jasper National Park.
 title: Marmot Basin
