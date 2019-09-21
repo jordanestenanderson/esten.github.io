@@ -1,10 +1,10 @@
 ---
 layout: project
-order: 2
+order: 1
 metatitle: Foosh ✕ Esten.co
 metadescription: A space that has combined sneakers, streetwear, music and art culture since 1999. 
 title: Foosh
-headline: Pushing apparel, sneakers & collectables since 1999.
+headline: Pushing sneakers, streetwear, music and art culture since 1999.
 hyperlink: https://www.foosh.ca/
 hex: "242628"
 agency: Esten.co
