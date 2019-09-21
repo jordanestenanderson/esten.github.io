@@ -125,11 +125,13 @@ header nav .menu-brand {
     li {
       padding-bottom: 22px;
       margin-bottom: 22px;
+      vertical-align: top;
       a.menu-link {
         color:$white;
-        padding: 5px 12px;
+        padding: 5px 12px 4px 12px;
         border-left: 2px solid;
         position: relative;
+        display: block;
         &:hover {
           border-width: 8px;
         }
@@ -217,7 +219,7 @@ header nav .menu-brand {
       padding-left:0;
       margin-top:0;
       li {
-        font-size: 14px;
+        font-size: 13px;
         padding-bottom: 16px;
         margin-bottom: 16px;
         width: 47%;
