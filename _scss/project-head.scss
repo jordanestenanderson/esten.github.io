@@ -28,7 +28,6 @@
 			}
 		  	img {
 		  		width:calc(32.5% - 44px);
-		  		height: 100%;
 		  		margin:50px 0;
 		  		@include shadow(rgba(0,0,0,0.12));
 		  	}
@@ -91,6 +90,7 @@
 			  	img {
 			  		width:calc(31.5% - 6px);
 			  		margin:0;
+			  		height: 100%;
 			  	}
 			  	img:nth-child(1) {
 			  		margin-left:0;
