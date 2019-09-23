@@ -35,7 +35,17 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://esten.co/projects/roundhouse/</loc>
+    <loc>https://esten.co/projects/foosh/</loc>
+    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://esten.co/projects/commonwealth-walkway/</loc>
+    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://esten.co/projects/flagstaff-crafted/</loc>
     <lastmod>2019-05-05T00:48:38+00:00</lastmod>
     <priority>0.80</priority>
   </url>
