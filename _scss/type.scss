@@ -209,10 +209,16 @@ svg {
     font-size:2rem;
   }
   h2 {
-    font-size:1.5rem;
+    font-size:1.35rem;
   }
   p, li, blockquote {
     font-size:1rem;
+  }
+  .meta-title {
+    font-size:  0.65rem;
+    &.hero {
+      font-size: 0.75rem;
+    }
   }
   .tablet-aligncenter {
     text-align: center;
