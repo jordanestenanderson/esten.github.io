@@ -1,125 +1,223 @@
+// SF UI Text
 @font-face {
-  font-family: 'Inter UI';
-  font-style:  normal;
+  font-family: 'SFUIText';
+  src: url('../assets/fonts/SF-UI-Text-Regular.woff') format('woff'),
+       url('../assets/fonts/SF-UI-Text-Regular.ttf')  format('truetype');
+  font-style:   normal;
+  font-weight:  400;
+}
+@font-face {
+  font-family: "SFUIText";
+  src: url('../assets/fonts/SF-UI-Text-Semibold.woff') format('woff'),
+       url('../assets/fonts/SF-UI-Text-Semibold.ttf')  format('truetype');
+  font-style:   normal;
+  font-weight:  600;
+}
+// SF UI Display
+@font-face {
+  font-family: "SFUIDisplay";
+  src: url('../assets/fonts/SF-UI-Display-Regular.woff') format('woff'),
+       url('../assets/fonts/SF-UI-Display-Regular.ttf')  format('truetype');
+  font-style:   normal;
+  font-weight:  400;
+}
+@font-face {
+  font-family: "SFUIDisplay";
+  src: url('../assets/fonts/SF-UI-Display-Medium.woff') format('woff'),
+       url('../assets/fonts/SF-UI-Display-Medium.ttf')  format('truetype');
+  font-style:   normal;
+  font-weight:  500;
+}
+@font-face {
+  font-family: "SFUIDisplay";
+  src: url('../assets/fonts/SF-UI-Display-Semibold.woff') format('woff'),
+       url('../assets/fonts/SF-UI-Display-Semibold.ttf')  format('truetype');
+  font-style:   normal;
+  font-weight:  600;
+}
+html {
+  font-family: "SFUIText", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: $white;
   font-weight: 400;
-  src: url("../assets/fonts/Inter-UI-Regular.woff2") format("woff2"),
-       url("../assets/fonts/Inter-UI-Regular.woff") format("woff");
-}
-@font-face {
-  font-family: 'Inter UI';
-  font-style:  normal;
-  font-weight: 500;
-  src: url("../assets/fonts/Inter-UI-Medium.woff2") format("woff2"),
-       url("../assets/fonts/Inter-UI-Medium.woff") format("woff");
-}
-@font-face {
-  font-family: 'Inter UI';
-  font-style:  normal;
-  font-weight: 700;
-  src: url("../assets/fonts/Inter-UI-Bold.woff2") format("woff2"),
-       url("../assets/fonts/Inter-UI-Bold.woff") format("woff");
-}
-@font-face {
-  font-family: 'Inter UI';
-  font-style:  normal;
-  font-weight: 900;
-  src: url("../assets/fonts/Inter-UI-Black.woff2") format("woff2"),
-       url("../assets/fonts/Inter-UI-Black.woff") format("woff");
-}
-@font-face {
-  font-family: 'Tiempos Light';
-  font-style:  normal;
-  font-weight: 100;
-  src: url("../assets/fonts/TiemposHeadline-Light.otf") format("opentype");
-}
-h1, h2, h3 {
-  font-family: 'Tiempos Light', sans-serif;
-  font-weight: 100;
+  font-size:16px;
+  line-height: 1.4;
 }
 h1 {
-  font-size:50px;
-  margin:0;
-  color: $black;
-  line-height: 1.3em;
+  font-family: "SFUIDisplay", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 3.25rem;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  margin: $xs-space 0;
 }
 h2 {
-	font-size:34px;
-  margin:0;
-  line-height: 1.3em;
+  font-family: "SFUIDisplay", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size:  2.125rem;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  margin: $xs-space 0;
 }
-#project-content h2:after {
-  content: "";
-  display: block;
-  width: 60px;
-  border-bottom: solid 2px;
-  border-color:inherit;
-  padding-top: 10px;
+.meta-title {
+  font-family: "SFUIDisplay", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  font-size:  0.75rem;
+  letter-spacing: 2px;
+  text-transform:uppercase;
+  span {
+    padding:0 4px;
+    opacity: $opacity;
+  }
+  &.hero {
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
 }
-p, li {
-	font-family:"Inter UI", sans-serif;
-  font-size:18px;
-  line-height: 1.4em;
-  color:$darkgrey;
+p {
+  font-size: 1.125rem;
+  margin: $xs-space 0;
+}
+blockquote {
+  .blockquote-bug {
+    display:block;
+    width: 32px;
+    margin-bottom:$xs-space;
+    height:auto;
+    path {
+      fill:$white;
+    }
+  }
+  margin-left: 0;
+  font-size: 1.125rem;
+  font-style: italic;
+  position:relative;
+  margin: $xs-space 0;
+}
+.desktop-alignright {
+  text-align: right;
+}
+.desktop-aligncenter {
+  text-align: center;
+}
+.no-margin {
+  margin: 0;
 }
 ul {
-  font-family:"Inter UI", sans-serif;
   list-style: none;
 }
 a {
   @include transition(350ms);
+  color: $white;
   text-decoration: none;
-  color:$black;
-  &:hover {
-    color:$primaryhover;
+  svg.white-icon path {
+    fill:$white;
+  }
+  &.underlined {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    padding-bottom:1px;
+    &:hover {
+      background-size: 100% 1px;
+    }
   }
 }
-.btn-sml {
+.hoverstate {
+  opacity: 1;
+  &:hover {
+    opacity: 0.65;
+  }
+}
+.btn-sml, .btn-disabled {
+  font-weight: 500;
+  font-size: 1.125rem;
   text-transform:uppercase;
   position:relative;
-  padding-bottom:8px;
-  border-bottom: 2px solid;
-  border-color:inherit;
-  @include transition(200ms);
-  &:hover {
-    color:inherit;
-    padding-bottom:5px;
-  }
+  padding-bottom:4px;
+  display: inline-block;
+  border-color: inherit;
+  overflow: hidden;
+  @include transition(350ms);
+}
+
+.btn-sml:before, .btn-sml:after, .btn-disabled:before, .btn-disabled:after {
+    width: 100%;
+    border-bottom:2px solid;
+    border-color: inherit;
+    display: block;
+    content: '';
+    -webkit-transition:  transform .4s ease-in-out, border-color 350ms ease-out 600ms;
+    -moz-transition:    transform .4s ease-in-out, border-color 350ms ease-out 600ms;
+    -o-transition:    transform .4s ease-in-out, border-color 350ms ease-out 600ms;
+    transition:       transform .4s ease-in-out, border-color 350ms ease-out 600ms;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s;
+}
+.btn-sml:before, .btn-disabled:before {
+    -moz-transform: translate(-101%,0);
+    -o-transform: translate(-101%,0);
+    -ms-transform: translate(-101%,0);
+    -webkit-transform: translate(-101%,0);
+    transform: translate(-101%,0);
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.btn-sml:hover:before {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -moz-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s;
+}
+.btn-sml:hover:after {
+    -moz-transform: translate(101%,0);
+    -o-transform: translate(101%,0);
+    -ms-transform: translate(101%,0);
+    -webkit-transform: translate(101%,0);
+    transform: translate(101%,0);
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+svg {
+  fill: $white;
+}
+.brand svg {
+  height:$xs-space;
+  padding:$padding;
 }
 ::-moz-selection {
-  color: $white;
-  background: $black;
-}
-::selection {
-  color: $white; 
-  background: $black;
-}
-.whitetext *::-moz-selection {
   color: $black;
   background: rgba(255,255,255,0.99);
 }
-.whitetext *::selection {
+::selection {
   color: $black; 
   background: rgba(255,255,255,0.99);
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width:$m-breakpoint) {
   h1 {
-    font-size:40px;
+    font-size:2rem;
   }
   h2 {
-    font-size:26px;
+    font-size:1.5rem;
   }
-  p, li {
-    font-size:16px;
-    line-height: 1.4em;
+  p, li, blockquote {
+    font-size:1rem;
   }
-}
-
-
-@media only screen and (max-width: 540px) {
-  h1 {
-    font-size:30px;
+  .tablet-aligncenter {
+    text-align: center;
   }
-  h2 {
-    font-size:24px;
+  .btn-sml, .btn-disabled {
+    font-size: 1rem;
   }
 }

@@ -1,90 +1,36 @@
-/****STRUCTURE****/
-header nav {
-	.brand, .menutrigger {
-		position:relative;
-		width:50%;
-		display:inline-block;
-		vertical-align: top;
-	}
-
-	.brand, .menutrigger {
-		margin: 50px 0;
-	}
-	.brand {
-    .brand-animation {
-      width:120px;
-      path {
-        fill:$black;
-        @include transition(200ms);
-      }
-    }
-    .brand-animation:hover {
-      path {
-        fill:$darkgrey;
-      }
-    }
-	}
-}
-
-@-webkit-keyframes menu-slide {
-  from {top: -124px;}
-  to {top: 0px;}
-}
-@-moz-keyframes menu-slide {
-  from {top: -124px;}
-  to {top: 0px;}
-}
-@-o-keyframes menu-slide {
-  from {top: -124px;}
-  to {top: 0px;}
-}
-@keyframes menu-slide {
-  from {top: -124px;}
-  to {top: 0px;}
-}
-
-@media only screen and (max-width:1000px) {
-  header nav {
-    .brand, .menutrigger {
-      margin: 30px 0 40px 0;
-    }
+header {
+  position:sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  height: $header-height;
+  .brand-animation {
+    height: $header-height;
+    display: inline-block;
   }
 }
-
-/****BURGER****/
 .burger {
   display: none;
 }
-html.js .burger {
-  display: block;
-  position: relative;
-  height: 18px;
-  width: 35px;
+html.js .burger-wrap {
+  padding:16px;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
   cursor: pointer;
-  margin:3px 0 3px auto;
-  span {
-  background: $black;
-  border: none;
-  height: 1px;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  @include transition(350ms);
-  cursor: pointer;
-    &:nth-of-type(2) {
-      top: 8px;
-      width: 80%;
+  .burger {
+    display: block;
+    position: relative;
+    line-height: 0;
+    margin-top:-1px;
+    @include transition(350ms);
+    svg line {
+      stroke: $white;
+      stroke-width: 12px;
+      fill:none;
     }
-    
-    &:nth-of-type(3) {
-      top: 16px;
-      width: 100%;
-    }
-  }
-  &:hover {
-    span {
-      width: 100%;
+    &.open {
+      @include rotate(45deg);
     }
   }
 }

@@ -1,22 +1,17 @@
 #project-hero {
-	position:relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height:calc(100vh - 52px);
+	max-height:1100px;
+	min-height: 800px;
 }
-
 .project-meta, .project-visual {
 	width:50%;
-	display:inline-block;
-	vertical-align:top;
-	position:relative;
 	.project-metainner, .project-visualinner {
-		height:550px;
-		display: flex;
-	  	flex-direction: column;
-	  	justify-content: center;
 	  	img {
-	  		width:calc(100% - 100px);
-	  		position:relative;
-	  		z-index:1;
-	  		margin:50px;
+	  		width:100%;
+	  		border-radius: $border-radius;
 	  		@include shadow(rgba(0,0,0,0.12));
 	  	}
 	}
@@ -27,17 +22,7 @@
 				justify-content: space-between;
 			}
 		  	img {
-		  		width:calc(32.5% - 44px);
-		  		margin:50px 0;
-		  		@include shadow(rgba(0,0,0,0.12));
-		  	}
-		  	img:nth-child(1) {
-		  		margin-left:50px;
-		  		margin-right:16px;
-		  	}
-		  	img:nth-child(3) {
-		  		margin-left:16px;
-		  		margin-right:50px;
+		  		width:calc(33.33333333% - 16px);
 		  	}
 		}
 	}
@@ -46,88 +31,46 @@
 	.project-intro {
 		max-width: 85%;
 	}
-}
-.project-visual {
-	background-color:none;
-	position:relative;
-}
-.project-colorblock {
-    content: "";
-    width: 72%;
-    height: 100%;
-    position: absolute;
-    right:0;
-}
-.project-metainner .project-link {
-	margin-top: 22px;
-}
-.project-detail {
-	text-transform:uppercase;
-	span {
-		text-transform:initial;
-		display:block;
-		color:$darkgrey;
+	.project-detail {
+		text-transform:uppercase;
+		.meta-title {
+			color: $white;
+		}
+		.detail-item {
+			text-transform:initial;
+			display:block;
+		}
+	}
+	.project-link {
+		margin-top: 22px;
 	}
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:$l-breakpoint) {
+	#project-hero {
+		display: block;
+		height:auto;
+		max-height:100%;
+		min-height:0px;
+	}
 	.project-meta, .project-visual {
 		width:100%;
+		margin-bottom: $l-space;
 		.project-metainner {
-			height:auto;
-			margin-bottom: $mobilebottom;
-			margin-top: 1%;
+			padding-top: calc(#{$l-space} - #{$r-space});
+			margin-bottom: $l-space;
 		}
-		.project-visualinner {
-			height:auto;
-			img {
-				width:100%;
-				margin:0;
-			}
-		}
-		&.mobile-app {
-			.project-metainner, .project-visualinner {
-			  	img {
-			  		width:calc(31.5% - 6px);
-			  		margin:0;
-			  		height: 100%;
-			  	}
-			  	img:nth-child(1) {
-			  		margin-left:0;
-			  		margin-right:9px;
-			  	}
-			  	img:nth-child(3) {
-			  		margin-left:9px;
-			  		margin-right:0;
-			  	}
-			}
-		}
-	}
-	.project-visual:before {
-		width:100%;
-		height:25%;
-		bottom:0;
 	}
 	.project-meta {
 		.project-intro {
 			max-width: 65%;
 		}
 	}
-	.project-colorblock {
-	    width: 112%;
-	    height: 76%;
-	    left: -6%;
-	    bottom: -22%;
-	}
-	.intro-stream.bigimage-streamfield {
-		margin-top: 10%;
-	}
 }
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:$m-breakpoint) {
 	.project-meta {
 		.project-intro {
 			max-width: 100%;
 		}
 	}
-
 }

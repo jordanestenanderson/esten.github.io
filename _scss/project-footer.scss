@@ -1,47 +1,54 @@
 #project-end {
-	text-align:center;
+	margin: $l-space auto;
+	.project-endlink {
+		margin-top: 0px;
+		margin-bottom: 8px;
+		.btn-sml {
+			margin-bottom:16px;
+		}
+	}
 	img {
-		padding-top:20px;
 		width:100px;
 	}
 }
 #related-projects {
-	padding-top:$desktopspace;
 	.related-card {
-		display:inline-block;
-		width: calc(50% - 25px);
-		background-color: $white;
-		margin-right:$tabletspace;
-		vertical-align:top;
-		background-size: contain;
-	    background-position: bottom right;
-	    background-repeat: no-repeat;
-	    background-blend-mode: multiply;
-	    -webkit-backface-visibility: hidden;
-	    backface-visibility: visible;
+		flex: 0 0 calc(50% - #{$s-space});
+	    border-radius: $border-radius;
+	    overflow: hidden;
 		@include transition(350ms);
-		&:hover {
-			@include scale(1.02);
-			@include shadowbig(rgba(0,0,0,0.2));
-		}
+	    img {
+	    	mix-blend-mode: multiply;
+	    	object-position: right;
+	    	@include transition(2s);
+	    }
 		.related-spread {
 			height:250px;
+			border-radius: $border-radius;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			.related-svg {
-				fill: $white;
 				height: 60px;
-			}
-			.related-info {
+				position: relative;
 				@include transition(350ms);
 			}
+			.related-info {
+				text-align:center;
+				@include transition(350ms);
+			}
+		    &:hover {
+		    	img {
+		    		@include scale(1.15);
+		    		@include transition(10s);
+		    	}
+		    }
 		}
 		&:nth-child(even) {
 			margin-right:0;
 		}
 		&:nth-child(2n+1),&:nth-child(2n+2) {
-			margin-top:$tabletspace;
+			margin-top:$m-space;
 		}
 		&:nth-child(1),&:nth-child(2) {
 			margin-top:0;
@@ -49,22 +56,24 @@
 	}
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:$m-breakpoint) {
 	#project-end {
 		img {
-			padding-top:20px;
 			width:80px;
 		}
 	}
 	#related-projects {
-		padding-top:$mobilebottom;
 		.related-card {
-			width:100%;
-			display:block;
-			margin-right:0;
-			margin-top:$mobilebottom !important;
+			flex: 0 0 calc(50% - 12px);
 			.related-svg {
-				height: 50px !important;
+				height: 44px !important;
+			}
+			img {
+				object-fit: cover;
+				object-position: center;
+			}
+			.related-spread {
+				height:200px;
 			}
 		}
 	}

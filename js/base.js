@@ -1,51 +1,23 @@
-var previousColor = "#2f2f2f";
-var colorHistory = ['#2f2f2f'];
-var loaded = false;
+var hueHistory = ['#1b1b1b'];
+
+$(".burger-wrap").click(function(){
+  $("html, .overlay, .burger").toggleClass("open");
+});
 
 function BaseJS() {
-
-	$('.loader-link').click(function(evt) {
-
-	        var hex = $(this).data('wipe');
-	        // previousColor = $("#wipe")[0].style.background;
-	        // console.log("let it be my day");
-	        // console.log(previousColor);
-	        // previousColor = hex;
-	        // console.log(previousColor);
-	        colorHistory.push(hex);
-			console.log(colorHistory);
-
-	        $("#wipe, .loader").css({background:hex});
-	        $(".loader path").css({fill:hex});
+	$(document).on("click",".loader-link",function() {
+        var hex = $(this).data('hue');
+        hueHistory.push(hex);
+		console.log(hueHistory);
+        $("#wipe, .loader").css({background:hex});
 	});
 
-	$(window).on('popstate', function(event) {
-		// console.log(colorHistory);
-		// var hex = colorHistory.pop();
-		// $("#wipe, .loader").css({background:hex});
-		// $(".loader path").css({fill:hex});
-		// console.log('Popped')
-	});
+	AOS.init({
+	  	duration: 1000,
+	    easing: 'ease-out-quad',
+	    once: true,
+	})
 
-	$('.burger').on('click', function() {
-	  $('.body , .overlay, html').addClass('open');
-	});
-
-	$('.close, .menu-link, .menu-brand').on('click', function() {
-	  $('.body , .overlay, html').removeClass('open');
-	});
-
-	$('.close, .menu-link, .menu-brand').on('click', function() {
-	  $('.body , .overlay, html').removeClass('open');
-	});
-
-	$( document ).ready(function() {
-		if(!loaded){
-			var animation = new
-			TweenMax.fromTo('#barba-wrapper', 1, {opacity: 0, y: -22, scale:1.02}, {opacity: 1, y: 0, scale:1, ease: Expo.linear}); 
-			loaded = true;
-		}
-	});
-
+	document.getElementById("year").innerHTML = new Date().getFullYear();
 }
 BaseJS();

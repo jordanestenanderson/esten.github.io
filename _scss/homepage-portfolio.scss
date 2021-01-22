@@ -1,105 +1,83 @@
 .hero-messaging {
-	padding:100px 0 140px 0;
-	width:66.666666668%;
-	text-align: left;
-	margin: 0 0 0 160px;
+	padding-top: calc(#{$xl-space} - #{$header-height});
+	padding-bottom: $xl-space;
 	max-width: 700px;
-	p {
-		text-transform:uppercase;
-	}
 }
 .home-grid {
-	.project-card-wrap {
-		margin-bottom: $desktopspace;
-	}
 	.project-card {
-	    height: 420px;
+		display: block;
+	    height: 70vh;
+	    margin-bottom: $r-space;
+	    max-height: 800px;
+	    min-height: 520px;
 	    position: relative;
-	    padding:40px;
-	    background-repeat: no-repeat;
-	    background-position:bottom right;
-	    background-size:contain;
-	    background-blend-mode:multiply;
-	    -webkit-backface-visibility: hidden;
-	    backface-visibility: visible;
-	    @include transition(350ms);
+	    // &:hover {
+	    // 	@include shadowbig(rgba(0,0,0,0.2));
+	    // 	@include scale(1.01);
+	    // }
+	    .project-background {
+	    	mix-blend-mode: multiply;
+	    	@include transition(2s);
+	    }
+	    .project-info {
+	    	height: calc(100% - #{$l-space});
+	    	padding-top: $m-space;
+	    	padding-bottom: $m-space;
+	    	max-width: 620px;
+	    	margin: 0 auto 0 0;
+	    	.project-svg {
+	    		height: 50px;
+	    	}
+	    	.inline-arrow {
+	    		display:inline-block;
+	    		width: auto;
+	    		height: 22px;
+	    		opacity:0;
+	    		margin-left: -4px;
+	    		@include transition(350ms);
+	    	}
+	    	.meta-title {
+	    		margin-bottom: 0;
+	    	}
+	    }
+	    &:last-child {
+	    	margin-bottom: 0;
+	    }
 	    &:hover {
-	    	@include shadowbig(rgba(0,0,0,0.2));
-	    	@include scale(1.01);
-	    	.project-visuals img {
-	    		@include scale(1.04);
-	    		@include transition(5000ms);
+	    	.project-background {
+	    		@include scale(1.15);
+	    		@include transition(10s);
+	    	}
+	    	.inline-arrow {
+			    opacity: 1;
+			    margin-left: 1px;
 	    	}
 	    }
 	}
-	&:last-child {
-		margin-bottom:0;
-	}
-	.project-info {
-		width:50%;
-		height:100%;
-		display:inline-block;
-		vertical-align:top;
-		position:relative;
-	}
-	.project-info {
-		.project-svg {
-			height: 50px;
-			fill: #fff;
-		}
-		h2, p {
-			margin: 0;
-			color: $white;
-			position:absolute;
-		}
-		h2 {
-			top: 50%;
-			@include translateY(-50%);
-		}
-		p {
-			bottom:0;
-			text-transform:uppercase;
-		}
-	}
-
-}
-.project-card:last-child {
-	margin-bottom:0;
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:$m-breakpoint) {
 	.hero-messaging {
-		padding:0;
-		width:auto;
-		max-width: initial;
-		text-align: left;
-		margin: 4% 0 8% 0;
+		padding-top: calc(#{$l-space} - #{$r-space});
+		padding-bottom: $l-space;
 	}
 	.home-grid {
-		.project-card-wrap {
-			margin-bottom: $mobilebottom;
-		}
 		.project-card {
-			padding:30px 20px;
-			height: 240px;
-		    .project-info {
-		    	position:relative;
-		    	z-index: 100;
-		    }
+			height: 320px;
+			min-height: 320px;
+			margin-bottom: $s-space;
+			.project-info {
+				height: calc(100% - #{$m-space});
+				padding-top: $s-space;
+				padding-bottom: $s-space;
+				.inline-arrow {
+					height: 16px;
+				}
+				.project-svg {
+					height: 45px;
+				}
+			}
 		 }
-		.project-info {
-			width:100%;
-			display:block;
-		}
-		.project-info {
-			.project-svg {
-				height: 45px;
-			}
-			h2 {
-				font-size: 22px;
-				top: 54%;
-			}
-		}
 	}
 }
 

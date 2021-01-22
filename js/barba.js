@@ -6,20 +6,15 @@ var lastClickEl;
 var transitionAnimation = Barba.BaseTransition.extend({
       
  start: function() {
-
     Promise
       .all([this.newContainerLoading, this.startTransition()])
       .then(this.fadeIn.bind(this));
-
   },
 
   startTransition: function() {
-
     var transitionPromise = new Promise(function(resolve) {
-      
      var outTransition = new TimelineMax();
       
-        
         outTransition
                 .set(".color-wipe", {display:"block", y: "100%"})
                 
@@ -29,23 +24,19 @@ var transitionAnimation = Barba.BaseTransition.extend({
         
                 .to(".color-wipe", 0.7, {delay:0.2, y: "-200%", ease: Expo.easeIn})
                 .set(".color-wipe", {delay:0.2, display:'none'})
-
     });
-      
     return transitionPromise;
-
   },
 
     
  fadeIn: function() {
-     
      $(window).scrollTop(0);
      
       var _this = this;
       var $el = $(this.newContainer);
 
       TweenMax.set($(this.oldContainer), { display: "none" });
-      TweenMax.set($el, { visibility: "visible", opacity: 0, });
+      TweenMax.set($el, { visibility: "visible", opacity: 0 });
      
      
       TweenMax.fromTo(".loader", 0.7, { autoAlpha: 1}, { autoAlpha: 0, ease: Expo.easeIn});
@@ -72,18 +63,14 @@ Barba.Dispatcher.on('linkClicked', (el) => {
 
 Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, container) {
     BaseJS();
+    $("html, .overlay, .burger").removeClass("open");
 });
-
-
-
-
 
 Barba.Dispatcher.on('initStateChange', () => {
   if (!linkClicked) {
-    var hex = colorHistory.pop();
-    var hex = colorHistory[colorHistory.length - 1];
+    var hex = hueHistory.pop();
+    var hex = hueHistory[hueHistory.length - 1];
     $("#wipe, .loader").css({background:hex});
-    $(".loader path").css({fill:hex});
   }
 })
 

@@ -1,8 +1,8 @@
 @mixin transition($transition) {
-  -webkit-transition: 	all $transition ease-in-out;
-  -moz-transition: 		all $transition ease-in-out;
-  -o-transition: 		all $transition ease-in-out;
-  transition: 			all $transition ease-in-out;
+  -webkit-transition: 	all $transition ease-out;
+  -moz-transition: 		all $transition ease-out;
+  -o-transition: 		all $transition ease-out;
+  transition: 			all $transition ease-out;
 }
 
 @mixin rotate($rotate) {
@@ -18,6 +18,14 @@
   -ms-transform:     scale($scale);
   -o-transform:      scale($scale);
   transform:         scale($scale);
+}
+
+@mixin scalex($scalex) {
+  -webkit-transform: scalex($scalex);
+  -moz-transform:    scalex($scalex);
+  -ms-transform:     scalex($scalex);
+  -o-transform:      scalex($scalex);
+  transform:         scalex($scalex);
 }
 
 @mixin translate($translate) {
