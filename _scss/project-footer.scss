@@ -37,12 +37,6 @@
 				text-align:center;
 				@include transition(350ms);
 			}
-		    &:hover {
-		    	img {
-		    		@include scale(1.15);
-		    		@include transition(10s);
-		    	}
-		    }
 		}
 		&:nth-child(even) {
 			margin-right:0;
@@ -76,15 +70,14 @@
 		}
 	}
 	#related-projects {
+		flex-wrap: wrap;
 		.related-card {
 			flex: 0 0 100%;
-			flex-wrap: wrap;
+			&:nth-child(1) {
+				margin-bottom:$s-space;
+			}
 			.related-svg {
 				height: 44px !important;
-			}
-			img {
-				object-fit: cover;
-				object-position: center;
 			}
 			.related-spread {
 				height:200px;
