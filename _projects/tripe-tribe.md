@@ -10,7 +10,7 @@ hyperlink: Coming Soon
 hex: "4a7388"
 hex2: "a3bfcc"
 agency: Lift Interactive
-type: Web Application
+type: Web App
 role: Design
 bug: trip-tribe-bug.png
 cardbackground: trip-tribe-background.png

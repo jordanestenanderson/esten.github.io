@@ -10,7 +10,7 @@ hyperlink: Coming Soon
 hex: "0266a4"
 hex2: "90c4e6"
 agency: Lift Interactive
-type: Web Application & Website
+type: Web App & Website
 role: Strategy
 role2: Design
 bug: lifecourse-bug.png

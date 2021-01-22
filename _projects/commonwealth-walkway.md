@@ -10,7 +10,7 @@ hyperlink: https://apps.apple.com/ca/app/edmonton-commonwealth-walkway/id1473850
 hex: "439FCD"
 hex2: "b3e6ff"
 agency: Lift Interactive
-type: Mobile Application
+type: Mobile App
 role: Strategy
 role2: Design
 bug: commonwealth-bug.png
