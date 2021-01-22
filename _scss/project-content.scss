@@ -40,7 +40,6 @@
 }
 /*********SCREENS STREAMFIELD*********/
 .screens-streamfield {
-	overflow-x: hidden;
 	.flex-container {
 		margin-top:$r-space;
 		margin-bottom:$r-space;
@@ -125,6 +124,9 @@
 	}
 }
 @media only screen and (max-width:$m-breakpoint) {
+	.screens-streamfield {
+		overflow-x: hidden;
+	}
 	.app-streamfield {
 	  	flex-wrap: wrap;
 		.app-image {
