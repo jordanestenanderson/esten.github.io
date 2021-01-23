@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 4
+order: 2
 metatitle: Trip Tribe ✕ Esten.co
 metadescription: A community built around joining extraordinary wellness retreats hosted by trusted leaders worldwide.
 device: desktop

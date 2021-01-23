@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 1
+order: 7
 metatitle: Amaze Media Labs ✕ Esten.co
 metadescription: Connecting the world's leading brands with engaged audiences through branded podcasts, live stream content and immersive experiences.
 device: desktop

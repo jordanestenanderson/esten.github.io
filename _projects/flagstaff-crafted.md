@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 7
+order: 8
 metatitle: Flagstaff Crafted ✕ Esten.co
 metadescription: A platform that enhances the exposure of makers, artisans, and retailers of local products.
 device: desktop

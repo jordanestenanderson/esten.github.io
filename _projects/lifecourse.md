@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 6
+order: 4
 metatitle: Lifecourse ✕ Esten.co
 metadescription: A life-planning solution that helps people of all abilities develop a better vision for the future.
 device: desktop
