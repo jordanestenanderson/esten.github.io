@@ -3,7 +3,7 @@ layout: project
 order: 2
 metatitle: Trip Tribe ✕ Esten.co
 metadescription: A community built around joining extraordinary wellness retreats hosted by trusted leaders worldwide
-metaimg: portfolio/trip-tribe/triptribe-1.jpg
+metaimg: triptribe-meta.jpg
 device: desktop
 title: Trip Tribe
 headline: Extraordinary wellness retreats with trusted leaders
@@ -18,6 +18,7 @@ cardbackground: trip-tribe-background.png
 cardbackgroundalt: Trip Tribe supporting graphic of a woman doing yoga
 herographic: trip-tribe-herographic.jpg
 herographicalt: Homepage screenshot of the Trip Tribe web application
+introimg: triptribe-1.jpg
 introimgalt: Grid of screenshots from various pages of the Trip Tribe web application
 screens1title: Trip Makers
 screens1description: Trip Tribe had run successful trips for years before we met, but where they excelled in technology and community building they lacked in design and user experience. That's where we came in, re-thinking their application screen by screen from user-flow to design. 

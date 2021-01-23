@@ -3,7 +3,7 @@ layout: project
 order: 10
 metatitle: Jireh Industries ✕ Esten.co
 metadescription: Designers and manufacturers of scanners that assist with testing in the oil & gas, power generation, and aerospace industries
-metaimg: portfolio/jireh-industries/jireh-1.jpg
+metaimg: jireh-meta.jpg
 device: desktop
 title: Jireh Industries
 headline: Industry leading scanners designed for industrial application
@@ -18,6 +18,7 @@ cardbackground: jireh-background.png
 cardbackgroundalt:  Jireh supporting graphic of the Navic industrial scanner
 herographic: jireh-herographic.jpg
 herographicalt: Homepage screenshot of the Jireh website
+introimg: jireh-1.jpg
 introimgalt: Grid of screenshots from various pages of the Jireh website
 screens1title: Industry Leaders
 screens1description: Jireh came to us looking for a streamline solution users could build and purchase custom scanners from numerous options and variations.</br>Our approach included an easily-updatable product database and a quote request system with integrated customer support. The design visually demonstrated the products premium quality while ensuring customers could view products and specs with ease.

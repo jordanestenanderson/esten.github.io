@@ -84,10 +84,10 @@ layout: main
 			</div>
 			<!--PROJECT CONTENT-->
 			<section id="project-content">
-				{% if page.metaimg %}
+				{% if page.introimg %}
 					<div data-aos="fade-up" class="bigimage-streamfield project-streamfield">
 						<div class="image-bleed image-fit">
-							<img src="{{ site.baseurl }}/assets/{{ page.metaimg }}" alt="{{ page.introimgalt }}">
+							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.introimg }}" alt="{{ page.introimgalt }}">
 						</div>
 					</div>
 				{% endif %}

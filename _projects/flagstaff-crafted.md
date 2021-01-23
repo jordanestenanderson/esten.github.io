@@ -3,7 +3,7 @@ layout: project
 order: 8
 metatitle: Flagstaff Crafted ✕ Esten.co
 metadescription: A platform that enhances the exposure of makers, artisans, and retailers of local products
-metaimg: portfolio/flagstaff-crafted/flagstaff-1.jpg
+metaimg: flagstaff-meta.jpg
 device: desktop
 title: Flagstaff Crafted
 headline: Supporting makers, artisans and retailers of local products
@@ -19,6 +19,7 @@ cardbackground: flagstaff-background.png
 cardbackgroundalt: Flagstaff Crafted supporting graphic of the "Simply Bee" local product
 herographic: flagstaff-herographic.jpg
 herographicalt: Homepage screenshot of the Flagstaff Crafted website
+introimg: flagstaff-1.jpg
 introimgalt: Grid of screenshots from various pages of the Flagstaff Crafted website
 screens1title: Building Community
 screens1description: Flagstaff Crafted came to us in the early stages of building their organization looking for a platform to connect and support their community of makers. Our solution utilizes intuitive layouts that tell stories, showcase members and drive sales.
