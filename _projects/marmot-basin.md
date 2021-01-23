@@ -2,7 +2,8 @@
 layout: project
 order: 6
 metatitle: Marmot Basin ✕ Esten.co
-metadescription: Unparalleled ski and snowboard resort in Jasper National Park.
+metadescription: Unparalleled ski and snowboard resort in Jasper National Park
+metaimg: portfolio/marmot-basin/marmot-1.jpg
 device: desktop
 title: Marmot Basin
 headline: An unparalleled ski and snowboard resort in Jasper National Park
@@ -17,7 +18,6 @@ cardbackground: marmot-background.png
 cardbackgroundalt: Marmot Basin supporting graphic of a female snowboarder
 herographic: marmot-herographic.jpg
 herographicalt: Homepage screenshot of the Marmot Basin website
-introimg: marmot-1.jpg
 introimgalt: Grid of screenshots from various pages of the Marmot Basin website
 screens1title: Epic Views
 screens1description: Marmot came to us looking for a fresh new site for their upcoming season. Starting with a full content-audit, our team then ran a card sorting exercise to outline assumptions and user expectations around navigation. These findings then allowed our team to create intuitive page names, groupings and hierarchy.

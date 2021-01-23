@@ -2,7 +2,8 @@
 layout: project
 order: 5
 metatitle: Foosh ✕ Esten.co
-metadescription: A space that has combined sneakers, streetwear, music and art culture since 1999.
+metadescription: A space that has combined sneakers, streetwear, music and art culture since 1999
+metaimg: portfolio/foosh/foosh-1.jpg
 device: desktop
 title: Foosh
 headline: Pushing sneakers, streetwear and art culture since 1999
@@ -19,7 +20,6 @@ cardbackground: foosh-background.png
 cardbackgroundalt: Foosh supporting graphic of a model wearing Foosh apparel
 herographic: foosh-herographic.jpg
 herographicalt: Homepage screenshot of the Foosh website
-introimg: foosh-1.jpg
 introimgalt: Grid of screenshots from various pages of the Foosh website
 screens1title: Remodeling
 screens1description: As the Foosh crew began planning their renovated space, it seemed only fitting to launch a fresh new website that echoed their growth. Over the years Foosh has been dedicated to building themselves into Edmonton's dopest store and the new site needed to reflect that.

@@ -2,7 +2,8 @@
 layout: project
 order: 4
 metatitle: Lifecourse ✕ Esten.co
-metadescription: A life-planning solution that helps people of all abilities develop a better vision for the future.
+metadescription: A life-planning solution that helps people of all abilities develop a better vision for the future
+metaimg: portfolio/lifecourse/lifecourse-1.jpg
 device: desktop
 title: Lifecourse
 headline: Uncover and develop a unique vision for your future online
@@ -18,7 +19,6 @@ cardbackground: lifecourse-background.png
 cardbackgroundalt: Lifecourse supporting graphic of somebody using the app on a Macbook
 herographic: lifecourse-herographic.jpg
 herographicalt: Personal schedule screenshot of the Lifecourse web application
-introimg: lifecourse-1.jpg
 introimgalt: Grid of screenshots from various pages of the Lifecourse website
 screens1title: Going Digital
 screens1description: The team behind Lifecourse came to us with the unique challenge of building a digital application based around the principles of the existing on-paper Lifecourse program. With what a complex system it already was, it was imperative that we not only build this for existing clients but we build it as a learning tool that can onboard new ones.

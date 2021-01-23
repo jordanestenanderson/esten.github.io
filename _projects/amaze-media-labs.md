@@ -2,7 +2,8 @@
 layout: project
 order: 7
 metatitle: Amaze Media Labs ✕ Esten.co
-metadescription: Connecting the world's leading brands with engaged audiences through branded podcasts, live stream content and immersive experiences.
+metadescription: Connecting the world's leading brands with engaged audiences through branded podcasts, live stream content and immersive experiences
+metaimg: portfolio/amaze-media-labs/amaze-1.jpg
 device: desktop
 title: Amaze Media Labs
 headline: Amazing stories, connected brands, passionate communities
@@ -18,7 +19,6 @@ cardbackground: amaze-background-image.png
 cardbackgroundalt: Amaze Media Labs supporting graphic of actress Alysia Reiner
 herographic: amaze-herographic.jpg
 herographicalt: Homepage screenshot of the Amaze Media Labs website
-introimg: amaze-1.jpg
 introimgalt: Grid of screenshots from various pages of the Amaze Media Labs website
 screens1title: Fresh Start
 screens1description: The Amaze Media Labs team found us in the infancy of their business looking for a website that could not just tell their story, but one that would truly celebrate their new branding and leave a lasting mark on customers.

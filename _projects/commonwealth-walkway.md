@@ -2,7 +2,8 @@
 layout: project
 order: 1
 metatitle: Commonwealth Walkway ✕ Esten.co
-metadescription: Discover stories and venture through the 10 kilometre walkway along Edmonton's river valley.
+metadescription: Discover stories and venture through the 10 kilometre walkway along Edmonton's river valley
+metaimg: portfolio/commonwealth-walkway/commonwealth-1.jpg
 device: mobile
 title: Commonwealth Walkway
 headline: Discover stories while venturing through Edmonton's river valley
@@ -22,7 +23,6 @@ herographic-2: commonwealth-herographic-2.jpg
 herographic-2alt: Edmontosaurus story screenshot of the Commonwealth Walkway mobile app
 herographic-3: commonwealth-herographic-3.jpg
 herographic-3alt: River Valley storyline map discovery screenshot of the Commonwealth Walkway mobile app
-introimg: commonwealth-1.jpg
 introimgalt: Grid of screenshots from various screens of the Commonwealth Walkway mobile app
 screens1title: Explore Edmonton
 screens1description: The Commonwealth Walkway Trust came to us seeking an interactive storytelling application to accompany the unveiling of their newest walkway right in the heart of Edmonton.</br>The app was designed to encourage Edmonton's citizens and visitors to get out and explore the most beautiful parts of the city, all while learning about its vibrant history.

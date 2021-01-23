@@ -2,7 +2,8 @@
 layout: project
 order: 9
 metatitle: Jasper Skytram ✕ Esten.co
-metadescription: Experience Jasper from the highest aerial tramway in Canada.
+metadescription: Experience Jasper from the highest aerial tramway in Canada
+metaimg: portfolio/jasper-skytram/skytram-1.jpg
 device: desktop
 title: Jasper Skytram
 headline: Ride Canada's highest aerial tramway into new altitudes
@@ -18,7 +19,6 @@ cardbackground: jasper-skytram-background.png
 cardbackgroundalt: Jasper Skytram supporting graphic of a woman enjoying the scenic view
 herographic: jasper-skytram-herographic.jpg
 herographicalt: Homepage screenshot of the Jasper Skytram website
-introimg: skytram-1.jpg
 introimgalt: Grid of screenshots from various pages of the Jasper Skytram website
 screens1title: Breathtaking Views
 screens1description: With a handful of successful Skytram collaborations already under our belt, we jumped at the opportunity to re-think and design their new site. As a designer you can't ask for much more than a mountain-town client with phenomenal photography.

@@ -2,7 +2,8 @@
 layout: project
 order: 3
 metatitle: Handful of Films ✕ Esten.co
-metadescription: An award winning production company devoted to creating exquisite and timeless films.
+metadescription: An award winning production company devoted to creating exquisite and timeless films
+metaimg: portfolio/handful-of-films/hof-1.jpg
 device: desktop
 title: Handful of Films
 headline: Crafting a great film is hard, there’s only time for a handful
@@ -18,7 +19,6 @@ cardbackground: hof-background.png
 cardbackgroundalt: Handful of Films supporting graphic of the "Boy Nomad" film
 herographic: hof-herographic.jpg
 herographicalt: Homepage screenshot of the Handful of Films website
-introimg: hof-1.jpg
 introimgalt: Grid of screenshots from various pages of the Handful of Films website
 screens1title: Only Time For A Handful
 screens1description: Handful of Films came to us seeking an alluring new site that would justly showcase their award winning films with a priority on intuitive interface patterns users can explore with ease.</br>With such an eclectic body of work, flexible storytelling was imperative to guarantee each film is shared as originally intended.
