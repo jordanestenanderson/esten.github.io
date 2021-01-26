@@ -31,7 +31,7 @@ screens3desktopalt: Responsive desktop screenshot of the Trip Tribe web applicat
 bustoutimage: trip-tribe-bigimage.jpg
 bustoutimagealt: Imagery of a group of people enjoying a white-water rafting travel experience
 screens2title: Aesthetics
-screens2description: When designing a web application of this size it becomes less about style than it is about user experience and intuition. Consequently, spacious stark layouts were utilized to break down content into digestible chunks, while smart layouts and colour application guides users to where they need to go.
+screens2description: When designing a web application of this scale it becomes less about style than it is about user experience and intuition. With that in mind, spacious stark layouts were utilized to break down content into digestible chunks, while smart colour application guides users to where they need to go.
 <!-- screens2linktext: -->
 <!-- screens2linkurl: -->
 screens2firstimage: trip-tribe-mobile1.jpg
