@@ -26,7 +26,7 @@ herographic-3alt: River Valley storyline map discovery screenshot of the Commonw
 introimg: commonwealth-1.jpg
 introimgalt: Grid of screenshots from various screens of the Commonwealth Walkway mobile app
 screens1title: Explore Edmonton
-screens1description: The Commonwealth Walkway Trust came to us seeking an interactive storytelling application to accompany the unveiling of their newest walkway right in the heart of Edmonton.</br>The app was designed to encourage Edmonton's citizens and visitors to get out and explore the most beautiful parts of the city, all while learning about its vibrant history.
+screens1description: The Commonwealth Walkway Trust came to us seeking an interactive storytelling application to accompany the unveiling of their newest walkway right in the heart of Edmonton. The app was designed to encourage Edmonton's citizens and visitors to get out and explore the most beautiful parts of the city, all while learning about its vibrant history.
 screens1firstimage: commonwealth-mobile1.jpg
 screens1firstimagealt: Map discovery screenshot of the Commonwealth Walkway mobile app
 screens1secondimage: commonwealth-mobile2.jpg
@@ -38,7 +38,7 @@ screens1fourthimagealt: Groat Road map location screenshot of the Commonwealth W
 bustoutimage: commonwealth-introimage.jpg
 bustoutimagealt: Imagery of a biker in Edmonton's river valley using the Commonwealth Walkway mobile app
 screens2title: Start Anywhere
-screens2description: Utilizing the Google Maps API and geofencing, users can stop and start their journey seamlessly no matter where they entered the walkway.</br>Walk along the path and browse each storyline to discover new perspectives at each medallion embedded in the walkway.
+screens2description: Utilizing the Google Maps API and geofencing, users can stop and start their journey seamlessly no matter where they entered the walkway. Walk along the path and browse each storyline to discover new perspectives at each medallion embedded in the walkway.
 screens2linktext: Global News
 screens2linkurl: https://globalnews.ca/news/5827514/commonwealth-walkway-edmonton-river-valley-app/
 screens2firstimage: commonwealth-mobile5.jpg

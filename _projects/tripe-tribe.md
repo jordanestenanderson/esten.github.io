@@ -9,7 +9,7 @@ title: Trip Tribe
 headline: Extraordinary wellness retreats with trusted leaders
 hyperlink: Coming Soon
 hex: "4a7388"
-hex2: "a3bfcc"
+hex2: "b5ceda"
 agency: Lift Interactive
 type: Web App
 role: Design
@@ -21,7 +21,7 @@ herographicalt: Homepage screenshot of the Trip Tribe web application
 introimg: triptribe-1.jpg
 introimgalt: Grid of screenshots from various pages of the Trip Tribe web application
 screens1title: Trip Makers
-screens1description: Trip Tribe had run successful trips for years before we met, but where they excelled in technology and community building they lacked in design and user experience. That's where we came in, re-thinking their application screen by screen from user-flow to design. 
+screens1description: Trip Tribe was running successful trips for years before we met, but where they excelled in technology and community building they also lacked in design and user experience. That's where we came in, re-thinking their application screen by screen from user-flow to design. 
 screens1desktop: triptribe-screen-1.jpg
 screens1desktopalt: Responsive desktop screenshot of the Trip Tribe web application "Cari Javoroski" leader profile page
 screens2desktop: triptribe-screen-2.jpg
@@ -31,7 +31,7 @@ screens3desktopalt: Responsive desktop screenshot of the Trip Tribe web applicat
 bustoutimage: trip-tribe-bigimage.jpg
 bustoutimagealt: Imagery of a group of people enjoying a white-water rafting travel experience
 screens2title: Aesthetics
-screens2description: When designing a web application of this scale it becomes less about style than it is about user experience and intuition. With that in mind, spacious stark layouts were utilized to break down content into digestible chunks, while smart colour application guides users to where they need to go.
+screens2description: When working on an interface of this scale it becomes less about style than it is about intuitive design. With each complex feature or function added to the app comes with a deeper look into visual hierarchy, useability, readability and smart colour application.
 <!-- screens2linktext: -->
 <!-- screens2linkurl: -->
 screens2firstimage: trip-tribe-mobile1.jpg

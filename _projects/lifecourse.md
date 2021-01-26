@@ -22,7 +22,7 @@ herographicalt: Personal schedule screenshot of the Lifecourse web application
 introimg: lifecourse-1.jpg
 introimgalt: Grid of screenshots from various pages of the Lifecourse website
 screens1title: Going Digital
-screens1description: The team behind Lifecourse came to us with the unique challenge of building a digital application based around the principles of the existing on-paper Lifecourse program. With what a complex system it already was, it was imperative that we not only build this for existing clients but we build it as a learning tool that can onboard new ones.
+screens1description: The team behind Lifecourse came to us with the unique challenge of building a digital application based around the principles of the existing on-paper Lifecourse program. With what a complex system it already was, it was imperative that we not only build this for existing clients but we build it as a learning tool that can on-board new ones.
 screens1desktop: lifecourse-screen-1.jpg
 screens1desktopalt: Responsive desktop screenshot of the Lifecourse website "features" page
 screens2desktop: lifecourse-screen-2.jpg
@@ -32,7 +32,7 @@ screens3desktopalt: Responsive desktop screenshot of the Lifecourse website "pri
 bustoutimage: lifecourse-2.jpg
 bustoutimagealt: Grid of screenshots from various pages of the Lifecourse web application
 screens2title: Onboarding & Usability
-screens2description: The majority of strategic thinking for this project revolved around onboarding and usability, being an application that opens itself up to individuals of all age and abilities it was key to ensure that each step was fully yet simply explained, followed usability guidelines and seamlessly flowed together.
+screens2description: The majority of strategic thinking for this project revolved around onboarding and usability. Being an application that opens itself up to individuals of all age and abilities, it was key to ensure that each step was simply yet fully explained, followed usability guidelines and seamlessly flowed together.
 <!-- screens2linktext: -->
 <!-- screens2linkurl: -->
 screens2desktop1: lifecourse-app-screen-1.jpg
@@ -49,7 +49,7 @@ screens2desktop6: lifecourse-app-screen-6.jpg
 screens2desktop6alt: Responsive desktop screenshot of the Lifecourse web application "goal" making view
 screens3title: Our Solution
 <!-- screens3blockquote: -->
-screens3description: The final designs feature intuitive layouts that put a focus on readability and legibility. Smart colour application guides the users eye through the design and assists in making visual connections to the areas of life they are improving.
+screens3description: The final designs feature intuitive layouts that put a focus on readability and legibility. Smart colour application guides users eyes through the design and assists in making visual connections to the "areas of life" users are focusing on.
 <!-- screens3linktext: -->
 <!-- screens3linkurl: -->
 outroimage: lifecourse-3.jpg
