@@ -7,7 +7,7 @@ metaimg: lifecourse-meta.jpg
 device: desktop
 title: Lifecourse
 headline: Uncover and develop a unique vision for your future online
-hyperlink: Coming Soon
+hyperlink: https://www.lifecourseonline.com/
 hex: "0266a4"
 hex2: "90c4e6"
 agency: Lift Interactive
