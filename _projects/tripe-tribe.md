@@ -7,7 +7,7 @@ metaimg: triptribe-meta.jpg
 device: desktop
 title: Trip Tribe
 headline: Extraordinary wellness retreats with trusted leaders
-hyperlink: Coming Soon
+hyperlink: https://triptribe.com/
 hex: "4a7388"
 hex2: "b5ceda"
 agency: Lift Interactive
