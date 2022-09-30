@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Tommy Soft';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("https://solesavy-email-assets.s3.us-west-2.amazonaws.com/fonts/made-tommy-soft-bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Tommy Soft';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("https://solesavy-email-assets.s3.us-west-2.amazonaws.com/fonts/made-tommy-soft-black.woff2") format("woff2");
+}
