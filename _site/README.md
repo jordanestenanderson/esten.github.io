@@ -7,7 +7,7 @@ $  jekyll build --watch
 ```
 In another terminal, start a local server (run in site root directory)
 ```
-$  jekyll serve
+$  jekyll serve --livereload
 ```
 View the site in your browser at
 ```
