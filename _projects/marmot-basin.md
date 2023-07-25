@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 6
+order: 7
 metatitle: Marmot Basin ✕ Esten.co
 metadescription: Unparalleled ski and snowboard resort in Jasper National Park
 metaimg: marmot-meta.jpg
@@ -8,11 +8,12 @@ device: desktop
 title: Marmot Basin
 headline: An unparalleled ski and snowboard resort in Jasper National Park
 hyperlink: https://www.skimarmot.com/
-hex: "D02139"
-hex2: "fbaab5"
+hex: "b71d32"
+hex2: "ff8393"
 agency: Lift Interactive
 type: Website
-role: Design
+role: Strategy
+role2: Design
 bug: marmot-bug.png
 cardbackground: marmot-background.png
 cardbackgroundalt: Marmot Basin supporting graphic of a female snowboarder

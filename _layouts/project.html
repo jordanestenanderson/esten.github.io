@@ -36,7 +36,13 @@ layout: main
 									<p class="project-intro">{{ page.metadescription }}</p>
 								{% endif %}
 								{% if page.agency %}
+									{% if page.agency contains "SoleSavy" %}
+										<p class="project-detail"><span class="meta-title">Employer</span><span class="detail-item">{{ page.agency }}</span></p>
+									{% elsif page.agency contains "Back n Forth" %}
+										<p class="project-detail"><span class="meta-title">Employer</span><span class="detail-item">{{ page.agency }}</span></p>
+									{% else %}
 									<p class="project-detail"><span class="meta-title">Studio</span><span class="detail-item">{{ page.agency }}</span></p>
+									{% endif %}
 								{% endif %}
 								{% if page.role %}
 									<p class="project-detail"><span class="meta-title">Role{% if page.role2 %}s{% endif %}</span><span class="detail-item">{{ page.role }}{% if page.role2 %}, {{ page.role2 }}{% endif %}{% if page.role3 %}, {{ page.role3 }}{% endif %}</span></p>
@@ -103,6 +109,11 @@ layout: main
 						</div>
 					</div>
 				{% endif %}
+				{% if page.inlineimg1 %}
+					<div data-aos="fade-up" class="inlineimg-streamfield project-streamfield wrapper">
+							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.inlineimg1 }}" alt="{{ page.inlineimg1alt }}">
+					</div>
+				{% endif %}
 				{% if page.screens1desktop and page.screens2desktop and page.screens3desktop %}
 					<div data-aos="fade-up" class="screens-streamfield project-streamfield wrapper no-top-padding flex-container align-center desktop-aligncenter">
 						<div class="flex-container">
@@ -116,6 +127,23 @@ layout: main
 								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop }}" alt="{{ page.screens3desktopalt }}">
 							</div>
 						</div>
+					</div>
+				{% endif %}
+				{% if page.screens1-2title or page.screens1-2description %}
+					<div data-aos="fade-up" class="content-streamfield project-streamfield wrapper flex-container align-center">
+						<div class="content-wrapper">
+							{% if page.screens1-2title %}
+								<h2>{{ page.screens1-2title }}</h2>
+							{% endif %}
+							{% if page.screens1-2description %}
+								<p>{{ page.screens1-2description }}</p>
+							{% endif %}
+						</div>
+					</div>
+				{% endif %}
+				{% if page.inlineimg2 %}
+					<div data-aos="fade-up" class="inlineimg-streamfield project-streamfield wrapper">
+							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.inlineimg2 }}" alt="{{ page.inlineimg2alt }}">
 					</div>
 				{% endif %}
 				{% if page.screens1firstimage and page.screens1secondimage and page.screens1thirdimage and page.screens1fourthimage %}
@@ -138,6 +166,62 @@ layout: main
 						{% if page.screens1fourthimage %}
 							<div class="app-image">
 								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1fourthimage }}" alt="{{ page.screens1fourthimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens1fifthimage and page.screens1sixthimage and page.screens1seventhimage and page.screens1eighthimage %}
+						{% if page.screens1fifthimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1fifthimage }}" alt="{{ page.screens1fifthimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens1sixthimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1sixthimage }}" alt="{{ page.screens1sixthimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens1seventhimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1seventhimage }}" alt="{{ page.screens1seventhimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens1eighthimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1eighthimage }}" alt="{{ page.screens1eighthimagealt }}">
+							</div>
+						{% endif %}
+						{% endif %}
+					</div>
+				{% endif %}
+				{% if page.screens1desktop1 and page.screens1desktop2 %}
+					<div data-aos="fade-up" class="desktopapp-streamfield project-streamfield wrapper flex-container flex-between align-center">
+						{% if page.screens1desktop1 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop1 }}" alt="{{ page.screens1desktop1alt }}">
+							</div>
+						{% endif %}
+						{% if page.screens1desktop2 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop2 }}" alt="{{ page.screens1desktop2alt }}">
+							</div>
+						{% endif %}
+						{% if page.screens1desktop3 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop3 }}" alt="{{ page.screens1desktop3alt }}">
+							</div>
+						{% endif %}
+						{% if page.screens1desktop4 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop4 }}" alt="{{ page.screens1desktop4alt }}">
+							</div>
+						{% endif %}
+						{% if page.screens1desktop5 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop5 }}" alt="{{ page.screens1desktop5alt }}">
+							</div>
+						{% endif %}
+						{% if page.screens1desktop6 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop6 }}" alt="{{ page.screens1desktop6alt }}">
 							</div>
 						{% endif %}
 					</div>
@@ -164,8 +248,11 @@ layout: main
 						</div>
 					</div>
 				{% endif %}
-				
-
+				{% if page.inlineimg3 %}
+					<div data-aos="fade-up" class="inlineimg-streamfield project-streamfield wrapper">
+							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.inlineimg3 }}" alt="{{ page.inlineimg3alt }}">
+					</div>
+				{% endif %}
 				{% if page.screens2desktop1 and page.screens2desktop2 %}
 					<div data-aos="fade-up" class="desktopapp-streamfield project-streamfield wrapper flex-container flex-between align-center">
 						{% if page.screens2desktop1 %}
@@ -200,8 +287,6 @@ layout: main
 						{% endif %}
 					</div>
 				{% endif %}
-
-
 				{% if page.screens2firstimage and page.screens2secondimage and page.screens2thirdimage and page.screens2fourthimage %}
 					<div data-aos="fade-up" class="app-streamfield project-streamfield wrapper flex-container flex-between align-center">
 						{% if page.screens2firstimage %}
@@ -223,6 +308,28 @@ layout: main
 							<div class="app-image">
 								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2fourthimage }}" alt="{{ page.screens2fourthimagealt }}">
 							</div>
+						{% endif %}
+						{% if page.screens2fifthimage and page.screens2sixthimage and page.screens2seventhimage and page.screens2eighthimage %}
+						{% if page.screens2fifthimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2fifthimage }}" alt="{{ page.screens2fifthimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens2sixthimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2sixthimage }}" alt="{{ page.screens2sixthimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens2seventhimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2seventhimage }}" alt="{{ page.screens2seventhimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens2eighthimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2eighthimage }}" alt="{{ page.screens2eighthimagealt }}">
+							</div>
+						{% endif %}
 						{% endif %}
 					</div>
 				{% endif %}
@@ -253,6 +360,91 @@ layout: main
 				{% endif %}
 				{% if content %}
 					{{ content }}
+				{% endif %}
+				{% if page.inlineimg4 %}
+					<div data-aos="fade-up" class="inlineimg-streamfield project-streamfield wrapper">
+							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.inlineimg4 }}" alt="{{ page.inlineimg4alt }}">
+					</div>
+				{% endif %}
+				{% if page.screens3firstimage and page.screens3secondimage and page.screens3thirdimage and page.screens3fourthimage %}
+					<div data-aos="fade-up" class="app-streamfield project-streamfield wrapper flex-container flex-between align-center">
+						{% if page.screens3firstimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3firstimage }}" alt="{{ page.screens3firstimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3secondimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3secondimage }}" alt="{{ page.screens3secondimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3thirdimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3thirdimage }}" alt="{{ page.screens3thirdimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3fourthimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3fourthimage }}" alt="{{ page.screens3fourthimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3fifthimage and page.screens3sixthimage and page.screens3seventhimage and page.screens3eighthimage %}
+						{% if page.screens3fifthimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3fifthimage }}" alt="{{ page.screens3fifthimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3sixthimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3sixthimage }}" alt="{{ page.screens3sixthimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3seventhimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3seventhimage }}" alt="{{ page.screens3seventhimagealt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3eighthimage %}
+							<div class="app-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3eighthimage }}" alt="{{ page.screens3eighthimagealt }}">
+							</div>
+						{% endif %}
+						{% endif %}
+					</div>
+				{% endif %}
+				{% if page.screens3desktop1 and page.screens3desktop2 %}
+					<div data-aos="fade-up" class="desktopapp-streamfield project-streamfield wrapper flex-container flex-between align-center">
+						{% if page.screens3desktop1 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop1 }}" alt="{{ page.screens3desktop1alt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3desktop2 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop2 }}" alt="{{ page.screens3desktop2alt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3desktop3 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop3 }}" alt="{{ page.screens3desktop3alt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3desktop4 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop4 }}" alt="{{ page.screens3desktop4alt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3desktop5 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop5 }}" alt="{{ page.screens3desktop5alt }}">
+							</div>
+						{% endif %}
+						{% if page.screens3desktop6 %}
+							<div class="desktopapp-image">
+								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop6 }}" alt="{{ page.screens3desktop6alt }}">
+							</div>
+						{% endif %}
+					</div>
 				{% endif %}
 				{% if page.outroimage %}
 					<div data-aos="fade-up" class="bigimage-streamfield project-streamfield">
@@ -288,6 +480,14 @@ layout: main
 							</a>
 						</div>
 						{% endif %}
+					{% endif %}
+					{% else %}
+					{% if page.bug %}
+					<div>
+						<a href="{{ page.hyperlink }}" target="_blank">
+							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.bug }}" alt="{{ page.title }} Logo Graphic">
+						</a>
+					</div>
 					{% endif %}
 				{% endif %}
 			</section>

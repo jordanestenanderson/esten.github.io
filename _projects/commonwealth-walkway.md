@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 1
+order: 6
 metatitle: Commonwealth Walkway ✕ Esten.co
 metadescription: Discover stories and venture through the 10 kilometre walkway along Edmonton's river valley
 metaimg: commonwealth-meta.jpg
@@ -12,8 +12,7 @@ hex: "439FCD"
 hex2: "b3e6ff"
 agency: Lift Interactive
 type: Mobile App
-role: Strategy
-role2: Design
+role: Product Design
 bug: commonwealth-bug.png
 cardbackground: commonwealth-background.png
 cardbackgroundalt: Commonwealth Walkway supporting graphic of somebody holding an iPhone using the app

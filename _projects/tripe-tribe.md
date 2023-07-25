@@ -1,18 +1,17 @@
 ---
 layout: project
-order: 2
+order: 10
 metatitle: Trip Tribe ✕ Esten.co
 metadescription: A community built around joining extraordinary wellness retreats hosted by trusted leaders worldwide
 metaimg: triptribe-meta.jpg
 device: desktop
 title: Trip Tribe
 headline: Extraordinary wellness retreats with trusted leaders
-hyperlink: https://triptribe.com/
 hex: "4a7388"
 hex2: "b5ceda"
 agency: Lift Interactive
 type: Web App
-role: Design
+role: Product Design
 bug: trip-tribe-bug.png
 cardbackground: trip-tribe-background.png
 cardbackgroundalt: Trip Tribe supporting graphic of a woman doing yoga

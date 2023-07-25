@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 9
+order: 8
 metatitle: Jasper Skytram ✕ Esten.co
 metadescription: Experience Jasper from the highest aerial tramway in Canada
 metaimg: skytram-meta.jpg

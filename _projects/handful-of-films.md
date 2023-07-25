@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 3
+order: 5
 metatitle: Handful of Films ✕ Esten.co
 metadescription: An award winning production company devoted to creating exquisite and timeless films
 metaimg: hof-meta.jpg
@@ -8,8 +8,8 @@ device: desktop
 title: Handful of Films
 headline: Crafting a great film is hard, there’s only time for a handful
 hyperlink: https://handfuloffilms.ca/
-hex: "FF4438"
-hex2: "fddddd"
+hex: "242628"
+hex2: "c1c1c1"
 agency: Lift Interactive
 type: Website
 role: Strategy

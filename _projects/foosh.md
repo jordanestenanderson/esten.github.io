@@ -1,6 +1,6 @@
 ---
 layout: project
-order: 5
+order: 9
 metatitle: Foosh ✕ Esten.co
 metadescription: A space that has combined sneakers, streetwear, music and art culture since 1999
 metaimg: foosh-meta.jpg
