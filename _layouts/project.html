@@ -446,6 +446,31 @@ layout: main
 						{% endif %}
 					</div>
 				{% endif %}
+				{% if page.screens4title or page.screens4description or page.screens4linkurl or page.screens4linktext %}
+					<div data-aos="fade-up" class="content-streamfield project-streamfield wrapper flex-container align-center">
+						<div class="content-wrapper">
+							{% if page.screens4title %}
+								<h2>{{ page.screens4title }}</h2>
+							{% endif %}
+							{% if page.screens4blockquote %}
+								<blockquote>
+									<svg class="blockquote-bug" width="226px" height="172px" viewBox="0 0 226 172" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									        <path d="M51.4,171.2 C77.2,171.2 97,152.6 97,126.8 C97,98 76,84.8 58.6,84.8 C49.6,84.8 44.8,86.6 41.8,89.6 L38.8,88.4 C46,62 68.8,38 102.4,26.6 L71.2,0.2 C22.6,22.4 0.4,64.4 0.4,107.6 C0.4,144.2 18.4,171.2 51.4,171.2 Z M174.4,171.2 C200.2,171.2 220,152.6 220,126.8 C220,98 199,84.8 181.6,84.8 C172.6,84.8 167.8,86.6 164.8,89.6 L161.8,88.4 C169,62 191.8,38 225.4,26.6 L194.2,0.2 C145.6,22.4 123.4,64.4 123.4,107.6 C123.4,144.2 141.4,171.2 174.4,171.2 Z" fill-rule="nonzero"></path>
+									    </g>
+									</svg>
+									{{ page.screens4blockquote }}
+								</blockquote>
+							{% endif %}
+							{% if page.screens4description %}
+								<p>{{ page.screens4description }}</p>
+							{% endif %}
+							{% if page.screens4linkurl and page.screens4linktext %}
+								<p class="project-link"><a href="{{ page.screens4linkurl }}" target="_blank" class="btn-sml" style="border-color:#{{ page.hex }};">{{ page.screens4linktext }}</a></p>
+							{% endif %}
+						</div>
+					</div>
+				{% endif %}
 				{% if page.outroimage %}
 					<div data-aos="fade-up" class="bigimage-streamfield project-streamfield">
 						<div class="image-bleed image-fit">
