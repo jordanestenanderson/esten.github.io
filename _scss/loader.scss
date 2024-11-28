@@ -1,5 +1,3 @@
-@use 'kit' as *;
-
 html, header nav .brand-change .brand-animation svg,html.js .burger-wrap, .projectmenu-number, .overlay-projects ul li a:after, .meta-title {
     @include delay(600ms);
 }
