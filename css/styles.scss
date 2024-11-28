@@ -1,13 +1,14 @@
 ---
+# Front matter comment to ensure Jekyll properly reads file.
 ---
 
-@use "styles/normalize";
-@use "styles/type";
-@use "styles/base";
-@use "styles/loader";
-@use "styles/header";
-@use "styles/homepage-portfolio";
-@use "styles/overlay";
-@use "styles/project-head";
-@use "styles/project-content";
-@use "styles/project-footer";
+@forward "normalize";
+@forward "type";
+@forward "base";
+@forward "loader";
+@forward "header";
+@forward "homepage-portfolio";
+@forward "overlay";
+@forward "project-head";
+@forward "project-content";
+@forward "project-footer";
