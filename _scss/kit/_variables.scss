@@ -1,12 +1,12 @@
-/****WRAPPER*****/
+//Wrapper
 $wrapper: 1800px;
 $s-wrapper: 1200px;
 
-/****BREAKPOINTS*****/
+//Breakpoints
 $m-breakpoint: 992px;
 $l-breakpoint: 1300px;
 
-/****SPACE*****/
+//Space
 $space: 8px;
 $xs-space: $space * 2;
 $s-space: $space * 3;
@@ -15,16 +15,16 @@ $m-space: $space * 6;
 $l-space: $space * 12;
 $xl-space: $space * 24;
 
-/****COLORS*****/
+//Color
 $grey: #f1f1f1;
 $darkgrey: #585858;
 $black: #1b1b1b;
 $white: #ffffff;
 
-/****OPACITY*****/
+//Opacity
 $opacity: 0.4;
 
-/****STYLES*****/
+//Styles
 $padding: 18px;
 $header-height: 52px;
 $border-radius: 16px;

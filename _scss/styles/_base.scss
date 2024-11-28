@@ -1,3 +1,5 @@
+@use '../kit' as *;
+
 html, header nav .brand-change .brand-animation svg, html.js .burger-wrap {
     background:#1b1b1b;
 }

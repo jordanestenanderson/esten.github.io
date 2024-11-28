@@ -1,3 +1,5 @@
+@use '../kit' as *;
+
 .hero-messaging {
 	padding-top: calc(#{$xl-space} - #{$header-height});
 	padding-bottom: $xl-space;
