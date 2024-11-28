@@ -1,3 +1,5 @@
+@use 'kit' as *;
+
 .overlay {
   background:$black;
   position: fixed;
