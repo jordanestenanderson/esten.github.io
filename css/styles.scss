@@ -2,13 +2,13 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-@use "normalize";
-@use "type";
-@use "base";
-@use "loader";
-@use "header";
-@use "homepage-portfolio";
-@use "overlay";
-@use "project-head";
-@use "project-content";
-@use "project-footer";
+@use "../_scss/normalize";
+@use "../_scss/type";
+@use "../_scss/base";
+@use "../_scss/loader";
+@use "../_scss/header";
+@use "../_scss/homepage-portfolio";
+@use "../_scss/overlay";
+@use "../_scss/project-head";
+@use "../_scss/project-content";
+@use "../_scss/project-footer";
