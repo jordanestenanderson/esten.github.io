@@ -1,0 +1,9 @@
+{% assign section_bustoutimage = include.section | append: "-" | append: include.subsection | append: "-bustoutimage" %}
+{% assign section_bustoutimage_alt = include.section | append: "-" | append: include.subsection | append: "-bustoutimage-alt" %}
+{% if page[section_bustoutimage] %}
+	<div data-aos="fade-up" class="bigimage-streamfield project-streamfield">
+		<div class="image-bleed image-fit">
+			<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_bustoutimage] }}" alt="{{ page[section_bustoutimage_alt] }}">
+		</div>
+	</div>
+{% endif %}

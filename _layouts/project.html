@@ -4,570 +4,256 @@ layout: main
 <div id="barba-wrapper">
 	<div class="barba-container" data-namespace="project">
 		<style>
-			.btn-sml:before, .btn-sml:after, .btn-disabled:before, .btn-disabled:after {
-				border-color:#{{ page.hex2 }};
-			}
 			::-moz-selection {
-				color:#{{ page.hex }};
+				color:#{{ page.hex-2 }};
+				background:#{{ page.hex-1 }};
 			}
 			::selection {
-				color:#{{ page.hex }};
-			}
-			html, header nav .brand-change .brand-animation svg, html.js .burger-wrap, .intro-stream, .overlay {
-				background:#{{ page.hex }};
+				color:#{{ page.hex-2 }};
+				background:#{{ page.hex-1 }};
 			}
 			.overlay-projects ul li a:after {
-				background:#{{ page.hex2 }};
+				background:#{{ page.hex-2 }};
 			}
-			p, .projectmenu-number, .overlay .loader-link, blockquote {
-				color:#{{ page.hex2 }} !important;
+			.header-banner {
+				background:#{{ page.hex-2 }};
 			}
 		</style>
 		<main class="project {{ page.title | slugify }}">
-			<div class="wrapper">
-				<section data-aos="zoom-out-down" id="project-hero">
+			<section data-aos="zoom-out-down" id="project-head">
+				<div class="project-head-wrapper wrapper">
 					<div class="project-meta slide-left">
 						<div class="project-metainner">
-							<div>
-								{% if page.title %}
-									<h1 class="title">{{ page.title }}</h1>
-								{% endif %}
-								{% if page.metadescription %}
-									<p class="project-intro">{{ page.metadescription }}</p>
-								{% endif %}
-								{% if page.agency %}
-									{% if page.agency contains "SoleSavy" %}
-										<p class="project-detail"><span class="meta-title">Employer</span><span class="detail-item">{{ page.agency }}</span></p>
-									{% elsif page.agency contains "Back n Forth" %}
-										<p class="project-detail"><span class="meta-title">Employer</span><span class="detail-item">{{ page.agency }}</span></p>
-									{% else %}
-									<p class="project-detail"><span class="meta-title">Studio</span><span class="detail-item">{{ page.agency }}</span></p>
+							<div class="project-info-header flex-container flex-between align-center">
+								<svg class="project-svg {{ page.title | slugify }}-brand" viewBox="{{ page.svg-box }}">
+									<use xlink:href="#{{ page.title | slugify }}-brand" />
+								</svg>
+							</div>
+							<div class="project-titlebar flex-container">
+								<div class="project-title">
+									{% if page.product %}
+										<p class="meta-title">{{ page.product }}</p>
 									{% endif %}
-								{% endif %}
-								{% if page.role %}
-									<p class="project-detail"><span class="meta-title">Role{% if page.role2 %}s{% endif %}</span><span class="detail-item">{{ page.role }}{% if page.role2 %}, {{ page.role2 }}{% endif %}{% if page.role3 %}, {{ page.role3 }}{% endif %}</span></p>
-								{% endif %}
-								{% if page.hyperlink %}
-									{% if page.hyperlink contains "Coming Soon" %}
-									    <p class="project-link"><a class="btn-disabled" style="border-color:#{{ page.hex }};cursor:not-allowed;"><span>Launching Soon</span></a></p>
-									{% else %}
+									{% if page.title %}
+										<h1 class="title">{{ page.title }}</h1>
+									{% endif %}
+								</div>
+								<div class="project-links">
+									{% if page.hyperlink %}
 										{% if page.device contains "desktop" or page.device == "desktop" %}
-										    <p class="project-link"><a href="{{ page.hyperlink }}" target="_blank" class="btn-sml" style="border-color:#{{ page.hex }};"><span>Launch The Site</span></a></p>
+											<p class="project-link">
+												<a href="{{ page.hyperlink }}" target="_blank" class="icon-link" style="fill:#{{ page.hex-1 }};">
+													Launch the app
+													{% include arrow.html %}
+												</a>
+											</p>
 										{% endif %}
 										{% if page.device contains "mobile" or page.device == "mobile" %}
-										    <p class="project-link"><a href="{{ page.hyperlink }}" target="_blank" class="btn-sml" style="border-color:#{{ page.hex }};"><span>The App Store</span></a></p>
+											<p class="project-link">
+												<a href="{{ page.hyperlink }}" target="_blank" class="icon-link" style="fill:#{{ page.hex-1 }};">
+													The App Store
+													{% include arrow.html %}
+												</a>
+											</p>
 										{% endif %}
 									{% endif %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-head-image">
+					<div data-aos="fade-up" class="header-banner ">
+						{% if page.hero-banner %}
+							<div class="project-visual">
+								<div class="project-visualinner">
+									<div>
+										<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.hero-banner }}" alt="{{ page.hero-banner-alt }}">
+									</div>
+								</div>
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</section>
+			<section class="project-container">
+				<div class="flex-container">
+					<!--------------------------SIDEBAR-------------------------->
+					<div class="project-sidebar" data-aos="fade-up">
+						<ul class="project-navigation">
+							{% if page.section-1-1-nav %}
+								<li class="project-navigation-item"><a class="project-navigation-link smooth-scroll" href="#project-{{ page.section-1-1-nav | slugify }}">{{ page.section-1-1-nav }}</a></li>
+							{% endif %}
+							{% if page.section-2-1-nav %}
+								<li class="project-navigation-item"><a class="project-navigation-link smooth-scroll" href="#project-{{ page.section-2-1-nav | slugify }}">{{ page.section-2-1-nav }}</a></li>
+							{% endif %}
+							{% if page.section-3-1-nav %}
+								<li class="project-navigation-item"><a class="project-navigation-link smooth-scroll" href="#project-{{ page.section-3-1-nav | slugify }}">{{ page.section-3-1-nav }}</a></li>
+							{% endif %}
+							{% if page.section-4-1-nav %}
+								<li class="project-navigation-item"><a class="project-navigation-link smooth-scroll" href="#project-{{ page.section-4-1-nav | slugify }}">{{ page.section-4-1-nav }}</a></li>
+							{% endif %}
+							{% if page.section-5-1-nav %}
+								<li class="project-navigation-item"><a class="project-navigation-link smooth-scroll" href="#project-{{ page.section-5-1-nav | slugify }}">{{ page.section-5-1-nav }}</a></li>
+							{% endif %}
+							{% if page.section-6-1-nav %}
+								<li class="project-navigation-item"><a class="project-navigation-link smooth-scroll" href="#project-{{ page.section-6-1-nav | slugify }}">{{ page.section-6-1-nav }}</a></li>
+							{% endif %}
+							{% if page.section-7-1-nav %}
+								<li class="project-navigation-item"><a class="project-navigation-link smooth-scroll" href="#project-{{ page.section-7-1-nav | slugify }}">{{ page.section-7-1-nav }}</a></li>
+							{% endif %}
+							{% if page.section-8-1-nav %}
+								<li class="project-navigation-item"><a class="project-navigation-link smooth-scroll" href="#project-{{ page.section-8-1-nav | slugify }}">{{ page.section-8-1-nav }}</a></li>
+							{% endif %}
+						</ul>
+					</div>
+					<div class="project-body">
+						<div id="project-content">
+							<!--------------------------SECTION 1-------------------------->
+							<div id="project-{{ page.section-1-1-nav | slugify }}" class="active-section project-section">
+								{% if page.section-1-1-nav %}
+									<div data-aos="fade-up" class="content-streamfield project-streamfield wrapper flex-container align-center">
+										<div class="content-wrapper">
+											{% if page.section-1-1-title %}
+												<h2>{{ page.section-1-1-title }}</h2>
+											{% endif %}
+											{% if page.section-1-1-description-1 %}
+												<p>{{ page.section-1-1-description-1 }}</p>
+											{% endif %}
+											{% if page.section-1-1-description-2 %}
+												<p>{{ page.section-1-1-description-2 }}</p>
+											{% endif %}
+											{% if page.section-1-1-description-3 %}
+												<p>{{ page.section-1-1-description-3 }}</p>
+											{% endif %}
+											{% if page.section-1-1-link-text and page.section-1-1-link-url %}
+												<p class="project-link">
+													<a href="{{ page.section-1-1-link-url }}" target="_blank" class="icon-link" style="fill:#{{ page.hex-1 }};">
+														{{ page.section-1-1-link-text }}
+														{% include arrow.html %}
+													</a>
+												</p>
+											{% endif %}
+											{% if page.employer %}
+												<p class="project-detail"><span class="meta-title">Employer</span><span class="detail-item">{{ page.employer }}</span></p>
+											{% endif %}
+											{% if page.role %}
+												<p class="project-detail"><span class="meta-title">Role{% if page.role2 %}s{% endif %}</span><span class="detail-item">{{ page.role }}{% if page.role2 %}, {{ page.role2 }}{% endif %}{% if page.role3 %}, {{ page.role3 }}{% endif %}</span></p>
+											{% endif %}
+											{% if page.team %}
+												<p class="project-detail"><span class="meta-title">Team</span><span class="detail-item">{{ page.team }}</span></p>
+											{% endif %}
+											{% if page.timeline %}
+												<p class="project-detail"><span class="meta-title">Timeline</span><span class="detail-item">{{ page.timeline }}</span></p>
+											{% endif %}
+										</div>
+									</div>
 								{% endif %}
+								{% include section-inlineimg.html section="section-1" subsection="1" %}
+								{% include section-appimg.html section="section-1" subsection="1" %}
+								{% include section-imagegrid.html section="section-1" subsection="1" %}
+								{% include section-bustout.html section="section-1" subsection="1" %}
+							</div>
+							<!--------------------------SECTION 2-------------------------->
+							<div id="project-{{ page.section-2-1-nav | slugify }}" class="active-section project-section">
+								{% include section-content.html section="section-2" subsection="1" %}
+								{% include section-appimg.html section="section-2" subsection="1" %}
+								{% include section-inlineimg.html section="section-2" subsection="1" %}
+								{% include section-imagegrid.html section="section-2" subsection="1" %}
+								{% include section-bustout.html section="section-2" subsection="1" %}
+							</div>
+							<!--------------------------SECTION 3-------------------------->
+							<div id="project-{{ page.section-3-1-nav | slugify }}" class="active-section project-section">
+								{% include section-content.html section="section-3" subsection="1" %}
+								{% include section-inlineimg.html section="section-3" subsection="1" %}
+								{% include section-appimg.html section="section-3" subsection="1" %}
+								{% include section-imagegrid.html section="section-3" subsection="1" %}
+								{% include section-bustout.html section="section-3" subsection="1" %}
+							</div>
+							<!--------------------------SECTION 4-------------------------->
+							<div id="project-{{ page.section-4-1-nav | slugify }}" class="active-section project-section">
+								{% include section-content.html section="section-4" subsection="1" %}
+								{% include section-inlineimg.html section="section-4" subsection="1" %}
+								{% include section-content.html section="section-4" subsection="2" %}
+								{% include section-inlineimg.html section="section-4" subsection="2" %}
+								{% include section-appimg.html section="section-4" subsection="1" %}
+								{% include section-imagegrid.html section="section-4" subsection="1" %}
+								{% include section-bustout.html section="section-4" subsection="1" %}
+							</div>
+							<!--------------------------SECTION 5-------------------------->
+							<div id="project-{{ page.section-5-1-nav | slugify }}" class="active-section project-section">
+								{% include section-content.html section="section-5" subsection="1" %}
+								{% include section-appimg.html section="section-5" subsection="1" %}
+								{% include section-inlineimg.html section="section-5" subsection="1" %}
+								{% include section-content.html section="section-5" subsection="2" %}
+								{% include section-appimg.html section="section-5" subsection="2" %}
+								{% include section-content.html section="section-5" subsection="3" %}
+								{% include section-appimg.html section="section-5" subsection="3" %}
+								{% include section-content.html section="section-5" subsection="4" %}
+								{% include section-appimg.html section="section-5" subsection="4" %}
+								{% include section-content.html section="section-5" subsection="5" %}
+								{% include section-appimg.html section="section-5" subsection="5" %}
+								{% include section-content.html section="section-5" subsection="6" %}
+								{% include section-appimg.html section="section-5" subsection="6" %}
+								{% include section-content.html section="section-5" subsection="7" %}
+								{% include section-appimg.html section="section-5" subsection="7" %}
+								{% include section-content.html section="section-5" subsection="8" %}
+								{% include section-appimg.html section="section-5" subsection="8" %}
+								{% include section-imagegrid.html section="section-5" subsection="1" %}
+								{% include section-bustout.html section="section-5" subsection="1" %}
+							</div>
+							<!--------------------------SECTION 6-------------------------->
+							<div id="project-{{ page.section-6-1-nav | slugify }}" class="active-section project-section">
+								{% include section-content.html section="section-6" subsection="1" %}
+								{% include section-takeaways.html section="section-6" subsection="1" %}
+								{% include section-inlineimg.html section="section-6" subsection="1" %}
+								{% include section-content.html section="section-6" subsection="2" %}
+								{% include section-appimg.html section="section-6" subsection="1" %}
+								{% include section-imagegrid.html section="section-6" subsection="1" %}
+								{% include section-bustout.html section="section-6" subsection="1" %}
+							</div>
+							<!--------------------------SECTION 7-------------------------->
+							<div id="project-{{ page.section-7-1-nav | slugify }}" class="active-section project-section">
+								{% include section-content.html section="section-7" subsection="1" %}
+								{% include section-takeaways.html section="section-7" subsection="1" %}
+								{% include section-inlineimg.html section="section-7" subsection="1" %}
+								{% include section-content.html section="section-7" subsection="2" %}
+								{% include section-appimg.html section="section-7" subsection="1" %}
+								{% include section-imagegrid.html section="section-7" subsection="1" %}
+								{% include section-bustout.html section="section-7" subsection="1" %}
 							</div>
 						</div>
 					</div>
-					{% if page.device contains "desktop" or page.device == "desktop" %}
-						{% if page.herographic %}
-							<div class="project-visual slide-right">
-			    				<div class="project-visualinner">
-			    					<div>
-			    						<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.herographic }}" alt="{{ page.herographicalt }}">
-			    					</div>
-			    				</div>
-			    			</div>
-		    			{% endif %}
-		    		{% endif %}
-		    		{% if page.device contains "mobile" or page.device == "mobile" %}
-		    			{% if page.herographic-1 and page.herographic-2 and page.herographic-3 %}
-			    			<div class="project-visual slide-right mobile-app">
-			 					<div class="project-visualinner">
-			 						<div class="app-flex">
-			 							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.herographic-1 }}" alt="{{ page.herographic-1alt }}">
-			 							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.herographic-2 }}" alt="{{ page.herographic-2alt }}">
-			 							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.herographic-3 }}" alt="{{ page.herographic-3alt }}">
-			 						</div>
-			 					</div>
-			 				</div>
-		 				{% endif %}
-		 			{% endif %}
-				</section>
-			</div>
-			<!--PROJECT CONTENT-->
-			<section id="project-content">
-				{% if page.introimg %}
-					<div data-aos="fade-up" class="bigimage-streamfield project-streamfield">
-						<div class="image-bleed image-fit">
-							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.introimg }}" alt="{{ page.introimgalt }}">
-						</div>
-					</div>
-				{% endif %}
-				{% if page.screens1title or page.screens1description %}
-					<div data-aos="fade-up" class="content-streamfield project-streamfield wrapper flex-container align-center">
-						<div class="content-wrapper">
-							{% if page.screens1title %}
-								<h2>{{ page.screens1title }}</h2>
-							{% endif %}
-							{% if page.screens1description %}
-								<p>{{ page.screens1description }}</p>
-							{% endif %}
-						</div>
-					</div>
-				{% endif %}
-				{% if page.inlineimg1 %}
-					<div data-aos="fade-up" class="inlineimg-streamfield project-streamfield wrapper">
-							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.inlineimg1 }}" alt="{{ page.inlineimg1alt }}">
-					</div>
-				{% endif %}
-				{% if page.screens1desktop and page.screens2desktop and page.screens3desktop %}
-					<div data-aos="fade-up" class="screens-streamfield project-streamfield wrapper no-top-padding flex-container align-center desktop-aligncenter">
-						<div class="flex-container">
-							<div class="desktop-screen image-fit flex-third">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop }}" alt="{{ page.screens1desktopalt }}">
-							</div>
-							<div class="desktop-screen image-fit flex-third center-screen">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2desktop }}" alt="{{ page.screens2desktopalt }}">
-							</div>
-							<div class="desktop-screen image-fit flex-third">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop }}" alt="{{ page.screens3desktopalt }}">
-							</div>
-						</div>
-					</div>
-				{% endif %}
-				{% if page.screens1-2title or page.screens1-2description %}
-					<div data-aos="fade-up" class="content-streamfield project-streamfield wrapper flex-container align-center">
-						<div class="content-wrapper">
-							{% if page.screens1-2title %}
-								<h2>{{ page.screens1-2title }}</h2>
-							{% endif %}
-							{% if page.screens1-2description %}
-								<p>{{ page.screens1-2description }}</p>
-							{% endif %}
-						</div>
-					</div>
-				{% endif %}
-				{% if page.inlineimg2 %}
-					<div data-aos="fade-up" class="inlineimg-streamfield project-streamfield wrapper">
-							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.inlineimg2 }}" alt="{{ page.inlineimg2alt }}">
-					</div>
-				{% endif %}
-				{% if page.screens1firstimage and page.screens1secondimage and page.screens1thirdimage and page.screens1fourthimage %}
-					<div data-aos="fade-up" class="app-streamfield project-streamfield wrapper no-top-padding flex-container flex-between align-center">
-						{% if page.screens1firstimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1firstimage }}" alt="{{ page.screens1firstimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1secondimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1secondimage }}" alt="{{ page.screens1secondimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1thirdimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1thirdimage }}" alt="{{ page.screens1thirdimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1fourthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1fourthimage }}" alt="{{ page.screens1fourthimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1fifthimage and page.screens1sixthimage and page.screens1seventhimage and page.screens1eighthimage %}
-						{% if page.screens1fifthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1fifthimage }}" alt="{{ page.screens1fifthimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1sixthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1sixthimage }}" alt="{{ page.screens1sixthimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1seventhimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1seventhimage }}" alt="{{ page.screens1seventhimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1eighthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1eighthimage }}" alt="{{ page.screens1eighthimagealt }}">
-							</div>
-						{% endif %}
-						{% endif %}
-					</div>
-				{% endif %}
-				{% if page.screens1desktop1 and page.screens1desktop2 %}
-					<div data-aos="fade-up" class="desktopapp-streamfield project-streamfield wrapper flex-container flex-between align-center">
-						{% if page.screens1desktop1 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop1 }}" alt="{{ page.screens1desktop1alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1desktop2 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop2 }}" alt="{{ page.screens1desktop2alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1desktop3 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop3 }}" alt="{{ page.screens1desktop3alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1desktop4 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop4 }}" alt="{{ page.screens1desktop4alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1desktop5 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop5 }}" alt="{{ page.screens1desktop5alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens1desktop6 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens1desktop6 }}" alt="{{ page.screens1desktop6alt }}">
-							</div>
-						{% endif %}
-					</div>
-				{% endif %}
-				{% if page.bustoutimage %}
-					<div data-aos="fade-up" class="bigimage-streamfield project-streamfield">
-						<div class="image-bleed image-fit">
-							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.bustoutimage }}" alt="{{ page.bustoutimagealt }}">
-						</div>
-					</div>
-				{% endif %}
-				{% if page.screens2title or page.screens2description or page.screens2linktext or page.screens2linkurl %}
-					<div data-aos="fade-up" class="content-streamfield project-streamfield wrapper flex-container align-center">
-						<div class="content-wrapper">
-							{% if page.screens2title %}
-								<h2>{{ page.screens2title }}</h2>
-							{% endif %}
-							{% if page.screens2description %}
-								<p>{{ page.screens2description }}</p>
-							{% endif %}
-							{% if page.screens2linkurl and page.screens2linktext %}
-								<p class="project-link"><a href="{{ page.screens2linkurl }}" target="_blank" class="btn-sml" style="border-color:#{{ page.hex }};">{{ page.screens2linktext }}</a></p>
-							{% endif %}
-						</div>
-					</div>
-				{% endif %}
-				{% if page.inlineimg3 %}
-					<div data-aos="fade-up" class="inlineimg-streamfield project-streamfield wrapper">
-							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.inlineimg3 }}" alt="{{ page.inlineimg3alt }}">
-					</div>
-				{% endif %}
-				{% if page.screens2desktop1 and page.screens2desktop2 %}
-					<div data-aos="fade-up" class="desktopapp-streamfield project-streamfield wrapper flex-container flex-between align-center">
-						{% if page.screens2desktop1 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2desktop1 }}" alt="{{ page.screens2desktop1alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2desktop2 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2desktop2 }}" alt="{{ page.screens2desktop2alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2desktop3 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2desktop3 }}" alt="{{ page.screens2desktop3alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2desktop4 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2desktop4 }}" alt="{{ page.screens2desktop4alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2desktop5 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2desktop5 }}" alt="{{ page.screens2desktop5alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2desktop6 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2desktop6 }}" alt="{{ page.screens2desktop6alt }}">
-							</div>
-						{% endif %}
-					</div>
-				{% endif %}
-				{% if page.screens2firstimage and page.screens2secondimage and page.screens2thirdimage and page.screens2fourthimage %}
-					<div data-aos="fade-up" class="app-streamfield project-streamfield wrapper flex-container flex-between align-center">
-						{% if page.screens2firstimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2firstimage }}" alt="{{ page.screens2firstimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2secondimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2secondimage }}" alt="{{ page.screens2secondimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2thirdimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2thirdimage }}" alt="{{ page.screens2thirdimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2fourthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2fourthimage }}" alt="{{ page.screens2fourthimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2fifthimage and page.screens2sixthimage and page.screens2seventhimage and page.screens2eighthimage %}
-						{% if page.screens2fifthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2fifthimage }}" alt="{{ page.screens2fifthimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2sixthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2sixthimage }}" alt="{{ page.screens2sixthimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2seventhimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2seventhimage }}" alt="{{ page.screens2seventhimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens2eighthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens2eighthimage }}" alt="{{ page.screens2eighthimagealt }}">
-							</div>
-						{% endif %}
-						{% endif %}
-					</div>
-				{% endif %}
-				{% if page.screens3title or page.screens3description or page.screens3linkurl or page.screens3linktext %}
-					<div data-aos="fade-up" class="content-streamfield project-streamfield wrapper flex-container align-center">
-						<div class="content-wrapper">
-							{% if page.screens3title %}
-								<h2>{{ page.screens3title }}</h2>
-							{% endif %}
-							{% if page.screens3blockquote %}
-								<blockquote>
-									<svg class="blockquote-bug" width="226px" height="172px" viewBox="0 0 226 172" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-									        <path d="M51.4,171.2 C77.2,171.2 97,152.6 97,126.8 C97,98 76,84.8 58.6,84.8 C49.6,84.8 44.8,86.6 41.8,89.6 L38.8,88.4 C46,62 68.8,38 102.4,26.6 L71.2,0.2 C22.6,22.4 0.4,64.4 0.4,107.6 C0.4,144.2 18.4,171.2 51.4,171.2 Z M174.4,171.2 C200.2,171.2 220,152.6 220,126.8 C220,98 199,84.8 181.6,84.8 C172.6,84.8 167.8,86.6 164.8,89.6 L161.8,88.4 C169,62 191.8,38 225.4,26.6 L194.2,0.2 C145.6,22.4 123.4,64.4 123.4,107.6 C123.4,144.2 141.4,171.2 174.4,171.2 Z" fill-rule="nonzero"></path>
-									    </g>
-									</svg>
-									{{ page.screens3blockquote }}
-								</blockquote>
-							{% endif %}
-							{% if page.screens3description %}
-								<p>{{ page.screens3description }}</p>
-							{% endif %}
-							{% if page.screens3linkurl and page.screens3linktext %}
-								<p class="project-link"><a href="{{ page.screens3linkurl }}" target="_blank" class="btn-sml" style="border-color:#{{ page.hex }};">{{ page.screens3linktext }}</a></p>
-							{% endif %}
-						</div>
-					</div>
-				{% endif %}
-				{% if content %}
-					{{ content }}
-				{% endif %}
-				{% if page.inlineimg4 %}
-					<div data-aos="fade-up" class="inlineimg-streamfield project-streamfield wrapper">
-							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.inlineimg4 }}" alt="{{ page.inlineimg4alt }}">
-					</div>
-				{% endif %}
-				{% if page.screens3firstimage and page.screens3secondimage and page.screens3thirdimage and page.screens3fourthimage %}
-					<div data-aos="fade-up" class="app-streamfield project-streamfield wrapper flex-container flex-between align-center">
-						{% if page.screens3firstimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3firstimage }}" alt="{{ page.screens3firstimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3secondimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3secondimage }}" alt="{{ page.screens3secondimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3thirdimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3thirdimage }}" alt="{{ page.screens3thirdimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3fourthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3fourthimage }}" alt="{{ page.screens3fourthimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3fifthimage and page.screens3sixthimage and page.screens3seventhimage and page.screens3eighthimage %}
-						{% if page.screens3fifthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3fifthimage }}" alt="{{ page.screens3fifthimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3sixthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3sixthimage }}" alt="{{ page.screens3sixthimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3seventhimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3seventhimage }}" alt="{{ page.screens3seventhimagealt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3eighthimage %}
-							<div class="app-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3eighthimage }}" alt="{{ page.screens3eighthimagealt }}">
-							</div>
-						{% endif %}
-						{% endif %}
-					</div>
-				{% endif %}
-				{% if page.screens3desktop1 and page.screens3desktop2 %}
-					<div data-aos="fade-up" class="desktopapp-streamfield project-streamfield wrapper flex-container flex-between align-center">
-						{% if page.screens3desktop1 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop1 }}" alt="{{ page.screens3desktop1alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3desktop2 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop2 }}" alt="{{ page.screens3desktop2alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3desktop3 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop3 }}" alt="{{ page.screens3desktop3alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3desktop4 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop4 }}" alt="{{ page.screens3desktop4alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3desktop5 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop5 }}" alt="{{ page.screens3desktop5alt }}">
-							</div>
-						{% endif %}
-						{% if page.screens3desktop6 %}
-							<div class="desktopapp-image">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.screens3desktop6 }}" alt="{{ page.screens3desktop6alt }}">
-							</div>
-						{% endif %}
-					</div>
-				{% endif %}
-				{% if page.screens4title or page.screens4description or page.screens4linkurl or page.screens4linktext %}
-					<div data-aos="fade-up" class="content-streamfield project-streamfield wrapper flex-container align-center">
-						<div class="content-wrapper">
-							{% if page.screens4title %}
-								<h2>{{ page.screens4title }}</h2>
-							{% endif %}
-							{% if page.screens4blockquote %}
-								<blockquote>
-									<svg class="blockquote-bug" width="226px" height="172px" viewBox="0 0 226 172" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-									        <path d="M51.4,171.2 C77.2,171.2 97,152.6 97,126.8 C97,98 76,84.8 58.6,84.8 C49.6,84.8 44.8,86.6 41.8,89.6 L38.8,88.4 C46,62 68.8,38 102.4,26.6 L71.2,0.2 C22.6,22.4 0.4,64.4 0.4,107.6 C0.4,144.2 18.4,171.2 51.4,171.2 Z M174.4,171.2 C200.2,171.2 220,152.6 220,126.8 C220,98 199,84.8 181.6,84.8 C172.6,84.8 167.8,86.6 164.8,89.6 L161.8,88.4 C169,62 191.8,38 225.4,26.6 L194.2,0.2 C145.6,22.4 123.4,64.4 123.4,107.6 C123.4,144.2 141.4,171.2 174.4,171.2 Z" fill-rule="nonzero"></path>
-									    </g>
-									</svg>
-									{{ page.screens4blockquote }}
-								</blockquote>
-							{% endif %}
-							{% if page.screens4description %}
-								<p>{{ page.screens4description }}</p>
-							{% endif %}
-							{% if page.screens4linkurl and page.screens4linktext %}
-								<p class="project-link"><a href="{{ page.screens4linkurl }}" target="_blank" class="btn-sml" style="border-color:#{{ page.hex }};">{{ page.screens4linktext }}</a></p>
-							{% endif %}
-						</div>
-					</div>
-				{% endif %}
-				{% if page.outroimage %}
-					<div data-aos="fade-up" class="bigimage-streamfield project-streamfield">
-						<div class="image-bleed image-fit">
-							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.outroimage }}" alt="{{ page.outroimagealt }}">
-						</div>
-					</div>
-				{% endif %}
+				</div>
 			</section>
-
-			<section data-aos="fade-in" id="project-end" class="wrapper desktop-aligncenter">
-				{% if page.hyperlink %}
-					{% if page.hyperlink contains "Coming Soon" %}
-					    <p class="project-link"><a class="btn-disabled" style="border-color:#{{ page.hex }};cursor:not-allowed;"><span>Launching Soon</span></a></p>
-					    {% if page.bug %}
-						    <div>
-						    	<div>
-						    		<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.bug }}" alt="{{ page.title }} Logo Graphic">
-						    	</div>
-						    </div>
-					    {% endif %}
-					{% else %}
-						{% if page.device contains "desktop" or page.device == "desktop" %}
-						    <p class="project-link"><a href="{{ page.hyperlink }}" target="_blank" class="btn-sml" style="border-color:#{{ page.hex }};"><span>Launch The Site</span></a></p>
-						{% endif %}
-						{% if page.device contains "mobile" or page.device == "mobile" %}
-						    <p class="project-link"><a href="{{ page.hyperlink }}" target="_blank" class="btn-sml" style="border-color:#{{ page.hex }};"><span>The App Store</span></a></p>
-						{% endif %}
-						{% if page.bug %}
-						<div>
-							<a href="{{ page.hyperlink }}" target="_blank">
-								<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.bug }}" alt="{{ page.title }} Logo Graphic">
-							</a>
-						</div>
-						{% endif %}
-					{% endif %}
-					{% else %}
-					{% if page.bug %}
-					<div>
-						<a href="{{ page.hyperlink }}" target="_blank">
-							<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.bug }}" alt="{{ page.title }} Logo Graphic">
-						</a>
-					</div>
-					{% endif %}
+			<!--------------------------RELATED PROJECTS-------------------------->				
+			{% assign projects = site[page.collection] | sort:"order" %}
+			{% for project in projects %}
+				{% if project.title == page.title %}
+					{% assign current_index = forloop.index0 %}
 				{% endif %}
-			</section>
-
-			{% if page.collection %}
-			    {% assign links = site[page.collection] | sort:"order"  %}
-			{% endif %}
-
-			{% for link in links %}
-			{% if link.title == page.title %}
-
-			{% if forloop.first %}
-			{% assign prev_index = forloop.length|minus:1 %}
-			{% assign next_index = forloop.index0|plus:1 %}
-			{% elsif forloop.last %}
-			{% assign prev_index = forloop.index0|minus:1 %}
-			{% assign next_index = 0 %}
-			{% else %}
-			{% assign prev_index = forloop.index0|minus:1 %}
-			{% assign next_index = forloop.index0|plus:1 %}
-			{% endif %}
-
-			{% assign next = links[next_index] %}
-			{% assign prev = links[prev_index] %}
-
-			{% endif %}
-			{% assign tmpprev = link %}
 			{% endfor %}
-
-			<div class="wrapper">
-				<section data-aos="fade-in" id="related-projects" class="flex-container flex-between align-center">
-					{% if prev %}
-						<div class="related-card" style="background-color:#{{ prev.hex }};">
-			    	        <a href="{{ site.baseurl }}{{ prev.url }}" class="related-spread loader-link image-fit fit-right" data-hue="#{{ prev.hex }}">
-			    	        	<img src="{{ site.baseurl }}/assets/portfolio/{{ prev.title | slugify }}/{{ prev.cardbackground }}" alt="{{ prev.title }} Feature Graphic">
-			    	            <div class="related-info">
-			    	                <svg class="related-svg" viewBox="{{ prev.svg-box }}"><use xlink:href="#{{ prev.title | slugify }}-brand" /></svg>
-			    	            </div>
-			    	        </a>
-			    	 	</div>
-			    	 {% endif %}
-			    	 {% if next %}
-			    	 	<div class="related-card" style="background-color:#{{ next.hex }};">
-			    	        <a href="{{ site.baseurl }}{{ next.url }}" class="related-spread loader-link image-fit fit-right" data-hue="#{{ next.hex }}">
-			    	        	<img src="{{ site.baseurl }}/assets/portfolio/{{ next.title | slugify }}/{{ next.cardbackground }}" alt="{{ next.title }} Feature Graphic">
-			    	            <div class="related-info">
-			    	                <svg class="related-svg" viewBox="{{ next.svg-box }}"><use xlink:href="#{{ next.title | slugify }}-brand" /></svg>
-			    	            </div>
-			    	        </a>
-				    	</div>
-				    {% endif %}
-				</section>
-			</div>
-
+			<section id="related-projects" class="project-footer project-grid">
+				<div data-aos="fade-up" class="related-projects-header">
+					<h2 class="related-projects-title">More Projects</h2>
+				</div>
+				<div class="related-projects-scroll">
+					<div class="related-projects-grid">
+						{% for project in projects %}
+							{% if forloop.index0 > current_index %}
+								{% include project-card.html %}
+							{% endif %}
+						{% endfor %}
+						{% for project in projects %}
+							{% if forloop.index0 < current_index %}
+								{% include project-card.html %}
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			</section>
 		</main>
+		<!--------------------------FOOTER-------------------------->
 		<div class="wrapper">
 			{% include footer.html %}
 		</div>

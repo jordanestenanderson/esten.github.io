@@ -1,0 +1,55 @@
+{% assign section_imagegrid_1 = include.section | append: "-" | append: include.subsection | append: "-imagegrid-1" %}
+{% assign section_imagegrid_1_alt = include.section | append: "-" | append: include.subsection | append: "-imagegrid-1-alt" %}
+{% assign section_imagegrid_2 = include.section | append: "-" | append: include.subsection | append: "-imagegrid-2" %}
+{% assign section_imagegrid_2_alt = include.section | append: "-" | append: include.subsection | append: "-imagegrid-2-alt" %}
+{% assign section_imagegrid_3 = include.section | append: "-" | append: include.subsection | append: "-imagegrid-3" %}
+{% assign section_imagegrid_3_alt = include.section | append: "-" | append: include.subsection | append: "-imagegrid-3-alt" %}
+{% assign section_imagegridrev_1 = include.section | append: "-" | append: include.subsection | append: "-imagegridrev-1" %}
+{% assign section_imagegridrev_1_alt = include.section | append: "-" | append: include.subsection | append: "-imagegridrev-1-alt" %}
+{% assign section_imagegridrev_2 = include.section | append: "-" | append: include.subsection | append: "-imagegridrev-2" %}
+{% assign section_imagegridrev_2_alt = include.section | append: "-" | append: include.subsection | append: "-imagegridrev-2-alt" %}
+{% assign section_imagegridrev_3 = include.section | append: "-" | append: include.subsection | append: "-imagegridrev-3" %}
+{% assign section_imagegridrev_3_alt = include.section | append: "-" | append: include.subsection | append: "-imagegridrev-3-alt" %}
+{% if page[section_imagegrid_1] or page[section_imagegrid_2] %}
+	<div data-aos="fade-up" class="imagegrid spaced project-streamfield wrapper">
+        <div class="imagegrid-wrapper flex-container">
+            {% if page[section_imagegrid_1] %}
+                <div class="imagegrid-image wide image-fit">
+                    <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegrid_1] }}" alt="{{ page[section_imagegrid_1_alt] }}">
+                </div>
+            {% endif %}
+            {% if page[section_imagegrid_2] and page[section_imagegrid_3] %}
+                <div class="imagegrid-row flex-container">
+                    <div class="imagegrid-image image-fit">
+                        <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegrid_2] }}" alt="{{ page[section_imagegrid_2_alt] }}">
+                    </div>
+                    <div class="imagegrid-image image-fit">
+                        <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegrid_3] }}" alt="{{ page[section_imagegrid_3_alt] }}">
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+	</div>
+{% endif %}
+{% if page[section_imagegridrev_1] or page[section_imagegridrev_2] %}
+	<div data-aos="fade-up" class="imagegrid spaced reverse project-streamfield wrapper">
+        <div class="imagegrid-wrapper flex-container">
+            {% if page[section_imagegridrev_1] %}
+                <div class="imagegrid-image wide image-fit">
+                    <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegridrev_1] }}" alt="{{ page[section_imagegridrev_1_alt] }}">
+                </div>
+            {% endif %}
+            {% if page[section_imagegridrev_2] and page[section_imagegridrev_3] %}
+                <div class="imagegrid-row flex-container">
+                    <div class="imagegrid-image image-fit">
+                        <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegridrev_2] }}" alt="{{ page[section_imagegridrev_2_alt] }}">
+                    </div>
+                    <div class="imagegrid-image image-fit">
+                        <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegridrev_3] }}" alt="{{ page[section_imagegridrev_3_alt] }}">
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+	</div>
+{% endif %}
+

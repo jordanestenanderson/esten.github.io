@@ -1,32 +1,56 @@
 //Wrapper
-$wrapper: 1800px;
-$s-wrapper: 1200px;
+$wrapper-l: 1800px;
+$wrapper-m: 1200px;
+$wrapper-s: 800px;
 
 //Breakpoints
-$m-breakpoint: 992px;
-$l-breakpoint: 1300px;
+$breakpoint-s: 992px;
+$breakpoint-m: 1300px;
+$breakpoint-l: 1896px;
 
 //Space
+$spacehalf: 4px;
 $space: 8px;
-$xs-space: $space * 2;
-$s-space: $space * 3;
-$r-space: $space * 4;
-$m-space: $space * 6;
-$l-space: $space * 12;
-$xl-space: $space * 24;
+$spaceplus: 12px;
+$space-xxxs: $space * 2;
+$space-xxs: $space * 3;
+$space-xs: $space * 4;
+$space-s: $space * 5;
+$space-m: $space * 6;
+$space-l: $space * 9;
+$space-xl: $space * 12;
+$space-xxl: $space * 16;
+$space-xxxl: $space * 24;
 
 //Color
-$grey: #f1f1f1;
-$darkgrey: #585858;
-$black: #1b1b1b;
-$white: #ffffff;
+$white: #FBFBF9;
+$neutral-100: #F8F7F2;
+$neutral-200: #F0EEE7;
+$neutral-300: #DFDBCE;
+$neutral-400: #A3A097;
+$neutral-500: #67645B;
+$neutral-600: #544F42;
+$neutral-700: #413A2B;
+$neutral-800: #2B271E;
+$neutral-900: #1F1D18;
+$black: #0E0D0B;
 
 //Opacity
 $opacity: 0.4;
 
-//Styles
-$padding: 18px;
+//Fixed Sizes
 $header-height: 52px;
-$border-radius: 16px;
-$border-radius-s: 12px;
-$border-radius-xs: 8px;
+$sidebar-width: 116.633px;
+
+//Border Radius
+$radius-m: 12px;
+$radius-m: 8px;
+$radius-s: 4px;
+
+//Wrap Padding
+$wrap-padding-s: 16px;
+$wrap-padding-s-dub: $wrap-padding-s * 2;
+$wrap-padding-m: 32px;
+$wrap-padding-m-dub: $wrap-padding-m * 2;
+$wrap-padding-l: 48px;
+$wrap-padding-l-dub: $wrap-padding-l * 2;

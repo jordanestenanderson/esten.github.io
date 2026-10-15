@@ -1,0 +1,34 @@
+{% assign section_takeaways_1_title = include.section | append: "-" | append: include.subsection | append: "-takeaways-1-title" %}
+{% assign section_takeaways_1_description = include.section | append: "-" | append: include.subsection | append: "-takeaways-1-description" %}
+{% assign section_takeaways_2_title = include.section | append: "-" | append: include.subsection | append: "-takeaways-2-title" %}
+{% assign section_takeaways_2_description = include.section | append: "-" | append: include.subsection | append: "-takeaways-2-description" %}
+{% assign section_takeaways_3_title = include.section | append: "-" | append: include.subsection | append: "-takeaways-3-title" %}
+{% assign section_takeaways_3_description = include.section | append: "-" | append: include.subsection | append: "-takeaways-3-description" %}
+{% if page[section_takeaways_1_title] and page[section_takeaways_2_title] and page[section_takeaways_3_title] %}
+	<div data-aos="fade-up" class="takeaways-streamfield project-streamfield wrapper">
+		<div class="takeaway-card wide">
+			<div class="takeaway-card-content">
+				<h4>{{ page[section_takeaways_1_title] }}</h4>
+				{% if page[section_takeaways_1_description] %}
+					<p>{{ page[section_takeaways_1_description] }}</p>
+				{% endif %}
+			</div>
+		</div>
+		<div class="takeaway-card square">
+			<div class="takeaway-card-content">
+				<h4>{{ page[section_takeaways_2_title] }}</h4>
+				{% if page[section_takeaways_2_description] %}
+					<p>{{ page[section_takeaways_2_description] }}</p>
+				{% endif %}
+			</div>
+		</div>
+		<div class="takeaway-card square">
+			<div class="takeaway-card-content">
+				<h4>{{ page[section_takeaways_3_title] }}</h4>
+				{% if page[section_takeaways_3_description] %}
+					<p>{{ page[section_takeaways_3_description] }}</p>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endif %}

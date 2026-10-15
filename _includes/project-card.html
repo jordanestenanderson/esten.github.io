@@ -1,0 +1,41 @@
+<a href="{{ site.baseurl }}{{ project.url }}" data-aos="fade-up" class="flex-container loader-link project-card {{ project.title | slugify }}-card" data-hue="#{{ project.hex-1 }}" style="fill:#{{ project.hex-1 }};">
+    {% if project.device contains "desktop" or project.device == "desktop" %}
+        {% if project.hero-desktop %}
+            <div class="project-graphic desktop-app" style="background-color:#{{ project.hex-2 }};">
+                <div class="project-graphic-overlay"></div>
+                <div class="project-graphic-inner">
+                    <img src="{{ site.baseurl }}/assets/portfolio/{{ project.title | slugify }}/{{ project.hero-desktop }}" alt="{{ project.hero-desktop-alt }}">
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+    {% if project.device contains "mobile" or project.device == "mobile" %}
+        {% if project.hero-mobile-1 and project.hero-mobile-2 and project.hero-mobile-3 %}
+            <div class="project-graphic mobile-app" style="background-color:#{{ project.hex-2 }};">
+                <div class="project-graphic-overlay"></div>
+                <div class="project-graphic-inner">
+                    <img src="{{ site.baseurl }}/assets/portfolio/{{ project.title | slugify }}/{{ project.hero-mobile-1 }}" alt="{{ project.hero-mobile-1-alt }}">
+                    <img src="{{ site.baseurl }}/assets/portfolio/{{ project.title | slugify }}/{{ project.hero-mobile-2 }}" alt="{{ project.hero-mobile-2-alt }}">
+                    <img src="{{ site.baseurl }}/assets/portfolio/{{ project.title | slugify }}/{{ project.hero-mobile-3 }}" alt="{{ project.hero-mobile-3-alt }}">
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+    <div class="project-info">
+        <div class="project-info-header flex-container flex-between align-center">
+            <svg class="project-svg {{ project.product | slugify }}-brand" viewBox="{{ project.svg-box }}">
+                <use xlink:href="#{{ project.title | slugify }}-brand" />
+            </svg>
+            <p class="meta-title">
+                {{ project.type }}, {% if project.start-year %}'{{ project.start-year }}{% endif %}{% if project.end-year %} – '{{ project.end-year }}{% endif %}</p>
+        </div>
+        <div class="project-info-content">
+            <p class="meta-title">{{ project.product }}</p>
+            <h2>
+                {{ project.title }}
+                {% include arrow.html %}
+            </h2>
+            <p class="project-description">{{ project.meta-description }}</p>
+        </div>
+    </div>
+</a>

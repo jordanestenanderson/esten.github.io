@@ -1,22 +1,20 @@
-html, header nav .brand-change .brand-animation svg, html.js .burger-wrap {
-    background:#1b1b1b;
-}
+@use "variables";
+@use "mixin";
+
 html {
+    background:variables.$white;
 	overflow-x:hidden;
 }
-html.open {
-	overflow:hidden;
-}
-.wrapper, .overlay-contents {
-	max-width:$wrapper;
+.wrapper, .overlay-contents, .project-container, .project-head-image, .related-projects-header {
+	max-width:variables.$wrapper-l;
 	margin: 0 auto;
 	position: relative;
+	padding:0 variables.$wrap-padding-l;
 }
-.wrapper, .overlay-contents {
-	padding:0 $m-space;
-	@include transition(350ms);
+.wrapper, .overlay-contents, .project-container, .related-projects-header {
+	@include mixin.transition(350ms);
 	&.s-wrapper {
-		max-width:$s-wrapper;
+		max-width:variables.$wrapper-m;
 	}
 }
 .flex-container {
@@ -62,6 +60,13 @@ html.open {
 		flex-basis: 0;
 	}
 }
+img {
+	border-radius: variables.$radius-m;
+	width:100%;
+	&.shadow {
+		@include mixin.shadow(rgba(0,0,0,0.12));
+	}
+}
 .image-fit {
 	overflow: hidden;
 	position:relative;
@@ -73,6 +78,10 @@ html.open {
 		object-position: right;
 		object-fit: contain;
 	}
+	&.fit-center img {
+		object-position: center;
+		object-fit: contain;
+	}
 	img {
 		object-fit: cover;
 		position:absolute;
@@ -80,22 +89,131 @@ html.open {
 		height: 100%;
 	}
 }
-footer {
-	margin: $l-space auto;
-	.footer-social {
-		a {
-			padding:0 $space;
+.project-svg {
+	height: 24px;
+	&.north-one-brand {
+		height: 26px;
+	}
+	&.back-n-forth-brand {
+		height: 24px;
+	}
+	&.collect-brand {
+		height: 30px;
+	}
+	&.solesavy-brand {
+		height: 24px;
+	}
+	&.commonwealth-walkway-brand {
+		height: 22px;
+	}
+}
+.project-footer .project-svg {
+	height: 20px;
+	&.north-one-brand {
+		height: 22px;
+	}
+	&.back-n-forth-brand {
+		height: 20px;
+	}
+	&.collect-brand {
+		height: 24px;
+	}
+	&.solesavy-brand {
+		height: 20px;
+	}
+	&.commonwealth-walkway-brand {
+		height: 18px;
+	}
+}
+.company-svg {
+	width: variables.$space-m;
+	height: variables.$space-m;
+	svg {
+		border-radius: variables.$spacehalf;
+		width: variables.$space-m;
+		height: auto;
+	}
+	&.esten {
+		margin-top:variables.$space;
+		svg {
+			background: variables.$black;
+		}
+	}
+	&.back-n-forth {
+		svg {
+			background: #2C2D30;
+		}
+	}
+	&.sole-savy {
+		svg {
+			background: #0D0D0D;
+		}
+	}
+	&.lift-interactive {
+		svg {
+			background: #1C50E7;
+		}
+	}
+	&.macewan {
+		svg {
+			background: #860931;
 		}
 	}
 }
-@media only screen and (max-width:$m-breakpoint) {
-	.wrapper, .overlay-contents {
-		padding:0 $s-space;
+.indent {
+	margin-left: 72px;
+}
+.desktop-drop {
+	display: none;
+}
+footer {
+	margin: variables.$space-l auto variables.$space-m auto;
+}
+@media only screen and (max-width:variables.$breakpoint-m) {
+	.wrapper, .overlay-contents, .project-container, .project-head-image, .related-projects-header {
+		padding:0 variables.$wrap-padding-m;
+	}
+}
+@media only screen and (max-width:variables.$breakpoint-s) {
+	.wrapper, .overlay-contents, .related-projects-header {
+		padding:0 variables.$wrap-padding-s;
+	}
+	.project-container, .project-head-image {
+		padding:0;
 	}
 	.flex-container.tablet-vertical {
 		flex-direction: column;
 	}
-	.tablet-sm-padding {
-		padding: $xs-space 0;
+	.desktop-drop {
+		display: inline-block;
+	}
+	.mobile-drop {
+		display: none;
+	}
+	.project-svg {
+		height: 20px;
+		&.north-one-brand {
+			height: 22px;
+		}
+		&.back-n-forth-brand {
+			height: 20px;
+		}
+		&.collect-brand {
+			height: 26px;
+		}
+		&.solesavy-brand {
+			height: 20px;
+		}
+		&.commonwealth-walkway-brand {
+			height: 18px;
+		}
+	}
+	.company-svg {
+		svg {
+			width: variables.$space-m;
+		}
+	}
+	footer {
+		margin: variables.$space-m auto variables.$space-xs auto;
 	}
 }

@@ -1,15 +1,15 @@
 ---
 layout: project
 order: 9
-metatitle: Hone ✕ Esten.co
-metadescription: An all-in-one solution that helps companies develop their leaders, no matter where they are.
+meta-title: Hone ✕ Esten.co
+meta-description: An all-in-one solution that helps companies develop their leaders, no matter where they are.
 device: desktop
 title: Hone
 headline: Leadership development tools for modern distributed teams
 hyperlink: https://honehq.com/
 hex: "EF4A81"
 hex2: "ffabc6"
-agency: Lift Interactive
+employer: Lift Interactive
 type: Website
 role: Strategy
 role2: Design

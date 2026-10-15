@@ -1,0 +1,27 @@
+{% assign section_inlineimg_1 = include.section | append: "-" | append: include.subsection | append: "-inlineimg-1" %}
+{% assign section_inlineimg_1_alt = include.section | append: "-" | append: include.subsection | append: "-inlineimg-1-alt" %}
+{% assign section_inlineimgcontain_1 = include.section | append: "-" | append: include.subsection | append: "-inlineimgcontain-1" %}
+{% assign section_inlineimgcontain_1_alt = include.section | append: "-" | append: include.subsection | append: "-inlineimgcontain-1-alt" %}
+{% assign section_inlinesmall_1 = include.section | append: "-" | append: include.subsection | append: "-inlinesmall-1" %}
+{% assign section_inlinesmall_1_alt = include.section | append: "-" | append: include.subsection | append: "-inlinesmall-1-alt" %}
+{% if page[section_inlinesmall_1] %}
+	<div data-aos="fade-up" class="imagegrid project-streamfield wrapper">
+        <div class="imagegrid-wrapper flex-container">
+            <div class="imagegrid-image wide image-fit">
+                <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_inlinesmall_1] }}" alt="{{ page[section_inlinesmall_1_alt] }}">
+            </div>
+        </div>
+	</div>
+{% endif %}
+{% if page[section_inlineimg_1] or page[section_inlineimgcontain_1] %}
+<div data-aos="fade-up" class="inlineimg-streamfield {% if page[section_inlineimgcontain_1] %}contain {% endif %}project-streamfield wrapper">
+	{% if page[section_inlineimg_1] %}
+		<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_inlineimg_1] }}" alt="{{ page[section_inlineimg_1_alt] }}">
+	{% endif %}
+	{% if page[section_inlineimgcontain_1] %}
+		<div class="containimg" style="background:#{{ page.hex-2 }};">
+			<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_inlineimgcontain_1] }}" alt="{{ page[section_inlineimgcontain_1_alt] }}">
+		</div>
+	{% endif %}
+</div>
+{% endif %}

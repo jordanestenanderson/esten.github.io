@@ -1,15 +1,15 @@
 ---
 layout: project
 order: 10
-metatitle: Amaze Media Labs ✕ Esten.co
-metadescription: Connecting the world's leading brands with engaged audiences through branded podcasts, live stream content and immersive experiences
-metaimg: amaze-meta.jpg
+meta-title: Amaze Media Labs ✕ Esten.co
+meta-description: Connecting the world's leading brands with engaged audiences through branded podcasts, live stream content and immersive experiences
+meta-img: amaze-meta.jpg
 device: desktop
 title: Amaze Media Labs
 headline: Amazing stories, connected brands, passionate communities
 hex: "365694"
 hex2: "afc5ef"
-agency: Lift Interactive
+employer: Lift Interactive
 type: Website
 role: Strategy
 role2: Design

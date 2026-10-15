@@ -1,16 +1,16 @@
 ---
 layout: project
 order: 9
-metatitle: Jireh Industries ✕ Esten.co
-metadescription: Designers and manufacturers of scanners that assist with testing in the oil & gas, power generation, and aerospace industries
-metaimg: jireh-meta.jpg
+meta-title: Jireh Industries ✕ Esten.co
+meta-description: Designers and manufacturers of scanners that assist with testing in the oil & gas, power generation, and aerospace industries
+meta-img: jireh-meta.jpg
 device: desktop
 title: Jireh Industries
 headline: Industry leading scanners designed for industrial application
 hyperlink: https://www.jireh.com/
 hex: "b01316"
 hex2: "faa8aa"
-agency: Lift Interactive
+employer: Lift Interactive
 type: E-Commerce
 role: Strategy
 role2: Design

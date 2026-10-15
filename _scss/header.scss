@@ -1,36 +1,79 @@
+@use "variables";
+@use "mixin";
+
 header {
   position:sticky;
-  width: 100%;
+  max-width:variables.$wrapper-l;
+	margin: 0 auto;
   top: 0;
-  z-index: 1;
-  height: $header-height;
-  .brand-animation {
-    height: $header-height;
-    display: inline-block;
+  z-index: 3;
+  padding:0 variables.$wrap-padding-l;
+  height: variables.$header-height;
+  .brand {
+    .brand-animation {
+      height: variables.$header-height;
+      display: inline-block;
+      .brand-wrapper {
+        background:variables.$white;
+        padding: variables.$space-xxxs;
+        margin-left: -(variables.$space-xxxs);
+        @include mixin.transition(350ms);
+        svg {
+          height:variables.$space-xxxs;
+        }
+      }
+    }
   }
 }
 .burger {
   display: none;
 }
 html.js .burger-wrap {
-  padding:16px;
-  width: 20px;
-  height: 20px;
-  margin-left: auto;
-  cursor: pointer;
   .burger {
+    background:variables.$white;
+    width: 20px;
+    height: 20px;
     display: block;
     position: relative;
+    padding: variables.$space-xxxs;
+    margin-left: auto;
+    margin-right:-(variables.$space-xxxs);
     line-height: 0;
     margin-top:-1px;
-    @include transition(350ms);
-    svg line {
-      stroke: $white;
-      stroke-width: 12px;
-      fill:none;
+    svg {
+      @include mixin.transition(350ms);
+      line {
+        stroke: variables.$black;
+        stroke-width: 12px;
+        fill:none;
+      }
     }
     &.open {
-      @include rotate(45deg);
+      svg {
+        @include mixin.rotate(45deg);
+      }
+    }
+  }
+}
+@media only screen and (max-width:variables.$breakpoint-m) {
+  header {
+    padding:0 variables.$wrap-padding-m;
+  }
+}
+@media only screen and (max-width:variables.$breakpoint-s) {
+	header {
+		padding:0;
+    .brand {
+      .brand-animation {
+        .brand-wrapper {
+          margin-left: 0px;
+        }
+      }
+    }
+	}
+  html.js .burger-wrap {
+    .burger {
+      margin-right: 0px;
     }
   }
 }

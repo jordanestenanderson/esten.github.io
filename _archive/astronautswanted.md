@@ -1,15 +1,15 @@
 ---
 layout: project
 order: 8
-metatitle: Astronauts Wanted ✕ Esten.co
-metadescription: A youth content development and production company dedicated to challenging tradition.
+meta-title: Astronauts Wanted ✕ Esten.co
+meta-description: A youth content development and production company dedicated to challenging tradition.
 device: desktop
 title: Astronauts Wanted
 headline: Creators of untraditional media targeted at generation X
 <!-- hyperlink: -->
 hex: "6B5278"
 hex2: "b899c7"
-agency: Lift Interactive
+employer: Lift Interactive
 type: Website
 role: Design
 bug: astro-bug.png

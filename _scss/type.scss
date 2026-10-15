@@ -1,3 +1,6 @@
+@use "variables";
+@use "mixin";
+
 // SF UI Text
 @font-face {
   font-family: 'SFUIText';
@@ -37,25 +40,39 @@
 }
 html {
   font-family: "SFUIText", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: $white;
+  color: variables.$neutral-500;
   font-weight: 400;
   font-size:16px;
   line-height: 1.4;
 }
 h1 {
   font-family: "SFUIDisplay", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: variables.$black;
   font-weight: 600;
   font-size: 3.25rem;
   line-height: 1.2;
   letter-spacing: 0.2px;
-  margin: $xs-space 0;
+  margin: variables.$space-xxxs 0;
 }
 h2 {
   font-family: "SFUIDisplay", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size:  2.125rem;
+  color: variables.$black;
+  font-size:  2rem;
   line-height: 1.2;
   letter-spacing: 0.2px;
-  margin: $xs-space 0;
+  margin: variables.$space-xxxs 0;
+}
+h3 {
+  font-family: "SFUIDisplay", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: variables.$black;
+  font-size:  1.5rem;
+  margin: variables.$space-xxxs 0;
+}
+h4 {
+  font-family: "SFUIDisplay", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  color: variables.$black;
+  font-size: 1.2rem;
+  margin: variables.$space-xxxs 0;
 }
 .meta-title {
   font-family: "SFUIDisplay", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -65,32 +82,35 @@ h2 {
   text-transform:uppercase;
   span {
     padding:0 4px;
-    opacity: $opacity;
+    opacity: variables.$opacity;
+  }
+  &.spaced {
+    margin-bottom: variables.$space-xxxs;
+  }
+  &.space-xsd {
+    margin-bottom: variables.$space-xxxs;
   }
   &.hero {
     font-weight: 600;
     font-size: 0.875rem;
   }
 }
+.content-wrapper h4 {
+  margin-top:variables.$space-s;
+  margin-bottom: variables.$spaceplus;
+  &:first-of-type {
+    margin-top:variables.$space-xs;
+  }
+}
 p {
   font-size: 1.125rem;
-  margin: $xs-space 0;
-}
-blockquote {
-  .blockquote-bug {
-    display:block;
-    width: 32px;
-    margin-bottom:$xs-space;
-    height:auto;
-    path {
-      fill:$white;
-    }
+  margin: variables.$space-xxxs 0;
+  b, strong, .hyperlink {
+    color: variables.$black;
   }
-  margin-left: 0;
-  font-size: 1.125rem;
-  font-style: italic;
-  position:relative;
-  margin: $xs-space 0;
+  .hyperlink:hover {
+    color: variables.$neutral-500;
+  }
 }
 .desktop-alignright {
   text-align: right;
@@ -105,11 +125,11 @@ ul {
   list-style: none;
 }
 a {
-  @include transition(350ms);
-  color: $white;
+  @include mixin.transition(350ms);
+  color: variables.$neutral-600;
   text-decoration: none;
   svg.white-icon path {
-    fill:$white;
+    fill:variables.$black;
   }
   &.underlined {
     background-image: linear-gradient(currentColor, currentColor);
@@ -128,90 +148,110 @@ a {
     opacity: 0.65;
   }
 }
-.btn-sml, .btn-disabled {
+.inline-btn {
+  &.no-bottom-margin {
+    margin-bottom:0px;
+  }
+  &.spaced {
+    margin-top: variables.$space-s;
+  }
+  &.spaced-m {
+    margin-top: variables.$space-m;
+  }
+  &.first {
+    padding-right: variables.$space-s;
+    width: 144px;
+  }
+}
+.icon-link {
   font-weight: 500;
   font-size: 1.125rem;
-  text-transform:uppercase;
+  padding: variables.$space 0;
   position:relative;
-  padding-bottom:4px;
-  display: inline-block;
-  border-color: inherit;
-  overflow: hidden;
-  @include transition(350ms);
+  display: flex;
+  gap: variables.$spaceplus;
+  @include mixin.transition(350ms);
+  &.black {
+    fill: variables.$black;
+  }
+  &.no-bottom-margin {
+    padding-bottom: 0px;
+  }
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: inherit;
+    stroke-width: 6px;
+    overflow: visible;
+    @include mixin.transition(350ms);
+    path {
+      fill: inherit;
+    }
+  }
+  &:hover {
+    color: variables.$black;
+    gap: variables.$space;
+  }
+  &.no-bottom-margin {
+    margin-bottom: 0px;
+  }
 }
-
-.btn-sml:before, .btn-sml:after, .btn-disabled:before, .btn-disabled:after {
-    width: 100%;
-    border-bottom:2px solid;
-    border-color: inherit;
-    display: block;
-    content: '';
-    -webkit-transition:  transform .4s ease-in-out, border-color 350ms ease-out 600ms;
-    -moz-transition:    transform .4s ease-in-out, border-color 350ms ease-out 600ms;
-    -o-transition:    transform .4s ease-in-out, border-color 350ms ease-out 600ms;
-    transition:       transform .4s ease-in-out, border-color 350ms ease-out 600ms;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    -webkit-transition-delay: .5s;
-    -o-transition-delay: .5s;
-    transition-delay: .5s;
-}
-.btn-sml:before, .btn-disabled:before {
-    -moz-transform: translate(-101%,0);
-    -o-transform: translate(-101%,0);
-    -ms-transform: translate(-101%,0);
-    -webkit-transform: translate(-101%,0);
-    transform: translate(-101%,0);
-    -webkit-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
-}
-.btn-sml:hover:before {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    -moz-transform: translate(0,0);
-    -o-transform: translate(0,0);
-    -ms-transform: translate(0,0);
-    -webkit-transform: translate(0,0);
-    transform: translate(0,0);
-    -webkit-transition-delay: .5s;
-    -o-transition-delay: .5s;
-    transition-delay: .5s;
-}
-.btn-sml:hover:after {
-    -moz-transform: translate(101%,0);
-    -o-transform: translate(101%,0);
-    -ms-transform: translate(101%,0);
-    -webkit-transform: translate(101%,0);
-    transform: translate(101%,0);
-    -webkit-transition-delay: 0s;
-    -o-transition-delay: 0s;
-    transition-delay: 0s;
+.icon-link.button {
+    font-weight: 500;
+    font-size: 1.125rem;
+    padding: variables.$space variables.$spaceplus;
+    position:relative;
+    border-radius:variables.$radius-s;
+    background: variables.$black;
+    border: 1px solid variables.$black;
+    color: variables.$white;
+    svg {
+      width:20px;
+      height: auto;
+      path {
+        fill:#fff;
+      }
+    }
 }
 svg {
-  fill: $white;
-}
-.brand svg {
-  height:$xs-space;
-  padding:$padding;
+  fill: variables.$black;
 }
 ::-moz-selection {
-  color: $black;
-  background: rgba(255,255,255,0.99);
+  color: variables.$white;
+  background: rgba(0,0,0,0.99);
 }
 ::selection {
-  color: $black; 
-  background: rgba(255,255,255,0.99);
+  color: variables.$white; 
+  background: rgba(0,0,0,0.99);
 }
-@media only screen and (max-width:$m-breakpoint) {
+@media only screen and (max-width:variables.$breakpoint-m) {
+	h1 {
+    font-size:2.8rem;
+  }
+}
+@media only screen and (max-width:variables.$breakpoint-s) {
   h1 {
     font-size:2rem;
   }
   h2 {
     font-size:1.35rem;
   }
-  p, li, blockquote {
+  h3 {
+    font-size:  1.2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+
+
+  .content-wrapper h4 {
+    margin-top:variables.$space-xs;
+    margin-bottom: variables.$space;
+    &:first-of-type {
+      margin-top:28px;
+    }
+  }
+  p, li {
     font-size:1rem;
   }
   .meta-title {
@@ -223,7 +263,22 @@ svg {
   .tablet-aligncenter {
     text-align: center;
   }
-  .btn-sml, .btn-disabled {
+  .inline-btn {
+    &.spaced-m {
+      margin-top: variables.$space-s;
+    }
+    &.first {
+      padding-right: variables.$space-xxs;
+      width: 120px;
+    }
+  }
+  .icon-link {
     font-size: 1rem;
+    padding-top: 0px;
+    svg {
+      width: variables.$spaceplus;
+      height: variables.$spaceplus;
+    }
   }
 }
+

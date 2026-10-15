@@ -1,77 +1,147 @@
-#project-hero {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height:calc(100vh - 52px);
-	max-height:1100px;
-	min-height: 800px;
-}
-.project-meta, .project-visual {
-	width:50%;
-	.project-metainner, .project-visualinner {
-	  	img {
-	  		width:100%;
-	  		border-radius: $border-radius;
-	  		@include shadow(rgba(0,0,0,0.12));
-	  	}
-	}
-	&.mobile-app {
-		.project-metainner, .project-visualinner {
-			.app-flex {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
+@use "variables";
+
+.project {
+	.flex-container {
+		.project-sidebar {
+			position: sticky;
+			z-index: 1;
+			top:0;
+			flex-shrink: 0;
+			width: variables.$sidebar-width;
+			height: 100vh;
+			.project-navigation {
+				top: variables.$space-xxl;
+				height: auto;
+				background: variables.$white;
+				position: relative;
+				padding:variables.$space-xxxs;
+				padding-left:0px;
+				.project-navigation-item {
+					padding-bottom: variables.$space;
+					&:last-child {
+						padding-bottom: 0px;
+					}
+				.project-navigation-link {
+						color: variables.$neutral-400;
+						font-weight: 500;
+						font-size: 1.2rem;
+						&.active {
+							color: variables.$black;
+						}
+						&:hover {
+							color: variables.$black;
+						}
+					}
+				}
 			}
-		  	img {
-		  		width:calc(33.33333333% - 16px);
-		  	}
+		}
+		.project-body {
+			flex-grow: 1;
 		}
 	}
 }
 .project-meta {
-	.project-intro {
-		max-width: 85%;
-	}
-	.project-detail {
-		text-transform:uppercase;
-		.meta-title {
-			color: $white;
+	padding: variables.$space-l 0 variables.$space-m 0;
+	.project-titlebar {
+		justify-content: space-between;
+		align-items: flex-end;
+		.project-title {
+			.meta-title {
+				margin: variables.$space-xs 0 0 0;
+			}
+			.title {
+				margin-top: variables.$space;
+			}
+			.project-intro {
+				max-width: variables.$wrapper-s;
+				margin-bottom: 0;
+			}
 		}
-		.detail-item {
-			text-transform:initial;
-			display:block;
+		.project-links {
+			flex-shrink: 0;
+			margin-left: variables.$space-m;
+			.project-link {
+				margin: 0;
+			}
 		}
 	}
-	.project-link {
-		margin-top: 22px;
+}
+.header-banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: variables.$radius-m;
+	.project-visual {
+		max-width:1400px;
+		.project-visualinner {
+			img {
+				margin: variables.$space-l variables.$space-xs;
+				width:calc(100% - 64px);
+			}
+		}
+		&.mobile-app {
+			.project-visualinner {
+				.app-flex {
+					margin: variables.$space-l variables.$space-xs;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+				img {
+					width:calc(33.33333333% - 21.33333333px);
+					margin: 0px;
+					&:nth-child(2) {
+						margin: 0 variables.$space-xs;
+					}
+				}
+			}
+		}
 	}
 }
 
-@media only screen and (max-width:$l-breakpoint) {
-	#project-hero {
-		display: block;
-		height:auto;
-		max-height:100%;
-		min-height:0px;
-	}
-	.project-meta, .project-visual {
-		width:100%;
-		margin-bottom: $l-space;
-		.project-metainner {
-			padding-top: calc(#{$l-space} - #{$r-space});
-			margin-bottom: $l-space;
-		}
-	}
-	.project-meta {
-		.project-intro {
-			max-width: 65%;
-		}
+@media only screen and (max-width:variables.$breakpoint-m) {
+	.project-sidebar {
+		display: none;
 	}
 }
-@media only screen and (max-width:$m-breakpoint) {
+@media only screen and (max-width:variables.$breakpoint-s) {
 	.project-meta {
-		.project-intro {
-			max-width: 100%;
+		padding: variables.$space-m 0 variables.$space 0;
+		.project-titlebar {
+			display:block;
+			.project-title {
+				.project-intro {
+				}
+			}
+			.project-links {
+				margin-left: 0;
+				margin-top: variables.$space-xxxs;
+			}
+		}
+	}
+	.header-banner {
+		border-radius: 0px;
+		.project-visual {
+			max-width:900px;
+			.project-visualinner {
+				img {
+					margin: variables.$space-s variables.$space-xxxs;
+					width:calc(100% - 32px);
+				}
+			}
+			&.mobile-app {
+				.project-visualinner {
+					.app-flex {
+						margin: variables.$space-s variables.$space-xxxs;
+					}
+					img {
+						width:calc(33.33333333% - 10.66666667px);
+						&:nth-child(2) {
+							margin: 0 variables.$space-xxxs;
+						}
+					}
+				}
+			}
 		}
 	}
 }

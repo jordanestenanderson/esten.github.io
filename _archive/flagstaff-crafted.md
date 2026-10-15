@@ -1,16 +1,16 @@
 ---
 layout: project
 order: 8
-metatitle: Flagstaff Crafted ✕ Esten.co
-metadescription: A platform that enhances the exposure of makers, artisans, and retailers of local products
-metaimg: flagstaff-meta.jpg
+meta-title: Flagstaff Crafted ✕ Esten.co
+meta-description: A platform that enhances the exposure of makers, artisans, and retailers of local products
+meta-img: flagstaff-meta.jpg
 device: desktop
 title: Flagstaff Crafted
 headline: Supporting makers, artisans and retailers of local products
 hyperlink: https://www.flagstaffcrafted.ca/
 hex: "7CA7AE"
 hex2: "c3e5ea"
-agency: Lift Interactive
+employer: Lift Interactive
 type: Networking Platform
 role: Strategy
 role2: Design

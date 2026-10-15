@@ -1,32 +1,51 @@
-#project-content {
-	.project-streamfield {
-		margin: $xl-space auto;
-		&:first-child {
-			margin-top: 0px;
-		}
-		&:last-child {
-			margin-bottom: $l-space;
+@use "variables";
+@use "mixin";
+
+.project-body {
+	.project-section {
+		margin: variables.$space-xxl auto;
+		.project-streamfield {
+			margin: variables.$space-xs auto;
 		}
 	}
 }
-@media only screen and (max-width:$m-breakpoint) {
-	#project-content {
-		.project-streamfield {
-			margin: $l-space auto;
+@media only screen and (max-width:variables.$breakpoint-s) {
+	.project-body {
+		.project-section {
+			margin: variables.$space-m auto;
+			.project-streamfield {
+				margin: variables.$space-xxxs auto;
+			}
 		}
 	}
 }
 /*********BIG IMAGE STREAMFIELD*********/
-.bigimage-streamfield {
+.project-body .project-section .project-streamfield.bigimage-streamfield {
+	margin-top: variables.$space-xxl;
 	.image-bleed {
 		height:90vh;
 		max-height:850px;
+		border-radius: variables.$radius-m;
+		width: calc(100% + variables.$sidebar-width);
+		left: -(variables.$sidebar-width);
 	}
 }
-@media only screen and (max-width:$m-breakpoint) {
-	.bigimage-streamfield {
+@media only screen and (max-width:variables.$breakpoint-m) {
+	.project-body .project-section .project-streamfield.bigimage-streamfield {
+		.image-bleed {
+			width: 100%;
+			left: 0;
+		}
+	}
+}
+@media only screen and (max-width:variables.$breakpoint-s) {
+	.project-body .project-section .project-streamfield.bigimage-streamfield {
+		margin-top: variables.$space-m;
 		.image-bleed {
 			height:300px;
+			width: 100%;
+			left: 0px;
+			border-radius: 0px;
 		}
 	}
 }
@@ -35,82 +54,124 @@
 	img {
 		width:100%;
 		height:auto;
-		border-radius: $border-radius;
+		border-radius: variables.$radius-m;
+	}
+	&.contain {
+		.containimg {
+			border-radius: variables.$radius-m;
+			padding: variables.$space-xs;
+			img {
+				border-radius: 0px;
+			}
+		}
+	}
+}
+@media only screen and (max-width:variables.$breakpoint-m) {
+	.inlineimg-streamfield {
+		&.contain {
+			.containimg {
+				padding: variables.$space-xxs;
+			}
+		}
+	}
+}
+@media only screen and (max-width:variables.$breakpoint-s) {
+	.inlineimg-streamfield {
+		&.contain {
+			.containimg {
+				padding: variables.$space-xxxs;
+			}
+		}
+	}
+}
+/*********IMAGE GRID STREAMFIELD*********/
+.project-body .project-section .project-streamfield.imagegrid {
+	.imagegrid-wrapper {
+		max-width: variables.$wrapper-s;
+		margin: 0 auto;
+		flex-direction: column;
+		gap: variables.$space-xxs;
+		.imagegrid-image {
+			width:100%;
+			&.wide {
+				aspect-ratio: 2 / 1;
+			}
+		}
+		.imagegrid-row {
+			gap: variables.$space-xxs;
+			width: 100%;
+			.imagegrid-image {
+				aspect-ratio: 1 / 1;
+			}
+		}
+	}
+	&.reverse {
+		.imagegrid-wrapper {
+			flex-direction: column-reverse;
+			.imagegrid-row {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+	&.spaced {
+		margin-top: variables.$space-xxl;
+	}
+}
+@media only screen and (max-width:variables.$breakpoint-s) {
+	.project-body .project-section .project-streamfield.imagegrid {
+		margin-top: variables.$space-m;
+		.imagegrid-wrapper {
+			max-width: 100%;
+			gap: variables.$space-xxxs;
+			.imagegrid-row {
+				gap: variables.$space-xxxs;
+			}
+		}
+		&.spaced {
+			margin-top: variables.$space-m;
+		}
 	}
 }
 /*********CONTENT STREAMFIELD*********/
 .content-streamfield {
 	.content-wrapper {
-		max-width:800px;
+		max-width: variables.$wrapper-s;
 		width: 100%;
 		margin:0 auto;
-	}
-}
-/*********SCREENS STREAMFIELD*********/
-.screens-streamfield {
-	.flex-container {
-		margin-top:$r-space;
-		margin-bottom:$r-space;
-		width:100%;
-		height:auto;
-	}
-	.desktop-screen {
-		height: 640px;
-		border-radius: $border-radius;
-		@include shadow(rgba(0,0,0,0.12));
-		img {
-			position:relative;
-			object-position: top;
+		.detail-item {
+			display:block;
 		}
-		&.center-screen {
-			@include scale(1.18);
-			margin-top: 5px;
-			z-index: 1;
+		iframe {
+			display:block;
+			width: 100%;
+			aspect-ratio: 16 / 9;
+			height: auto;
+			border-radius: variables.$radius-m;
+			overflow: hidden;
+			&.with-description {
+				margin-top:variables.$space-xxs;
+			}
 		}
 	}
 }
-@media only screen and (max-width:$l-breakpoint) {
-	.screens-streamfield {
-		.desktop-screen {
-			height: 480px;
-			border-radius: $border-radius-s;
+@media only screen and (max-width:variables.$breakpoint-s) {
+	.content-streamfield {
+		.content-wrapper {
+			max-width:100%;
+			iframe {
+				&.with-description {
+					margin-top:variables.$space-xxxs;
+				}
+			}
 		}
 	}
-}
-@media only screen and (max-width:$m-breakpoint) {
-	.screens-streamfield {
-		.flex-container {
-			width:600px;
-			min-width:600px;
-			left:50%;
-			margin-left:-300px;
-		}
-		.desktop-screen {
-			height: 300px;
-			border-radius: $border-radius-xs;
-		}
-	}
-	// .screens-streamfield {
-	// 	img {
-	// 		width:auto;
-	// 		height: 350px;
-	// 		position:absolute;
-	// 	  	left: 50%;
-	// 	  	transform: translateX(-50%);
-	// 	}
-	// }
 }
 /*********APP STREAMFIELD*********/
 .app-streamfield {
 	flex-wrap: wrap;
 	.app-image {
 		width: calc(25% - 37.5px);
-		img {
-			border-radius: $border-radius;
-			width:100%;
-			@include shadow(rgba(0,0,0,0.12));
-		}
-		&:nth-child(5), &:nth-child(6), , &:nth-child(7), , &:nth-child(8) {
+		&:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9), &:nth-child(10), &:nth-child(11), &:nth-child(12) {
 			padding-top: 50px;
 		}
 	}
@@ -118,38 +179,30 @@
 .desktopapp-streamfield {
 	flex-wrap: wrap;
 	.desktopapp-image {
-		width: calc(50% - 25px);
+		width: calc(50% - variables.$space-xxxs);
 		img {
-			border-radius: $border-radius;
-			width:100%;
-			@include shadow(rgba(0,0,0,0.12));
-			margin-bottom:50px;
+			margin-top: variables.$space-xxs;
 		}
-		&:nth-child(5) {
+		&:nth-child(1), &:nth-child(2) {
 			img {
-				margin-bottom:0px;
-			}
-		}
-		&:nth-child(6) {
-			img {
-				margin-bottom:0px;
+				margin-top:0px;
 			}
 		}
 	}
 }
-@media only screen and (max-width:$m-breakpoint) {
+@media only screen and (max-width:variables.$breakpoint-s) {
 	.screens-streamfield {
 		overflow-x: hidden;
 	}
 	.app-streamfield {
 	  	flex-wrap: wrap;
 		.app-image {
-			width: calc(50% - 10px);
+			width: calc(50% - variables.$space);
 			&:nth-child(1), &:nth-child(2) {
-				padding-bottom:20px;
+				padding-bottom: variables.$spaceplus;
 			}
 			&:nth-child(5), &:nth-child(6), , &:nth-child(7), , &:nth-child(8) {
-				padding-top: 20px;
+				padding-top: variables.$spaceplus;
 			}
 		}
 	}
@@ -157,17 +210,61 @@
 		.desktopapp-image {
 			width: 100%;
 			img {
-				margin-bottom:$r-space;
+				margin-top:variables.$spaceplus;
 			}
-			&:nth-child(5) {
+			&:nth-child(2) {
 				img {
-					margin-bottom:$r-space;
+					margin-top:variables.$spaceplus;
 				}
 			}
-			&:nth-child(6) {
-				img {
-					margin-bottom:$r-space;
-				}
+		}
+	}
+}
+/*********TAKEAWAYS STREAMFIELD*********/
+.takeaways-streamfield {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	gap: 24px;
+	.takeaway-card {
+		background: #fff;
+		border-radius: variables.$radius-m;
+		padding: 24px;
+		display: flex;
+		align-items: flex-end;
+		box-sizing: border-box;
+		@include mixin.shadow(rgba(0,0,0,0.12));
+		h4 {
+			margin: 0 0 16px;
+		}
+		p {
+			margin: 0;
+		}
+		&.square {
+			aspect-ratio: 1 / 1;
+		}
+	}
+}
+@media only screen and (max-width:variables.$breakpoint-m) {
+	.takeaways-streamfield {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+		.takeaway-card {
+			padding: 24px;
+			&.wide {
+				grid-column: 1 / -1;
+			}
+		}
+	}
+}
+@media only screen and (max-width:variables.$breakpoint-s) {
+	.takeaways-streamfield {
+		grid-template-columns: 1fr;
+		gap: 16px;
+		.takeaway-card {
+			padding: 16px;
+			&.wide {
+				aspect-ratio: 1 / 1;
+				grid-column: auto;
 			}
 		}
 	}

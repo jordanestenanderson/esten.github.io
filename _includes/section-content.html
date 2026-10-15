@@ -1,0 +1,93 @@
+{% assign section_title = include.section | append: "-" | append: include.subsection | append: "-title" %}
+{% assign section_description_1 = include.section | append: "-" | append: include.subsection | append: "-description-1" %}
+{% assign section_description_1_title = include.section | append: "-" | append: include.subsection | append: "-description-1-title" %}
+{% assign section_iframe_1 = include.section | append: "-" | append: include.subsection | append: "-iframe-1" %}
+{% assign section_description_2 = include.section | append: "-" | append: include.subsection | append: "-description-2" %}
+{% assign section_description_2_title = include.section | append: "-" | append: include.subsection | append: "-description-2-title" %}
+{% assign section_description_3 = include.section | append: "-" | append: include.subsection | append: "-description-3" %}
+{% assign section_description_3_title = include.section | append: "-" | append: include.subsection | append: "-description-3-title" %}
+{% assign section_description_4 = include.section | append: "-" | append: include.subsection | append: "-description-4" %}
+{% assign section_description_4_title = include.section | append: "-" | append: include.subsection | append: "-description-4-title" %}
+{% assign section_description_5 = include.section | append: "-" | append: include.subsection | append: "-description-5" %}
+{% assign section_description_5_title = include.section | append: "-" | append: include.subsection | append: "-description-5-title" %}
+{% assign section_link_text = include.section | append: "-" | append: include.subsection | append: "-link-text" %}
+{% assign section_link_url = include.section | append: "-" | append: include.subsection | append: "-link-url" %}
+{% assign section_outro_link = include.section | append: "-" | append: include.subsection | append: "-outro-link" %}
+{% if page[section_title] or page[section_description_1] or page[section_description_2] or page[section_description_3] or page[section_description_4] or page[section_description_5] %}
+	<div data-aos="fade-up" class="active-section content-streamfield project-streamfield wrapper flex-container align-center">
+		<div class="content-wrapper">
+			{% if page[section_title] %}
+				<h2>{{ page[section_title] }}</h2>
+			{% endif %}
+			{% if page[section_description_1] %}
+				{% if page[section_description_1_title] %}
+					<h4 class="with-description">{{ page[section_description_1_title] }}</h4>
+				{% endif %}
+				<p class="{% if page[section_description_1_title] %}with-title{% endif %}">
+					{{ page[section_description_1] }}
+				</p>
+			{% endif %}
+			{% if page[section_iframe_1] %}
+				<iframe src="{{ page[section_iframe_1] }}" width="670" height="372" frameborder="0" allowfullscreen scrolling="no" {% if page[section_description_1] or page[section_description_2]  %} class="with-description" {% endif %}></iframe>
+			{% endif %}
+			{% if page[section_description_2] %}
+				{% if page[section_description_2_title] %}
+					<h4 class="with-description">{{ page[section_description_2_title] }}</h4>
+				{% endif %}
+				<p class="{% if page[section_description_2_title] %}with-title{% endif %}">
+					{{ page[section_description_2] }}
+				</p>
+			{% endif %}
+			{% if page[section_description_3] %}
+				{% if page[section_description_3_title] %}
+					<h4 class="with-description">{{ page[section_description_3_title] }}</h4>
+				{% endif %}
+				<p class="{% if page[section_description_3_title] %}with-title{% endif %}">
+					{{ page[section_description_3] }}
+				</p>
+			{% endif %}
+			{% if page[section_description_4] %}
+				{% if page[section_description_4_title] %}
+					<h4 class="with-description">{{ page[section_description_4_title] }}</h4>
+				{% endif %}
+				<p class="{% if page[section_description_4_title] %}with-title{% endif %}">
+					{{ page[section_description_4] }}
+				</p>
+			{% endif %}
+			{% if page[section_description_5] %}
+				{% if page[section_description_5_title] %}
+					<h4 class="with-description">{{ page[section_description_5_title] }}</h4>
+				{% endif %}
+				<p class="{% if page[section_description_5_title] %}with-title{% endif %}">
+					{{ page[section_description_5] }}
+				</p>
+			{% endif %}
+			{% if page[section_link_text] and page[section_link_url] %}
+				<p class="project-link">
+					<a href="{{ page[section_link_url] }}" target="_blank" class="icon-link" style="fill:#{{ page.hex-1 }};">
+						{{ page[section_link_text] }}
+						{% include arrow.html %}
+					</a>
+				</p>
+			{% endif %}
+			{% if page.hyperlink and page[section_outro_link] == "Visible"  %}			
+				{% if page.device contains "desktop" or page.device == "desktop" %}
+					<p class="project-link">
+						<a href="{{ page.hyperlink }}" target="_blank" class="icon-link" style="fill:#{{ page.hex-1 }};">
+							Launch the app
+							{% include arrow.html %}
+						</a>
+					</p>
+				{% endif %}
+				{% if page.device contains "mobile" or page.device == "mobile" %}
+					<p class="project-link">
+						<a href="{{ page.hyperlink }}" target="_blank" class="icon-link" style="fill:#{{ page.hex-1 }};">
+							The App Store
+							{% include arrow.html %}
+						</a>
+					</p>
+				{% endif %}
+			{% endif %}
+		</div>
+	</div>
+{% endif %}
