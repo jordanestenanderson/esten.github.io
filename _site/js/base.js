@@ -1,24 +1,28 @@
 var hueHistory = ['#0E0D0B'];
 
-$(".burger-wrap").click(function(){
+$(".burger-wrap").click(function() {
   $("html, .overlay, .burger").toggleClass("open");
 });
 
 function BaseJS() {
-	$(document).on("click",".loader-link",function() {
-        var hex = $(this).data('hue');
-        hueHistory.push(hex);
-		console.log(hueHistory);
-        $("#wipe, .loader").css({background:hex});
-	});
+  $(document).on("click", ".loader-link", function() {
+    var hex = $(this).data('hue');
+    hueHistory.push(hex);
+    console.log(hueHistory);
+    $("#wipe, .loader").css({ background: hex });
+  });
 
-	AOS.init({
-	  	duration: 1000,
-	    easing: 'ease-out-quad',
-	    once: true,
-	})
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-out-quad',
+    once: true,
+  });
 
-	document.getElementById("year").innerHTML = new Date().getFullYear();
+  const year = document.getElementById("year");
+
+  if (year) {
+    year.innerHTML = new Date().getFullYear();
+  }
 
   function initScrollSpy() {
     const sections = document.querySelectorAll("#project-content .active-section");
@@ -47,13 +51,14 @@ function BaseJS() {
 
     sections.forEach((section) => observer.observe(section));
   }
+
   initScrollSpy();
 
   document.querySelectorAll('.smooth-scroll').forEach(link => {
     link.addEventListener('click', (e) => {
       const targetId = link.getAttribute('href');
 
-      // ignore external links or empty anchors
+      // Ignore external links or empty anchors
       if (!targetId || !targetId.startsWith('#')) return;
 
       const target = document.querySelector(targetId);
@@ -70,52 +75,54 @@ function BaseJS() {
 
   const relatedProjects = document.querySelector('.related-projects-grid');
 
-  let isDragging = false;
-  let hasDragged = false;
-  let startX = 0;
-  let scrollLeft = 0;
+  if (relatedProjects) {
+    let isDragging = false;
+    let hasDragged = false;
+    let startX = 0;
+    let scrollLeft = 0;
 
-  relatedProjects.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    hasDragged = false;
-    startX = e.pageX;
-    scrollLeft = relatedProjects.scrollLeft;
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-
-    const distance = e.pageX - startX;
-
-    if (Math.abs(distance) > 5) {
-      hasDragged = true;
-      relatedProjects.classList.add('is-dragging');
-    }
-
-    if (hasDragged) {
-      e.preventDefault();
-      relatedProjects.scrollLeft = scrollLeft - (distance * 1.5);
-    }
-  });
-
-  document.addEventListener('mouseup', () => {
-    if (!isDragging) return;
-
-    isDragging = false;
-    relatedProjects.classList.remove('is-dragging');
-  });
-
-  relatedProjects.addEventListener('click', (e) => {
-    if (hasDragged) {
-      e.preventDefault();
-      e.stopPropagation();
+    relatedProjects.addEventListener('mousedown', (e) => {
+      isDragging = true;
       hasDragged = false;
-    }
-  }, true);
+      startX = e.pageX;
+      scrollLeft = relatedProjects.scrollLeft;
+    });
 
-  relatedProjects.addEventListener('dragstart', (e) => {
-    e.preventDefault();
-  });
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
 
+      const distance = e.pageX - startX;
+
+      if (Math.abs(distance) > 5) {
+        hasDragged = true;
+        relatedProjects.classList.add('is-dragging');
+      }
+
+      if (hasDragged) {
+        e.preventDefault();
+        relatedProjects.scrollLeft = scrollLeft - (distance * 1.5);
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      if (!isDragging) return;
+
+      isDragging = false;
+      relatedProjects.classList.remove('is-dragging');
+    });
+
+    relatedProjects.addEventListener('click', (e) => {
+      if (hasDragged) {
+        e.preventDefault();
+        e.stopPropagation();
+        hasDragged = false;
+      }
+    }, true);
+
+    relatedProjects.addEventListener('dragstart', (e) => {
+      e.preventDefault();
+    });
+  }
 }
+
 BaseJS();
