@@ -73,16 +73,14 @@ section-5-1-inlinesmall-1-alt: Wireframes from the Commonwealth Walkway app desi
 
 section-5-2-description-1-title: Introducing the experience
 section-5-2-description-1: Particularly for users who discovered the experience through signage in the river valley, we needed to quickly earn their attention, briefly explain the concept, and get them into the app before they lost interest. Our solution was a concise onboarding flow that communicated the core idea — follow the route and discover the stories.
-section-5-2-inlineimgcontain-1: commonwealth-userflow.png
-section-5-2-inlineimgcontain-1-alt: User flow map for the Commonwealth Walkway mobile app
 section-5-2-mobileimg-1: commonwealth-walkthrough-1.jpg
-section-5-2-mobileimg-1-alt: Screenshot from the Commonwealth Walkway app of the river road map location screen
+section-5-2-mobileimg-1-alt: Screenshot from the Commonwealth Walkway app of the onboarding welcome screen
 section-5-2-mobileimg-2: commonwealth-walkthrough-2.jpg
-section-5-2-mobileimg-2-alt: Screenshot from the Commonwealth Walkway app of the river road indigenous storyline screen
+section-5-2-mobileimg-2-alt: Screenshot from the Commonwealth Walkway app of the navigate the path onboarding screen
 section-5-2-mobileimg-3: commonwealth-walkthrough-3.jpg
-section-5-2-mobileimg-3-alt: Screenshot from the Commonwealth Walkway app of the Papaschase Band story screen
+section-5-2-mobileimg-3-alt: Screenshot from the Commonwealth Walkway app of the learn the history onboarding screen
 section-5-2-mobileimg-4: commonwealth-walkthrough-4.jpg
-section-5-2-mobileimg-4-alt: Screenshot from the Commonwealth Walkway app of the share the story screen
+section-5-2-mobileimg-4-alt: Screenshot from the Commonwealth Walkway app of the find the key onboarding screen
 
 section-5-3-description-1-title: Navigation and geofencing
 section-5-3-description-1: The map was built with Google's API, using the medallion coordinates to highlight the route. As users moved along the path, geofencing automatically triggered the relevant story content — no tapping required.
@@ -90,21 +88,21 @@ section-5-3-description-2: By responding to where users were, we made discovery 
 section-5-3-mobileimg-1: commonwealth-generic-1.jpg
 section-5-3-mobileimg-1-alt: Screenshot from the Commonwealth Walkway app of the map screen
 section-5-3-mobileimg-2: commonwealth-generic-2.jpg
-section-5-3-mobileimg-2-alt: Screenshot from the Commonwealth Walkway app of a story triggered by geofencing
+section-5-3-mobileimg-2-alt: Screenshot from the Commonwealth Walkway app of the map screen dragged up to reveal stories
 section-5-3-mobileimg-3: commonwealth-generic-3.jpg
-section-5-3-mobileimg-3-alt: Screenshot from the Commonwealth Walkway app of the Papaschase Band story screen
+section-5-3-mobileimg-3-alt: Screenshot from the Commonwealth Walkway app of the River Road medallion screen
 section-5-3-mobileimg-4: commonwealth-generic-4.jpg
-section-5-3-mobileimg-4-alt: Screenshot from the Commonwealth Walkway app of the share the story screen
+section-5-3-mobileimg-4-alt: Screenshot from the Commonwealth Walkway app of the Edmontonsaurus story screen
 
 section-5-4-description-1-title: Storylines
 section-5-4-description-1: We also gave users the option to explore stories by storyline — thematic groupings that made it easier to find content based on their interests while also bringing more structure and organisation to the experience.
 section-5-4-description-2: Each story followed a consistent article structure built from reusable content blocks, giving the Commonwealth Walkway Trust the flexibility to add text, images, video, and audio directly through the content management system.
 section-5-4-mobileimg-1: commonwealth-story-1.jpg
-section-5-4-mobileimg-1-alt: Screenshot from the Commonwealth Walkway app of the storylines screen
+section-5-4-mobileimg-1-alt: Screenshot from the Commonwealth Walkway app of the family storyline screen
 section-5-4-mobileimg-2: commonwealth-story-2.jpg
-section-5-4-mobileimg-2-alt: Screenshot from the Commonwealth Walkway app of the indigenous storyline screen
+section-5-4-mobileimg-2-alt: Screenshot from the Commonwealth Walkway app of the family storyline while looking at a medallion screen
 section-5-4-mobileimg-3: commonwealth-story-3.jpg
-section-5-4-mobileimg-3-alt: Screenshot from the Commonwealth Walkway app of the Papaschase Band story screen
+section-5-4-mobileimg-3-alt: Screenshot from the Commonwealth Walkway app of the Bombs Away story screen
 section-5-4-mobileimg-4: commonwealth-story-4.jpg
 section-5-4-mobileimg-4-alt: Screenshot from the Commonwealth Walkway app of a story article scrolled down
 

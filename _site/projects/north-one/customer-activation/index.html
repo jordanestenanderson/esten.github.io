@@ -188,10 +188,10 @@
 												<h2>Overview</h2>
 											
 											
-												<p>As covered in the <a href="/projects/north-one/sign-up-flow/" class="loader-link hyperlink" data-hue="#55CE98" style="text-decoration:underline;">sign up flow</a>, once we stopped requiring users to fund their account, we had to figure out how to activate them further downstream. At that point, we had a passive mix of in-app notifications and email sequences encouraging users to fund their account. However, once those were dismissed, users were left on an empty dashboard with no guidance.</p>
+												<p>As covered in the <a href="/projects/north-one/sign-up-flow/" class="loader-link hyperlink" data-hue="#55CE98" style="text-decoration:underline;">sign up flow</a> — once we removed the funding requirement, we needed to find a way to activate users further downstream. At that point, we had a passive sequence of in-app notifications, but users were left with little guidance once those were dismissed.</p>
 											
 											
-												<p>Our data showed how important it was to activate users early — waiting increased the risk of churn. With that in mind, a small team and I spent a week in Toronto ideating, designing, and releasing a solution that could improve the user experience and activation rates.</p>
+												<p>Our data showed that activating users early reduced the risk of churn. So with that in mind, a small team and I spent a week together in Toronto ideating, designing, and releasing a solution aimed at improving activation rates.</p>
 											
 											
 											
@@ -416,7 +416,7 @@
 					<h4 class="with-description">Competitive analysis</h4>
 				
 				<p class="with-title">
-					We started by looking at direct competitors, along with comparable fintech products facing the same activation challenge. A clear pattern emerged — the strongest examples used monetary incentives, guided onboarding, persistent checklists, or a combination of the three. Most importantly, they made the next action obvious every time a user opened the app.
+					We started by looking at competitors and comparable fintech products facing the same activation challenge. A clear pattern emerged — the best examples used monetary incentives, guided onboarding, persistent checklists, or a combination of the three. Most importantly, they made the next action obvious every time a user opened the app.
 				</p>
 			
 			
@@ -425,14 +425,9 @@
 					<h4 class="with-description">Data analysis</h4>
 				
 				<p class="with-title">
-					Our data team played an important role in mapping the transaction patterns of users who became active versus those who churned early. Their findings gave us a clear path forward — users who reached six transactions became reliably active customers. Below that threshold, churn risk was significantly higher.
+					By mapping the transaction patterns of users who became active versus those who churned early, we found that users who reached six transactions were far more likely to become reliable active customers. Those transactions weren't random either, they clustered around three tangible milestones we could design for — funding the account, making a card transaction, and connecting third-party integrations.
 				</p>
 			
-			
-				
-				<p class="">
-					Those six transactions weren't random either. They clustered around three tangible milestones we could design for — funding the account, making a card transaction, and connecting third-party integrations.
-				</p>
 			
 			
 			
@@ -561,7 +556,7 @@
 			
 				
 				<p class="">
-					Based on our research, we agreed to move forward with both an initial guided experience and a persistent checklist. The guided experience would surface the highest-priority activation actions immediately, while the checklist would track progress over time. Given our tight timeline, ideation needed to move fast — we each started by sketching our own concepts, then came together to present them and vote on the ideas that worked best.
+					Based on our research, we agreed to move forward with a guided experience and a persistent checklist. The guided experience would surface the highest-priority activation actions first, while the checklist would track progress over time. Given our tight timeline, ideation needed to move fast — we each started by sketching our own concepts, then came together to present them and vote on the ideas that worked best.
 				</p>
 			
 			
@@ -570,7 +565,7 @@
 					<h4 class="with-description">Prioritization</h4>
 				
 				<p class="with-title">
-					Our first iteration would focus only on the three tangible milestones we uncovered — funding the account, making a card transaction, and connecting an integration. Everything else was either deferred until later in the lifecycle or added to the backlog for future consideration. With those priorities in place, we mapped out a user flow to define how users would move through the guided experience and into the persistent checklist.
+					Our first iteration focused only on the three tangible milestones uncovered in our research, while everything else went to the backlog. With those priorities in place, we began mapping the user flows to define exactly how users would move through the experience.
 				</p>
 			
 			
@@ -579,7 +574,7 @@
 					<h4 class="with-description">Motivation</h4>
 				
 				<p class="with-title">
-					Offering a monetary bonus like our competitors would have required a compliance process we didn't have time for. Our next best option was a free trial of North One Plus — putting more responsibility on our content to communicate the benefits of our premium membership. Another motivational lever our designs played with was the visual progress of moving a checklist from zero to complete.
+					Offering a monetary bonus like our competitors would have required a compliance process we didn’t have time for. So instead, we offered a free trial of North One Plus — putting more responsibility on our content to communicate the benefits of the upgraded plan.
 				</p>
 			
 			
@@ -723,7 +718,7 @@
 			
 				
 				<p class="">
-					With only two days to finish the design, prioritization was key. We started by using AI to prototype the flow — getting something functional in place first allowed us to experiment, make adjustments, and solidify the path forward.
+					With only two days to finish the design, we used AI to help us prototype the flow — creating something functional first allowed us to quickly experiment and solidify a path forward.
 				</p>
 			
 			
@@ -732,7 +727,7 @@
 					<h4 class="with-description">Guided experience</h4>
 				
 				<p class="with-title">
-					With the help of the design system, our high-fidelity designs came together quickly. We started with the guided experience — a focused step-by-step flow aimed at activating new users. Each step had a single focus, a clear framing of why it mattered, and a direct path to completing it. Since this was the first thing users saw after opening their account, we prioritized forward momentum. Even our skip actions were framed to reduce friction, reassuring users that they could always come back and complete the step later.
+					Starting with the guided experience, we designed a focused step-by-step flow aimed at activating new users. Each step had a single focus, clear framing, and a direct path to completion. Since this was the first thing users saw after opening their account, we prioritized forward momentum by giving them the option to skip steps while reassuring them that they could complete them later.
 				</p>
 			
 			
@@ -864,15 +859,10 @@
 					<h4 class="with-description">Set up screen</h4>
 				
 				<p class="with-title">
-					Once users complete the guided experience, they see a dynamic set up screen reflecting the progress they've just made. While we considered building this directly into the dashboard, we realized some users would still need the checklist after moving money through their account. Rather than fighting for priority on the dashboard, we gave them a convenient place to come back and pick up where they left off.
+					Once users completed the guided experience, they landed on a dynamic set up screen reflecting the progress they had just made. While we considered building this directly into the dashboard, we realized some users would still need the checklist after moving money through their account. Rather than fighting for priority on the dashboard, we created a new place where users could return and pick up where they left off.
 				</p>
 			
 			
-			
-				
-				<p class="">
-					The set up screen disappears once every task is complete. Users can either complete each task directly or choose to mark it as complete.
-				</p>
 			
 			
 			
@@ -979,7 +969,7 @@
 					<h4 class="with-description">Integrations</h4>
 				
 				<p class="with-title">
-					When thinking about the fastest ways to get a customer's money flowing into North One, payment processors, e-commerce platforms, and POS systems were top of our list. Not only were customers already using these platforms, but many had recurring cash flow we could tap into. In the first steps of the guided experience, we capture how customers get paid and which platforms they already use — so by the time they reach the set up screen, we can guide them straight toward connecting those platforms to North One.
+					While brainstorming the best ways to move customers’ money into North One, payment processors, e-commerce platforms, and POS systems rose to the top of our list. Not only were customers already using these platforms, but many had recurring cash flow we could tap into. In the guided experience, we captured how customers were getting paid, which meant we could now lead them directly toward connecting the platforms they already use.
 				</p>
 			
 			
@@ -1441,14 +1431,14 @@
 			
 				
 				<p class="">
-					Once our high-fidelity designs were complete and the developers had what they needed, our focus shifted toward user testing. Overall, our sessions validated the flow — users understood what they were being asked to do and why. But the more useful findings came from the moments where customers hesitated or showed signs of confusion.
+					Once the developers had what they needed, our focus shifted toward user testing. Overall, the testing validated our direction, but more importantly, it highlighted where customers hesitated or showed signs of confusion.
 				</p>
 			
 			
 			
 				
 				<p class="">
-					While the timeline didn't leave room for major changes in the first iteration, we built out a strong backlog and were still able to sneak in a few tweaks before launch.
+					While the timeline didn’t leave room for major changes in the first iteration, we made what improvements we could and began building out our backlog.
 				</p>
 			
 			
@@ -1594,7 +1584,7 @@
 			
 				
 				<p class="">
-					The zero state flow provided a reliable method for activating customers. Rather than relying on one-off prompts, we now had an experience that could evolve and introduce new milestones as we learned more about which behaviours drove long-term engagement.
+					The flow not only provided us with a more reliable method for activating customers, but it also gave us an experience that could evolve as we learned more about which behaviours drove long-term engagement.
 				</p>
 			
 			
