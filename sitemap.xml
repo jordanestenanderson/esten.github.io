@@ -6,47 +6,26 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://esten.co/</loc>
-    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://esten.co/projects/handful-of-films/</loc>
-    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
+    <loc>https://esten.co/projects/north-one/sign-up-flow/</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://esten.co/projects/hone/</loc>
-    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
+    <loc>https://esten.co/projects/north-one/customer-activation/</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://esten.co/projects/marmot-basin/</loc>
-    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
+    <loc>https://esten.co/projects/collect/buy-sell-trade-marketplace/</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://esten.co/projects/astronautswanted/</loc>
-    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
+    <loc>https://esten.co/projects/collect/sneaker-authentication/</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://esten.co/projects/jireh/</loc>
-    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://esten.co/projects/foosh/</loc>
-    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://esten.co/projects/commonwealth-walkway/</loc>
-    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://esten.co/projects/flagstaff-crafted/</loc>
-    <lastmod>2019-05-05T00:48:38+00:00</lastmod>
+    <loc>https://esten.co/projects/commonwealth-walkway/interactive-storytelling/</loc>
     <priority>0.80</priority>
   </url>
 </urlset>

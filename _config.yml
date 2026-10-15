@@ -1,16 +1,23 @@
-title:              Esten.co
-email:              jordan@esten.co
-description:        "Esten.co creates unique and impactful digital experiences across fintech, e-commerce, and consumer apps"
-url:                "http://esten.co/"
-# baseurl:            /main
-baseurl:
-image_path:         /public/images
-markdown:           kramdown
-permalink:          pretty
+title: Esten.co
+email: jordan@esten.co
+description: "Esten.co creates unique and impactful digital experiences across fintech, e-commerce, and consumer apps"
+
+url: "https://esten.co"
+baseurl: ""
+
+image_path: /public/images
+
+markdown: kramdown
+permalink: pretty
+
 collections:
   projects:
     output: true
     permalink: /projects/:path/
+
 sass:
-  sass_dir:         _scss
-  style:            :compressed
+  sass_dir: _scss
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
