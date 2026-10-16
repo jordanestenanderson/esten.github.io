@@ -2,11 +2,12 @@
 layout: project
 order: 3
 meta-title: Buy, sell, and trade sneakers — Collect
-meta-description: A marketplace for sneakerheads
+meta-description: An online marketplace designed for the SoleSavy community to buy, sell, and trade their sneaker collections.
 meta-img: collect-meta.jpg
 device: mobile
 product: Collect
-title: Buy, sell, and trade sneakers
+title: Sneaker marketplace
+card-description: An online space to buy, sell, and trade sneakers
 hex-1: "AF0D0F"
 hex-2: "FFEEEE"
 type: Mobile App
@@ -23,7 +24,7 @@ hero-banner-alt: A collage of two full-screen app screenshots as well as small h
 
 section-1-1-nav: Overview
 section-1-1-title: Overview
-section-1-1-description-1: Collect is a peer-to-peer marketplace built for the SoleSavy community — a place for them to buy, sell, and trade away from the price gouging that defines most resale platforms.
+section-1-1-description-1: Collect is a peer-to-peer marketplace built for the SoleSavy community — a place to buy, sell, and trade away from the price gouging that defines most resale platforms.
 section-1-1-description-2: While an agency was originally hired to design and build the Collect app, SoleSavy began building an internal team to take ownership of the platform once the initial build was complete. However, as our new team spent time familiarising ourselves with the project, we uncovered major gaps that led to a complete overhaul of the order flows, a delayed launch, and eventually a full redesign.
 employer: SoleSavy
 role: Senior Product Designer — Research, Ideation, Prototyping, User Testing, UI Design, Interaction Design

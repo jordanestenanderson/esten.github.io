@@ -2,11 +2,12 @@
 layout: project
 order: 1
 meta-title: Sign up flow — North One
-meta-description: Opening a business bank account
+meta-description: Rebuilding the North One sign up flow from the ground up — reducing friction, streamlining processes, and boosting conversions.
 meta-img: signup-meta.jpg
 device: desktop
 product: North One
-title: Sign up flow
+title: Neobank sign up flow
+card-description: Improving how customers apply a bank account
 hex-1: "09C080"
 hex-2: "EEFEE4"
 type: Web + Mobile App
@@ -19,7 +20,7 @@ hero-banner-alt: A collage of two app screenshots and a North One debit card. Th
 
 section-1-1-nav: Overview
 section-1-1-title: Overview
-section-1-1-description-1: North One was a neo-bank built for small business owners — a technology focused alternative to the friction and fees of traditional banking. When I joined the team, my first task was to audit the existing sign up flow and come back with recommendations.
+section-1-1-description-1: North One was a neobank built for small business owners — a technology focused alternative to the friction and fees of traditional banking. When I joined the team, my first task was to audit the existing sign up flow and come back with recommendations.
 section-1-1-description-2: What I found had been patched together over time with new decisions layered on top of old decisions, many no longer serving the product or the user. The audit led to a larger conversation and eventually a complete rebuild.
 employer: North One
 role: Senior Product Designer — Research, Ideation, Prototyping, User Testing, UI Design, Interaction Design  
@@ -33,7 +34,7 @@ section-2-1-description-1: Setting a strong first impression is an important par
 section-2-1-description-2-title: Starting fresh
 section-2-1-description-2: It was hard to make meaningful improvements on top of our tech debt — not only had the flow accumulated fields and logic that were no longer needed, but many steps lacked consistency with the current design system and each other. With the support of our development team, a decision was reached to rebuild the flow from scratch.
 section-2-1-description-3-title: Account funding
-section-2-1-description-3: While the decision was originally made to require funding during sign up, the analytics showed that this was where we were losing people. Expecting users to deposit their money before getting to experience the product was not realistic, especially from a neo-bank whose biggest differentiator is the technology backing its service.
+section-2-1-description-3: While the decision was originally made to require funding during sign up, the analytics showed that this was where we were losing people. Expecting users to deposit their money before getting to experience the product was not realistic, especially from a neobank whose biggest differentiator is the technology backing its service.
 section-2-1-description-4-title: Manual review
 section-2-1-description-4: About half of the users who signed up for North One were flagged for manual review, and our process felt like a punishment rather than a procedural step. Meanwhile, our trust and safety team was spending time on cases that could have been handled automatically.
 section-2-1-bustoutimage: signup-feature-2.png

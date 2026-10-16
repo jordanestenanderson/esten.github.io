@@ -2,11 +2,12 @@
 layout: project
 order: 5
 meta-title: Interactive storytelling — Commonwealth Walkway
-meta-description: Discover stories while exploring Edmonton
+meta-description: An interactive walking experience that surfaced stories based on where users moved through Edmonton’s river valley.
 meta-img: commonwealth-meta.jpg
 device: mobile
 product: Commonwealth Walkway
 title: Interactive storytelling
+card-description: Discover stories while exploring the river valley
 hex-1: "0B6C9D"
 hex-2: "E2F5FF"
 employer: Lift Interactive

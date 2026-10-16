@@ -1,15 +1,32 @@
-## Jekyll Build
+# Esten.co
 
-### Basic Usage (recommended)
-In one terminal, build the jekyll site, watching for any changes (run in site root directory)
+Personal product design portfolio built with Jekyll and hosted on GitHub Pages.
+
+## Running locally
+
+From the root of the project, install dependencies if needed
+
+```bash
+bundle install
 ```
-$  jekyll build --watch
+
+Start the local development server
+
+```bash
+bundle exec jekyll serve --livereload
 ```
-In another terminal, start a local server (run in site root directory)
+
+Then open
+
+```text
+http://localhost:4000
 ```
-$  jekyll serve --livereload
-```
-View the site in your browser at
-```
-localhost:4000
+
+## Clean rebuild
+
+If generated files appear stale or something is behaving unexpectedly, stop the server and run
+
+```bash
+bundle exec jekyll clean
+bundle exec jekyll serve --livereload
 ```

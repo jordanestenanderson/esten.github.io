@@ -2,11 +2,12 @@
 layout: project
 order: 2
 meta-title: Customer activation — North One
-meta-description: Onboarding aimed at activating new users
+meta-description: An onboarding experience designed to activate new customers by guiding them toward behaviours that drove long-term engagement.
 meta-img: zerostate-meta.jpg
 device: desktop
 product: North One
-title: Customer activation
+title: Neobank onboarding flow
+card-description: Improving customer activation and reducing churn
 hex-1: "09C080"
 hex-2: "EEFEE4"
 type: Web + Mobile App

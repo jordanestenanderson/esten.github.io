@@ -2,11 +2,12 @@
 layout: project
 order: 4
 meta-title: Sneaker authentication — Collect
-meta-description: Partnering with a digital authentication service
+meta-description: Partnering with Legitmark to bring authentication into Collect — reducing the risk of counterfeits, and creating a new revenue stream.
 meta-img: authentication-meta.jpg
 device: mobile
 product: Collect
 title: Sneaker authentication
+card-description: Integrating with a digital authentication platform
 hex-1: "AF0D0F"
 hex-2: "FFEEEE"
 type: Mobile App

@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <url>
-    <loc>https://esten.co/</loc>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://esten.co/projects/north-one/sign-up-flow/</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://esten.co/projects/north-one/customer-activation/</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://esten.co/projects/collect/buy-sell-trade-marketplace/</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://esten.co/projects/collect/sneaker-authentication/</loc>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://esten.co/projects/commonwealth-walkway/interactive-storytelling/</loc>
-    <priority>0.80</priority>
-  </url>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/projects/collect/sneaker-authentication/</loc>
+<lastmod>2026-10-16T11:52:31-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/projects/collect/sneaker-marketplace/</loc>
+<lastmod>2026-10-16T11:52:31-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/projects/commonwealth-walkway/interactive-storytelling/</loc>
+<lastmod>2026-10-16T11:52:31-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/projects/north-one/neobank-onboarding-flow/</loc>
+<lastmod>2026-10-16T11:52:31-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/projects/north-one/neobank-sign-up-flow/</loc>
+<lastmod>2026-10-16T11:52:31-07:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/assets/main/JordanAnderson-Resume.pdf</loc>
+<lastmod>2026-10-14T21:12:52-07:00</lastmod>
+</url>
 </urlset>
