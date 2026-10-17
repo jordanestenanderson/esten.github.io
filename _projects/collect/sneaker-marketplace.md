@@ -24,8 +24,8 @@ hero-banner-alt: A collage of two full-screen app screenshots as well as small h
 
 section-1-1-nav: Overview
 section-1-1-title: Overview
-section-1-1-description-1: Collect is a peer-to-peer marketplace built for the SoleSavy community — a place to buy, sell, and trade away from the price gouging that defines most resale platforms.
-section-1-1-description-2: While an agency was originally hired to design and build the Collect app, SoleSavy began building an internal team to take ownership of the platform once the initial build was complete. However, as our new team spent time familiarising ourselves with the project, we uncovered major gaps that led to a complete overhaul of the order flows, a delayed launch, and eventually a full redesign.
+section-1-1-description-1: Collect is a peer-to-peer marketplace built for the SoleSavy community — a place to buy, sell, and trade without the price gouging that defines most resale platforms.
+section-1-1-description-2: While an agency was originally hired to design and build the Collect app, a few months later SoleSavy began hiring an internal team to take ownership of the platform. As we familiarised ourselves with the project, we uncovered major gaps that led to an overhaul of the order flows, a delayed launch, and eventually a full redesign.
 employer: SoleSavy
 role: Senior Product Designer — Research, Ideation, Prototyping, User Testing, UI Design, Interaction Design
 timeline: Q3 2021 — Q2 2022
@@ -34,38 +34,37 @@ section-1-1-inlinesmall-1-alt: Image of a sneakerhead using the Collect mobile a
 
 section-2-1-nav: Context
 section-2-1-title: Context
-section-2-1-description-1: SoleSavy built a large community around sneaker culture — its members wanted an alternative to the problems they saw in the resale market. Collect was designed to give that community a new place to buy, sell, and trade their collections, with no bots and no anonymous resellers.
-section-2-1-description-2: But with the launch date already on the community's radar, we had little time to turn what the agency built into something we felt comfortable releasing. Beyond missing order states, every transaction used the same generic e-commerce templates intended for one-way purchases.
-section-2-1-description-3: To properly support two-way exchanges, we needed new templates that could clearly communicate shipments and payments on either side of a transaction. Those weren't gaps we could leave for a future iteration — they were trust problems waiting to happen.
+section-2-1-description-1: SoleSavy built its community around sneaker culture — members wanted an alternative to the problems they saw in the resale market. Collect was designed as a place for them to buy, sell, and trade their collections, away from bots and anonymous resellers.
+section-2-1-description-2: We had little time to turn what the agency built into something we felt confident releasing. Beyond missing order states, every transaction type used the same generic e-commerce templates intended for one-way purchases.
+section-2-1-description-3: To support two-way exchanges, we needed custom templates that could clearly communicate shipments and payments on both sides of a transaction. Those weren't gaps we could leave for a future iteration, they were trust problems waiting to happen.
 section-2-1-bustoutimage: collect-feature-2.jpg
 section-2-1-bustoutimage-alt: Screenshot grid of various screens from the Collect mobile app
 
 section-3-1-nav: Research
 section-3-1-title: Research
 section-3-1-description-1-title: Competitive analysis
-section-3-1-description-1: While neither StockX nor GOAT supported two-way exchanges, we looked at them first because they were the platforms our users were most familiar with. Researching Tradeblock next, another two-way trading platform, gave us the clearest example of the order states, shipping logistics, and dispute scenarios we needed to consider.
+section-3-1-description-1: While StockX and GOAT are not true trading platforms, we looked at them first because they set the standard for what our customers knew and expected. But Tradeblock gave us the clearest picture of what logistics a trading platform needed to consider.
 section-3-1-description-2-title: Community input
-section-3-1-description-2: We were building Collect for an existing community, so getting their buy-in was critical to our success. So we invited a group of members to form a focus group that could provide feedback on behalf of the community, vote on decisions that would shape the app, and beta test the platform ahead of the public launch.
+section-3-1-description-2: Getting community buy-in was critical to our success — we invited a group of members to form a focus group that could give feedback on behalf of the community, vote on decisions, and beta test the platform ahead of the public launch.
 section-3-1-description-3-title: Order status audit
-section-3-1-description-3: Using what we had already learned, we created a comprehensive list of every state an order could enter, along with the conditions required to trigger it. With that shared understanding of how an order moves through its lifecycle, we had the foundation needed to move into ideation and begin mapping our order flows.
+section-3-1-description-3: We then created a comprehensive list of every possible order status and the conditions that triggered each one. With that shared understanding, we had the foundation needed to start defining how orders would work on Collect.
 section-3-1-inlineimg-1: collect-orderstatus-1.jpg
 section-3-1-inlineimg-1-alt: Order status audit document listing every possible status an order can end up in and which status category it belongs to
 
 section-4-1-nav: Ideation
 section-4-1-title: Ideation
 section-4-1-description-1-title: Order flows
-section-4-1-description-1: We didn't want to deviate too far from familiar e-commerce patterns for one-way purchases, but supporting two-way exchanges required us to rethink parts of the experience on both sides. With little precedent to follow, we took our time determining what information each party needed to see across every possible scenario.
+section-4-1-description-1: We didn't deviate from familiar e-commerce patterns unless necessary, but supporting two-way exchanges required us to rethink how orders worked. With little precedent to follow, we took our time determining what information each party needed across every scenario.
 section-4-1-description-2-title: Policy playbook
-section-4-1-description-2: We also needed to develop a policy playbook. Our CX team needed clear guidance on how to handle each scenario, and we needed those decisions before we could finalise the order flows. After drafting an initial version, we brought it to leadership and other stakeholders to review, refine, and align on how each situation should be handled.
+section-4-1-description-2: Our CX team also needed clear guidance on how to handle every scenario, which led us to develop a policy playbook. After drafting an initial version, we brought in other stakeholders to review, refine, and align on our company policies.
 section-4-1-inlineimg-1: collect-orderflow-1.jpg
 section-4-1-inlineimg-1-alt: Order status map for the Collect mobile app documenting the flow of each type of order
 
 section-5-1-nav: Design
 section-5-1-title: Design
-section-5-1-description-1: With part of the design work already completed by the agency, we started by identifying what we could keep. From there, we spent the next few weeks rebuilding both existing and new screens alongside the beginnings of what would become our design system. What you see throughout this case study reflects the final designs — the result of two years of user interviews, A/B testing, and iteration rather than what we shipped on day one.
-section-5-1-description-2-title: Sign up for SoleSavy
-section-5-1-description-2: We wanted members to use the same login credentials across every SoleSavy platform, but since we also saw Collect as a marketing tool for attracting new members, we needed a way to let people in without requiring a paid membership. This eventually led us to introduce a new free membership tier, alongside a broader overhaul of our platforms that introduced paywalls and fees at key conversion areas.
-section-5-1-description-3: Our initial launch only supported existing members, but alongside the rollout of the free tier, we released a new version of Collect that opened the platform to everyone. This became an important growth channel for SoleSavy — new users generated revenue through transaction fees, while fee-free trading and exposure to our other products gave us opportunities to convert them into paid members.
+section-5-1-description-1-title: Sign up for SoleSavy
+section-5-1-description-1: We also saw Collect as a marketing tool for attracting new members, but that meant letting people in without a paid membership. This eventually led us to introduce a new free membership tier, alongside paywalls and transaction fees.
+section-5-1-description-2: This became an important growth channel — free tier users were generating revenue and we had a clear path to convert them into paid community members.
 section-5-1-mobileimg-1: collect-screen-1.jpg
 section-5-1-mobileimg-1-alt: Screenshot from the Collect app sign up flow of the welcome screen
 section-5-1-mobileimg-2: collect-screen-2.jpg
@@ -84,8 +83,8 @@ section-5-1-mobileimg-8: collect-screen-8.jpg
 section-5-1-mobileimg-8-alt: Screenshot from the Collect app sign up flow of the enable notifications screen
 
 section-5-2-description-1-title: Shopping for sneakers
-section-5-2-description-1: We kept most of the shopping experience that the agency designed — for the launch, we only made minor tweaks to bring each screen in line with the brand guidelines and the design system we were building.
-section-5-2-description-2: Post-launch, the experience evolved through analytics, user interviews, A/B testing, and the addition of the filter feature — improving how users discover listings as well as the language and layout used on those listings.
+section-5-2-description-1: We only made minor tweaks to these screens for launch, bringing each in line with the brand guidelines and the design system we were developing.
+section-5-2-description-2: But after launch, the experience continued to evolve through analytics, user interviews, A/B testing, and a new filtering system — improving how users discovered listings and the language and layout used within them.
 section-5-2-mobileimg-1: collect-screen-9.jpg
 section-5-2-mobileimg-1-alt: Screenshot from the Collect app of the shop screen
 section-5-2-mobileimg-2: collect-screen-10.jpg
@@ -104,8 +103,8 @@ section-5-2-mobileimg-8: collect-screen-16.jpg
 section-5-2-mobileimg-8-alt: Screenshot from the Collect app of the product detail screen scrolled further down to the seller profile
 
 section-5-3-description-1-title: Adding shoes
-section-5-3-description-1: Adding shoes served two purposes — it gave members a way to show off their entire collection through just a link, and the shoes they add can be used as marketplace listings if and when the user decides to sell or trade them.
-section-5-3-description-2: Similar to the shopping experience, the majority of work here was applying our brand guidelines and design system before launch. The existing designs were intuitive and flexible enough to evolve over time.
+section-5-3-description-1: Adding shoes served two purposes — it gave members a way to show off their entire collection, and those shoes could be converted into marketplace listings if and when they decided to sell or trade them.
+section-5-3-description-2: Similar to the shopping experience, we only needed to apply our brand guidelines and design system components. The existing layouts were intuitive and easy to build on.
 section-5-3-mobileimg-1: collect-screen-17.jpg
 section-5-3-mobileimg-1-alt: Screenshot from the Collect app of the profile screen in the add shoes experience
 section-5-3-mobileimg-2: collect-screen-18.jpg
@@ -116,8 +115,7 @@ section-5-3-mobileimg-4: collect-screen-20.jpg
 section-5-3-mobileimg-4-alt: Screenshot from the Collect app of the list for sale screen in the add shoes experience
 
 section-5-4-description-1-title: Making an offer
-section-5-4-description-1: Before launch, we spent a lot of time making sure our offer flows reflected the same value they could bring to Collect and the community — giving members a way to build multi-pair deals under the safety of identity verification.
-section-5-4-description-2: The main design challenge was fitting all of the necessary content and functionality into one intuitive screen. We wanted users to build, review, and understand an offer without bouncing between multiple steps.
+section-5-4-description-1: Giving members a way to build multi-pair deals under the safety of identity verification was the core of what Collect was about. The design challenge here was fitting every necessary piece of content and functionality into one intuitive screen so users could build, review, and understand an offer without bouncing between steps.
 section-5-4-mobileimg-1: collect-screen-21.jpg
 section-5-4-mobileimg-1-alt: Screenshot from the Collect app of the product details screen in the offers flow
 section-5-4-mobileimg-2: collect-screen-22.jpg
@@ -128,7 +126,7 @@ section-5-4-mobileimg-4: collect-screen-24.jpg
 section-5-4-mobileimg-4-alt: Screenshot from the Collect app of the make an offer screen with shoes added
 
 section-5-5-description-1-title: Receiving an offer
-section-5-5-description-1: Once an offer is sent or received, it appears in the Offered tab — giving users a place to find and track every open negotiation. The primary focus here was to ensure recipients could quickly understand what was being proposed, that meant creating a clear hierarchy of information that included everything a recipient needed to consider.
+section-5-5-description-1: Once an offer is sent or received, it appears in the Offered tab — giving users a place to manage every open negotiation. The focus was making each proposal easy to understand through a clear hierarchy of the information recipients needed to consider.
 section-5-5-mobileimg-1: collect-screen-25.jpg
 section-5-5-mobileimg-1-alt: Screenshot from the Collect app of the product details screen when receiving an offer
 section-5-5-mobileimg-2: collect-screen-26.jpg
@@ -147,7 +145,7 @@ section-5-5-mobileimg-8: collect-screen-32.jpg
 section-5-5-mobileimg-8-alt: Screenshot from the Collect app of the offer detail screen scrolled down to the fees section
 
 section-5-6-description-1-title: Accepted offers
-section-5-6-description-1: Once an offer is accepted, the order moves into the Confirmed tab — where each user is guided through the final details of their offer. First we ensure all packages have paid shipping labels, before then guiding them on how to ship their order.
+section-5-6-description-1: After an offer is accepted, the order moves into the Confirmed tab — where each user is guided through the final details of their offer. We first make sure every package has a paid shipping label, then guide users through shipping their order.
 section-5-6-mobileimg-1: collect-screen-33.jpg
 section-5-6-mobileimg-1-alt: Screenshot from the Collect app of the confirmed order screen
 section-5-6-mobileimg-2: collect-screen-34.jpg
@@ -158,7 +156,7 @@ section-5-6-mobileimg-4: collect-screen-36.jpg
 section-5-6-mobileimg-4-alt: Screenshot from the Collect app of the order confirmed screen
 
 section-5-7-description-1-title: Shipping an order
-section-5-7-description-1: Once both shipping labels are paid for, each user is instructed on how to properly prepare and ship their package. By automating our shipping label generation, users could instantly print their label without leaving the app or manually entering package details.
+section-5-7-description-1: Once both shipping labels were paid for, each user was instructed on how to properly prepare and ship their package. By providing clear guidance and automating shipping label generation, users were able to get packages out within hours of a offer being accepted.
 section-5-7-mobileimg-1: collect-screen-37.jpg
 section-5-7-mobileimg-1-alt: Screenshot from the Collect app of the notification users receive when they can ship their package
 section-5-7-mobileimg-2: collect-screen-38.jpg
@@ -169,8 +167,8 @@ section-5-7-mobileimg-4: collect-screen-40.jpg
 section-5-7-mobileimg-4-alt: Screenshot from the Collect app of the packing instructions modal
 
 section-5-8-description-1-title: Order status
-section-5-8-description-1: Our research and ideation told us every order state we needed to consider. Whether it was a failed transaction, failed delivery, or lost package — we treated fail states with the same priority as our happy path. Those moments are the ones that most directly determine whether a user trusts the platform enough to transact again.
-section-5-8-description-2: The design focused on ensuring both parties knew exactly where their order stood and what, if anything, they needed to do — using notifications to proactively update users when a status changed, with tailored communication for each user.
+section-5-8-description-1: Whether it was a failed transaction, failed delivery, or lost package — we treated fail states with the same priority as the happy path. Those moments were often what determined whether users trusted the platform enough to transact again.
+section-5-8-description-2: We ensured both parties knew exactly where their order stood and what, if anything, they needed to do — using notifications to proactively communicate status updates tailored to each side of the transaction.
 section-5-8-mobileimg-1: collect-screen-41.jpg
 section-5-8-mobileimg-1-alt: Screenshot from the Collect app showing the orders screen with an in-transit package
 section-5-8-mobileimg-2: collect-screen-42.jpg
@@ -199,11 +197,11 @@ section-5-8-mobileimg-12-alt: Screenshot from the Collect app showing the order 
 
 section-6-1-nav: Impact
 section-6-1-title: Impact
-section-6-1-description-1: After beta testing and addressing the issues uncovered by our focus group, we finally launched Collect to the SoleSavy community. Over the next two years, Collect continued to grow and evolve through user interviews, testing, analytics, and shifting business goals.
+section-6-1-description-1: After beta testing and addressing the issues uncovered by our focus group, we launched Collect to the SoleSavy community and saw strong adoption of the platform. Members quickly began listing sneakers, making offers, and completing transactions, validating that the experience was ready to grow beyond the community.
 section-6-1-description-2-title: Public launch
-section-6-1-description-2: After rounds of learning and iteration, we opened Collect to the public alongside our free membership tier. This created a new acquisition channel and allowed us to monetise those users through transaction fees, while giving them an incentive to upgrade. Through continued A/B testing, we <b>increased upgrade conversions by over 31%</b> following the public launch.
+section-6-1-description-2: After more iteration, we opened Collect to the public alongside our free membership tier. This created a new acquisition channel where we could monetise users through transaction fees while incentivising them to upgrade. Through continued testing and refinement, we were able to <b>increase upgrade conversions by over 31%</b> following the public launch.
 section-6-1-description-3-title: Community led
-section-6-1-description-3: 'While we still needed to consider our business goals, the community had a hand in everything we built — whether through focus groups, polls, or interviews. Our <a href="/projects/collect/sneaker-authentication/" class="loader-link hyperlink" data-hue="#C50E11" style="text-decoration:underline;">sneaker authentication</a> feature is a perfect example of that balance, originating directly from user feedback and ultimately helping increase our transaction rate by over 24%.'
+section-6-1-description-3: 'While we still needed to consider our business goals, the community had a hand in everything we built through focus groups, polls, and interviews. Our <a href="/projects/collect/sneaker-authentication/" class="loader-link hyperlink" data-hue="#C50E11" style="text-decoration:underline;">sneaker authentication</a> feature reflected that relationship perfectly — originating directly from user feedback and ultimately helping increase our transaction rate by over 24%.'
 section-6-1-bustoutimage: collect-feature-1.jpg
 section-6-1-bustoutimage-alt: Screenshot grid of various screens from the Collect mobile app
 

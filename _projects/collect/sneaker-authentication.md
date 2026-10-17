@@ -23,8 +23,8 @@ hero-banner-alt: A collage of three full-screen app screenshots as well as small
 
 section-1-1-nav: Overview
 section-1-1-title: Overview
-section-1-1-description-1: Trust is one of the biggest barriers in sneaker trading — peer-to-peer platforms are always one transaction away from someone receiving a fake, intentionally or not. We initially launched Collect without authentication, but the risk was relatively low considering that the platform was limited to existing SoleSavy members who already traded with one another through less secure channels.
-section-1-1-description-2: But as we prepared to open Collect to the public, authentication became a necessary first step. So we partnered with Legitmark, a digital sneaker authentication service, to bring authentication directly into our order flows. Working closely with their team, we co-designed the experience while they built the API that would power it.
+section-1-1-description-1: Trust is one of the biggest barriers to trading sneakers — peer-to-peer platforms are always one transaction away from someone receiving a fake, intentionally or not. We launched Collect without authentication, but the risk was relatively low considering SoleSavy members already traded with one another through less secure channels.
+section-1-1-description-2: But as we prepared to open Collect to the public, authentication became a requirement. We partnered with Legitmark, a digital sneaker authentication service, to bring authentication directly into our order flows. Working closely with their team, we co-designed the experience while they built the API that would power it.
 employer: SoleSavy
 role: Senior Product Designer — Research, Ideation, Prototyping, User Testing, UI Design, Interaction Design
 timeline: Q1 2023 — Q2 2023
@@ -33,36 +33,36 @@ section-1-1-inlinesmall-1-alt: Image of a sneakerhead using the Collect authenti
 
 section-2-1-nav: Context
 section-2-1-title: Context
-section-2-1-description-1: Outside of members already trading with people they trusted, there was no real assurance that sneakers purchased through Collect were authentic. Adding authentication could give more members the confidence to transact while also supporting our larger goal of opening Collect to the public as a new acquisition channel.
-section-2-1-description-2: Partnering with Legitmark gave us a practical way to introduce that trust, but it also came with the design challenge of making a third-party integration feel like a seamless part of Collect. Working closely with their team, we had to find the right balance between the experience and what the API could realistically support.
+section-2-1-description-1: Outside of members trading with people they already trusted, there was no real assurance that sneakers purchased through Collect were authentic. Adding authentication would not only support the public release, but also give more SoleSavy community members the confidence to transact with each other.
+section-2-1-description-2: Partnering with Legitmark gave us a practical way to introduce that trust, but it came with the challenge of making a third-party integration feel like a seamless part of Collect. Working closely with their team, we had to find the right balance between the experience we wanted to create and what the API could realistically support.
 section-2-1-bustoutimage: authentication-feature-1.jpg
 section-2-1-bustoutimage-alt: Screenshot grid of various screens from the Collect authentication feature
 
 section-3-1-nav: Research
 section-3-1-title: Research
 section-3-1-description-1-title: The authentication process
-section-3-1-description-1: We started by spending significant time with the Legitmark team understanding how their authentication process worked end to end. We walked through every step, edge case, and possible outcome — documenting every status and trigger that would require our app to communicate with the API.
+section-3-1-description-1: We spent a lot of time with the Legitmark team going through each step of their authentication process — uncovering every status, trigger, and edge case that would require communication with the API.
 section-3-1-description-2-title: Competitive analysis
-section-3-1-description-2: Looking at how other peer-to-peer marketplaces implemented authentication showed us the patterns users were already familiar with and where we could tailor them to better fit Collect. Our findings directly informed when authentication was surfaced, how each step was structured, and what conditional logic shaped the experience.
+section-3-1-description-2: While looking at how other peer-to-peer marketplaces implemented authentication, we documented the patterns users were already familiar with — directly influencing how we surfaced authentication in Collect.
 section-3-1-description-3-title: Community expectations
-section-3-1-description-3: Authentication was largely driven by customer feedback — they didn't trust themselves to reliably spot a counterfeit and wanted an easy way to authenticate a pair directly through Collect. But their existing experience with authentication also raised the bar — we needed it to feel as credible and trustworthy as the services they already use.
+section-3-1-description-3: The authentication feature was largely driven by user feedback — it was clear that buyers needed more assurance. We just needed to make the experience feel as credible as the authentication services they already used.
 section-3-1-inlinesmall-1: authentication-interview-1.jpg
 section-3-1-inlinesmall-1-alt: A screenshot of the Legitmark team and Jordan talking on a Google Meet call reviewing Legitmark's authentication process
 
 section-4-1-nav: Ideation
 section-4-1-title: Ideation
 section-4-1-description-1-title: User flows
-section-4-1-description-1: Our goal was to take a third-party integration with its own steps, timelines, and operational requirements, and find a way to make it feel like a native feature of Collect. So we started by mapping the full authentication journey — from every user action to API call, we laid out exactly how users would interact with the feature step by step.
+section-4-1-description-1: Our goal was to make every step of Legitmark's process feel native to Collect. We started by mapping the authentication flow, from every user action to each API call.
 section-4-1-description-2-title: Cross-team collaboration
-section-4-1-description-2: Once we knew exactly how we wanted the experience to work in Collect, we sat down with Legitmark again to align on the scope of what API changes we could make and which constraints we had to design around. This left both teams with a shared source of truth and a plan for what we were going to be building in the coming months.
+section-4-1-description-2: We then sat down with the Legitmark team again to align on which API customizations would be possible — leaving both teams with a shared source of truth and a path forward.
 section-4-1-inlineimg-1: authentication-orderflow-1.jpg
 section-4-1-inlineimg-1-alt: User flow map of the authentication feature
 
 section-5-1-nav: Design
 section-5-1-title: Design
 section-5-1-description-1-title: Photo submission flow
-section-5-1-description-1: Upon finishing the user flows, we moved straight into high-fidelity design. Our research and ideation gave us a clear direction for how the experience needed to work — users are taken through a step-by-step photo submission flow with one objective per screen, supported by examples and guidelines that significantly reduce the chance of mistakes.
-section-5-1-description-2: We built this flow seamlessly into the screen our customers already used to manage their sneaker collection and marketplace listing, making it much easier for them to request authentication on both new and existing pairs.
+section-5-1-description-1: Our research gave us a clear direction for how the photo submission flow needed to work. Users would be guided through a step-by-step process with one objective per screen, supported by examples that would reduce the chance of mistakes.
+section-5-1-description-2: We integrated the flow seamlessly into the screen users already used to manage their sneaker listings, making it easy to request authentication for both new and existing pairs.
 section-5-1-mobileimg-1: authentication-screen-1.jpg
 section-5-1-mobileimg-1-alt: Screenshot from the Collect authentication feature of the add shoes screen with authentication enabled
 section-5-1-mobileimg-2: authentication-screen-2.jpg
@@ -81,8 +81,8 @@ section-5-1-mobileimg-8: authentication-screen-8.jpg
 section-5-1-mobileimg-8-alt: Screenshot from the Collect authentication feature of the sneaker inner sides confirmation screen
 
 section-5-2-description-1-title: Order flows
-section-5-2-description-1: Beyond authenticating sneakers for peace of mind or making listings more attractive in the marketplace, the order flow was the key conversion moment for authentication. This was where buyers had to decide whether the added protection was worth paying for before moving forward with a transaction.
-section-5-2-description-2: Through multiple rounds of A/B testing and iteration, we found the right balance of content length, language, and visual hierarchy. Our most effective messaging stayed concise — focusing on buyer assurance and an exclusive 48-hour window to purchase the sneakers once their authenticity was confirmed.
+section-5-2-description-1: The order flow was the key conversion moment for authentication, where buyers had to decide whether they wanted that additional assurance.
+section-5-2-description-2: Through many rounds of A/B testing, we found the right way to talk about authentication to buyers. Our most effective messaging stayed concise, focusing on assurance and the exclusive 48-hour purchase window once authenticity was confirmed.
 section-5-2-mobileimg-1: authentication-screen-9.jpg
 section-5-2-mobileimg-1-alt: Screenshot from the Collect authentication feature of the sneaker listing screen
 section-5-2-mobileimg-2: authentication-screen-10.jpg
@@ -93,8 +93,7 @@ section-5-2-mobileimg-4: authentication-screen-12.jpg
 section-5-2-mobileimg-4-alt: Screenshot from the Collect authentication feature of the authentication checkout screen
 
 section-5-3-description-1-title: In-review state
-section-5-3-description-1: Once a sneaker is submitted for authentication, it enters the review state. While authentication is in progress, users can't edit, delete, or use it in another transaction.
-section-5-3-description-2: This allowed us to lock a sneaker into a single transaction when a buyer requested authentication as a condition of the deal, preventing it from changing or being committed elsewhere while its authenticity was being verified.
+section-5-3-description-1: Once sneakers are submitted for authentication, they enter the review state. During this period, users can't edit, delete, or use them in another transaction — keeping each pair locked into the deal up until the exclusive 48-hour purchase window.
 section-5-3-mobileimg-1: authentication-screen-13.jpg
 section-5-3-mobileimg-1-alt: Screenshot from the Collect authentication feature of the user profile screen with a sneaker authentication in review
 section-5-3-mobileimg-2: authentication-screen-14.jpg
@@ -105,8 +104,8 @@ section-5-3-mobileimg-4: authentication-screen-16.jpg
 section-5-3-mobileimg-4-alt: Screenshot from the Collect authentication feature of the authentication detail screen with an in-review state
 
 section-5-4-description-1-title: Resubmission flow
-section-5-4-description-1: When Legitmark flagged photos that had been submitted incorrectly, they triggered a resubmission flow that notified users and guided them through retaking the photos.
-section-5-4-description-2: The challenge was explaining what went wrong and how to fix it without making the experience feel punishing. By providing clear instructions on how to correct the issue and guiding users through only the photos that required attention, we were able to move them through the flow as painlessly as possible.
+section-5-4-description-1: When Legitmark flagged photos for resubmission, they triggered a flow we built into Collect that notified users and guided them through retaking each required photo.
+section-5-4-description-2: Our priority was preventing the same mistake from happening twice. We clearly explained what went wrong, showed users how to correct it, and only resurfaced the photos that needed attention — keeping the recovery process focused and easy to complete.
 section-5-4-mobileimg-1: authentication-screen-17.jpg
 section-5-4-mobileimg-1-alt: Screenshot from the Collect authentication feature of the resubmit authentication notification
 section-5-4-mobileimg-2: authentication-screen-18.jpg
@@ -117,8 +116,8 @@ section-5-4-mobileimg-4: authentication-screen-20.jpg
 section-5-4-mobileimg-4-alt: Screenshot from the Collect authentication feature of the resubmit inner tag capture screen
 
 section-5-5-description-1-title: Authentication result
-section-5-5-description-1: Once authentication was complete, Legitmark triggered a results flow that walked users through each reason their sneakers were determined to be authentic or fake.
-section-5-5-description-2: Authentic sneakers received a Legitmark-approved badge, increasing their credibility and desirability in the marketplace. If the sneaker was tied to an active transaction, the buyer was then given their 48-hour exclusive window to complete the purchase. On the other hand, fake sneakers were automatically removed from the marketplace, and any transactions or offers associated with them were cancelled.
+section-5-5-description-1: Once authentication was complete, Legitmark triggered a status change indicating whether the sneakers were authentic or fake.
+section-5-5-description-2: Authentic sneakers received a Legitmark approved badge, increasing their credibility and desirability in the marketplace. On the other hand, fakes were automatically unlisted from the marketplace — cancelling any associated transactions.
 section-5-5-mobileimg-1: authentication-screen-21.jpg
 section-5-5-mobileimg-1-alt: Screenshot from the Collect authentication feature of the authentication complete notification
 section-5-5-mobileimg-2: authentication-screen-22.jpg
@@ -137,8 +136,7 @@ section-5-5-mobileimg-8: authentication-screen-28.jpg
 section-5-5-mobileimg-8-alt: Screenshot from the Collect authentication feature of the edit sneaker listing screen showing users can no longer list fake sneakers in the marketplace
 
 section-5-6-description-1-title: In-app messenger
-section-5-6-description-1: Another feature we launched shortly after authentication was our in-app messenger. With the public launch opening Collect to users outside of the SoleSavy community, we needed a simple way for buyers and sellers to discuss deals directly in the app. For authentication specifically, this gave buyers a way to ask questions, request additional photos, or ask sellers to cover the cost of authentication.
-section-5-6-description-2: By integrating a third-party messaging API, we were able to launch the feature with minimal design and development effort while still making it feel like a native part of the app.
+section-5-6-description-1: Shortly after authentication, we also launched an in-app messenger to support the public launch. Buyers and sellers needed a way to discuss deals directly in Collect, since not every user would have access to the wider SoleSavy community. This also gave users a way to ask questions, request more photos, or even ask sellers to cover the authentication cost.
 section-5-6-mobileimg-1: authentication-screen-29.jpg
 section-5-6-mobileimg-1-alt: Screenshot from the Collect in-app messenger feature of the new message notification
 section-5-6-mobileimg-2: authentication-screen-30.jpg
@@ -158,11 +156,11 @@ section-5-6-mobileimg-8-alt: Screenshot from the Collect in-app messenger featur
 
 section-6-1-nav: Impact
 section-6-1-title: Impact
-section-6-1-description-1: Authentication not only addressed one of the biggest hurdles the marketplace faced, it also unlocked a new revenue stream for the business. By helping Legitmark pilot their API offering, we were able to help shape the integration around our needs.
-section-6-1-description-2-title: More confident transactions
-section-6-1-description-2: Our goal was to reduce buyer uncertainty when committing to a deal, while giving sellers the Legitmark-approved badge as a way to build credibility and stand out from other listings. After launching the feature, we saw our <b>transaction rate increase by over 24%</b>, reinforcing how directly buyer confidence could translate into completed transactions.
+section-6-1-description-1: Authentication not only addressed the biggest hurdle we faced, but also unlocked a new revenue stream for the business. By helping Legitmark pilot their API offering, we were also able to shape the integration around our needs.
+section-6-1-description-2-title: Confident transactions
+section-6-1-description-2: We gave buyers assurance, while also giving sellers a way to build credibility and stand out from other listings. After launch, we saw our <b>transaction rate increase by over 24%</b>.
 section-6-1-description-3-title: A new revenue stream
-section-6-1-description-3: Each authentication processed through Collect generated referral revenue through our partnership with Legitmark, allowing us to improve trust in the marketplace while also contributing directly to our business targets.
+section-6-1-description-3: Each authentication we processed generated a referral payment, allowing us to improve trust in the marketplace while also contributing directly to our business targets.
 section-6-1-bustoutimage: authentication-feature-2.jpg
 section-6-1-bustoutimage-alt: Another screenshot grid of more various screens from the Collect authentication feature
 

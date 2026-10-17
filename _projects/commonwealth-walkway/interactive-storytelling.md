@@ -25,8 +25,8 @@ hero-banner-alt: A row of four app screenshots from the Commonwealth Walkway mob
 
 section-1-1-nav: Overview
 section-1-1-title: Overview
-section-1-1-description-1: As the Commonwealth Walkway Trust began planning a new route through Edmonton's river valley, they came to us looking for a mobile app that could guide users along the route while telling stories connected to the places around them.
-section-1-1-description-2: The challenge was creating something simple enough to use while walking, engaging enough to keep people curious, and flexible enough to work no matter where users started their journey or which direction they chose to explore.
+section-1-1-description-1: The Commonwealth Walkway Trust came to us as they began planning a new route through Edmonton's river valley. They wanted us to build an experience that could guide users along the route while telling stories connected to the places around them.
+section-1-1-description-2: The solution needed to be simple enough to use while walking, engaging enough to keep people curious, and flexible enough to work no matter where users started or which direction they chose to explore.
 employer: Lift Interactive
 role: Senior Designer — Research, Ideation, Prototyping, User Testing, UI Design, Interaction Design
 timeline: Q3 2018 - Q3 2019
@@ -39,17 +39,17 @@ section-1-1-imagegrid-3-alt: Photo of somebody walking near one of the physical 
 
 section-2-1-nav: Context
 section-2-1-title: Context
-section-2-1-description-1: The Commonwealth Walkway Trust planned to mark the 10-kilometre route with signage and physical medallions embedded in the ground. Our job was to figure out the best way to bridge those physical touchpoints with stories about the places around them.
-section-2-1-description-2: But unlike a typical guided tour, the experience couldn't rely on a fixed starting point or direction. The app needed to feel like a natural companion whether someone planned their visit or simply stumbled upon our signage on their walk.
+section-2-1-description-1: They planned to mark the 10-kilometre route with signage and physical medallions embedded in the ground. Our job was to figure out the best way to bridge those physical touchpoints with stories about the places around them.
+section-2-1-description-2: But unlike a typical guided tour, the experience couldn't rely on a fixed starting point or direction. The app needed to feel like a natural companion whether someone planned their visit or simply stumbled upon our signage.
 section-2-1-bustoutimage: commonwealth-banner-1.jpg
 section-2-1-bustoutimage-alt: Screenshot collage of various Commonwealth Walkway app screens
 
 section-3-1-nav: Research
 section-3-1-title: Research
 section-3-1-description-1-title: Competitive analysis
-section-3-1-description-1: We started by looking at how other tourism apps balanced navigation, content, and the real world. The most immersive experiences used geofencing to make content appear when users physically arrived somewhere, rather than when they tapped a button.
+section-3-1-description-1: We started by looking at how other tourism apps balanced navigation, content, and the real world. The most immersive experiences used geofencing to surface content when users physically arrived somewhere.
 section-3-1-description-2-title: Walking the route
-section-3-1-description-2: With the coordinates for where each medallion and sign would be installed, we took the opportunity to walk the route ourselves and better understand how and when content should surface — noting likely entry points and the walking distance between each medallion.
+section-3-1-description-2: With the coordinates of where each medallion and sign would be installed, we walked the route ourselves to better understand how and when content should surface — noting likely entry points and the walking distance between each medallion.
 section-3-1-imagegridrev-1: commonwealth-feature-4.jpg
 section-3-1-imagegridrev-1-alt: A photo looking down at four people's shoes circling one of the Commonwealth Walkway embedded medallions
 section-3-1-imagegridrev-2: commonwealth-feature-5.jpg
@@ -60,20 +60,20 @@ section-3-1-imagegridrev-3-alt: A photo of the opening ceremony just after the c
 section-4-1-nav: Ideation
 section-4-1-title: Ideation
 section-4-1-description-2-title: Story structure
-section-4-1-description-2: Working closely with the Commonwealth Walkway Trust, we established guidelines each story would follow. Beyond keeping the length and format appropriate for reading on a phone outdoors, we needed each story to use repeatable content blocks that could be easily managed through the content management system.
+section-4-1-description-2: Beyond keeping the length and format appropriate for reading on a phone outdoors, we needed each story to use repeatable components that could be managed through the CMS. So we worked with the client to establish guidelines each story needed to follow.
 section-4-1-description-3-title: User flows
-section-4-1-description-3: We then mapped the experience from app download to discovering and reading a first story — helping us define how geofencing fit into the journey and identifying the key screens we needed to prototype and design.
+section-4-1-description-3: We then mapped the experience from app download to story discovery — helping us define exactly where geofencing fit and what screens we needed to design.
 section-4-1-inlineimgcontain-1: commonwealth-userflow.png
 section-4-1-inlineimgcontain-1-alt: User flow map for the Commonwealth Walkway mobile app
 
 section-5-1-nav: Design
 section-5-1-title: Design
-section-5-1-description-1: Our design phase started with wireframing the key screens identified in our user flows, exploring the most intuitive way for content to interact with the map. We needed to define how the map would respond to user movement and how geofencing would change what content users saw along the route.
+section-5-1-description-1: Our design phase started with wireframing the screens established in the user flows, exploring the most intuitive way for content to interact with the map. We needed to define how the map would respond to user movement and how geofencing would change what content users saw along the route.
 section-5-1-inlinesmall-1: commonwealth-wireframes.jpg
 section-5-1-inlinesmall-1-alt: Wireframes from the Commonwealth Walkway app design phase
 
 section-5-2-description-1-title: Introducing the experience
-section-5-2-description-1: Particularly for users who discovered the experience through signage in the river valley, we needed to quickly earn their attention, briefly explain the concept, and get them into the app before they lost interest. Our solution was a concise onboarding flow that communicated the core idea — follow the route and discover the stories.
+section-5-2-description-1: For users who discovered the experience by chance through signage in the river valley — we needed to quickly earn their attention, explain the concept, and get them into the app before they lost interest. Our solution was a concise onboarding flow that communicated the core idea of following the route and discovering stories.
 section-5-2-mobileimg-1: commonwealth-walkthrough-1.jpg
 section-5-2-mobileimg-1-alt: Screenshot from the Commonwealth Walkway app of the onboarding welcome screen
 section-5-2-mobileimg-2: commonwealth-walkthrough-2.jpg
@@ -84,8 +84,7 @@ section-5-2-mobileimg-4: commonwealth-walkthrough-4.jpg
 section-5-2-mobileimg-4-alt: Screenshot from the Commonwealth Walkway app of the find the key onboarding screen
 
 section-5-3-description-1-title: Navigation and geofencing
-section-5-3-description-1: The map was built with Google's API, using the medallion coordinates to highlight the route. As users moved along the path, geofencing automatically triggered the relevant story content — no tapping required.
-section-5-3-description-2: By responding to where users were, we made discovery feel natural. But for those who wanted to plan ahead or couldn't visit in person, we still made each medallion tappable so they could explore the stories manually.
+section-5-3-description-1: Geofencing automatically triggered the relevant story content as users approached a medallion's perimeter, making discovery feel natural. Outside the overall experience perimeter, each medallion could be tapped manually — allowing users to explore the stories even if they couldn't visit in person.
 section-5-3-mobileimg-1: commonwealth-generic-1.jpg
 section-5-3-mobileimg-1-alt: Screenshot from the Commonwealth Walkway app of the map screen
 section-5-3-mobileimg-2: commonwealth-generic-2.jpg
@@ -96,8 +95,8 @@ section-5-3-mobileimg-4: commonwealth-generic-4.jpg
 section-5-3-mobileimg-4-alt: Screenshot from the Commonwealth Walkway app of the Edmontonsaurus story screen
 
 section-5-4-description-1-title: Storylines
-section-5-4-description-1: We also gave users the option to explore stories by storyline — thematic groupings that made it easier to find content based on their interests while also bringing more structure and organisation to the experience.
-section-5-4-description-2: Each story followed a consistent article structure built from reusable content blocks, giving the Commonwealth Walkway Trust the flexibility to add text, images, video, and audio directly through the content management system.
+section-5-4-description-1: We also gave users the option to explore stories by thematic groupings, making it easier to find content based on their interests.
+section-5-4-description-2: Each story followed a consistent structure built from components, giving writers the ability to add text, images, video, and audio directly through the CMS.
 section-5-4-mobileimg-1: commonwealth-story-1.jpg
 section-5-4-mobileimg-1-alt: Screenshot from the Commonwealth Walkway app of the family storyline screen
 section-5-4-mobileimg-2: commonwealth-story-2.jpg
@@ -108,8 +107,8 @@ section-5-4-mobileimg-4: commonwealth-story-4.jpg
 section-5-4-mobileimg-4-alt: Screenshot from the Commonwealth Walkway app of a story article scrolled down
 
 section-5-5-description-1-title: Golden key
-section-5-5-description-1: The golden key feature was designed like a scavenger hunt to give users a fun weekend activity. Within the app, users could follow a series of clues that eventually led them to the golden key. Solving them required moving through the river valley and paying attention to the physical environment in a way the standard experience didn't demand.
-section-5-5-description-2: Using geofencing, we were able to reveal each clue and the key as users approached the relevant coordinate. Through the CMS, we gave the client the ability to update the clues and coordinates each week to keep users coming back.
+section-5-5-description-1: Within the app, users could also take part in a scavenger hunt that eventually led them to a virtual golden key. Solving each clue required users to move through the river valley while paying attention to the physical environment in a way the standard experience did not.
+section-5-5-description-2: Using geofencing, we revealed each clue and the key as users approached the relevant coordinates. Through the CMS, the client could update the clues and locations each week, giving people a reason to come back.
 section-5-5-mobileimg-1: commonwealth-key-1.jpg
 section-5-5-mobileimg-1-alt: Screenshot from the Commonwealth Walkway app of the golden key feature introduction screen
 section-5-5-mobileimg-2: commonwealth-key-2.jpg
@@ -121,7 +120,7 @@ section-5-5-mobileimg-4-alt: Screenshot from the Commonwealth Walkway app of the
 
 section-6-1-nav: Impact
 section-6-1-title: Impact
-section-6-1-description-1: The app launched alongside the physical walkway unveiling and was covered by Global News — a reflection of the community interest the project had generated and the novelty of what we had built. The Golden Key in particular generated genuine online enthusiasm online.
+section-6-1-description-1: We launched the app alongside the physical walkway unvieling ceremony, as covered by Global News — a reflection of the community interest we had generated.
 section-6-1-iframe-1: https://globalnews.ca/video/embed/5833872
 section-6-1-bustoutimage: commonwealth-banner-2.jpg
 section-6-1-bustoutimage-alt: Grid of screenshots from various screens of the Commonwealth Walkway app
