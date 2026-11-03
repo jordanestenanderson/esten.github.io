@@ -15,9 +15,6 @@ layout: main
 			.overlay-projects ul li a:after {
 				background:#{{ page.hex-2 }};
 			}
-			.header-banner {
-				background:#{{ page.hex-2 }};
-			}
 		</style>
 		<main class="project {{ page.title | slugify }}">
 			<section data-aos="zoom-out-down" id="project-head">
@@ -63,7 +60,7 @@ layout: main
 					</div>
 				</div>
 				<div class="project-head-image">
-					<div data-aos="fade-up" class="header-banner ">
+					<div data-aos="fade-up" class="header-banner" style="background:#{{ page.hex-2 }};">
 						{% if page.hero-banner %}
 							<div class="project-visual">
 								<div class="project-visualinner">

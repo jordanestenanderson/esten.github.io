@@ -1,3 +1,14 @@
+function disableScrollRestoration() {
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
+}
+
+// Each history entry has its own mode, including entries created before this fix.
+// Run before Barba's popstate handler; fadeIn scrolls only after the wipe covers.
+disableScrollRestoration();
+window.addEventListener('popstate', disableScrollRestoration);
+
 Barba.Pjax.start();
 Barba.Prefetch.init()
 

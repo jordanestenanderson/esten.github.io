@@ -2,9 +2,61 @@
 
 Personal product design portfolio built with Jekyll and hosted on GitHub Pages.
 
+## Start the local development server
+
+```bash
+bundle exec jekyll serve --livereload
+```
+
 ## Running locally
 
+Install Homebrew
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
 From the root of the project, install dependencies if needed
+
+```bash
+brew install rbenv ruby-build rbenv-gemset rbenv-vars
+rbenv init
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
+```
+
+To open your Zsh profile (.zshrc) using the nano text editor on a Mac
+```bash
+nano ~/.zshrc
+```
+
+Modify your shell startup script
+
+```bash
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
+eval "$(rbenv init - zsh)"
+```
+
+Install the latest version of Ruby
+
+```bash
+rbenv install 3.2.2
+rbenv global 3.2.2
+```
+
+Confirm you are using the latest ruby, open a new shell
+
+```bash
+ruby -v
+ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-darwin23]
+```
+
+Install Jekyll
+
+```bash
+gem install jekyll
+```
+
+Bundle the project
 
 ```bash
 bundle install
