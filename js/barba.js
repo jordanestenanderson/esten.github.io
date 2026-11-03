@@ -12,7 +12,16 @@ window.addEventListener('popstate', disableScrollRestoration);
 Barba.Pjax.start();
 Barba.Prefetch.init()
 
-var lastClickEl;
+var wipeColors = JSON.parse(document.getElementById('wipe-colors').textContent);
+var hueHistory = [];
+
+function setWipeColor(url) {
+  var path = new URL(url, window.location.href).pathname;
+  var color = wipeColors[path] || wipeColors[path.replace(/\/$/, '') + '/'] || '#0E0D0B';
+  $("#wipe, .loader").css({ background: color });
+  hueHistory.push({ url: path, color: color });
+  console.log('Wipe colors:', hueHistory.slice());
+}
 
 var transitionAnimation = Barba.BaseTransition.extend({
       
@@ -66,25 +75,15 @@ Barba.Pjax.getTransition = function() {
   return transitionAnimation;
 };
 
-let linkClicked = false
-Barba.Dispatcher.on('linkClicked', (el) => {
-    lastClickEl = el;
-    linkClicked = true;
-});
-
 Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, container) {
     BaseJS();
     $("html, .overlay, .burger").removeClass("open");
 });
 
-Barba.Dispatcher.on('initStateChange', () => {
-  if (!linkClicked) {
-    var hex = hueHistory.pop();
-    var hex = hueHistory[hueHistory.length - 1];
-    $("#wipe, .loader").css({background:hex});
-  }
-})
+Barba.Dispatcher.on('initStateChange', function(currentStatus) {
+  setWipeColor(currentStatus.url);
+});
 
-Barba.Dispatcher.on('transitionCompleted', () => {
-  linkClicked = false
-})
+document.addEventListener('DOMContentLoaded', function() {
+  setWipeColor(window.location.href);
+});

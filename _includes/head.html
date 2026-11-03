@@ -28,6 +28,7 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+	<script id="wipe-colors" type="application/json">{"{{ site.baseurl }}/":"#0E0D0B"{% for project in site.projects %},"{{ site.baseurl }}{{ project.url }}":"#{{ project.hex-1 }}"{% endfor %}}</script>
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 	<script>document.documentElement.className += 'js';</script>
