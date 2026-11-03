@@ -65,7 +65,7 @@ layout: main
 							<div class="project-visual">
 								<div class="project-visualinner">
 									<div>
-										<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page.hero-banner }}" alt="{{ page.hero-banner-alt }}">
+										{% include portfolio-image.html project=page filename=page.hero-banner alt=page.hero-banner-alt eager=true %}
 									</div>
 								</div>
 							</div>

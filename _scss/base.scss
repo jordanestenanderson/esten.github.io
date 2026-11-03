@@ -63,6 +63,7 @@ html {
 img {
 	border-radius: variables.$radius-m;
 	width:100%;
+	height:auto;
 	&.shadow {
 		@include mixin.shadow(rgba(0,0,0,0.12));
 	}

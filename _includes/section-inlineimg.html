@@ -8,7 +8,7 @@
 	<div data-aos="fade-up" class="imagegrid project-streamfield wrapper">
         <div class="imagegrid-wrapper flex-container">
             <div class="imagegrid-image wide image-fit">
-                <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_inlinesmall_1] }}" alt="{{ page[section_inlinesmall_1_alt] }}">
+                {% include portfolio-image.html project=page filename_key=section_inlinesmall_1 alt_key=section_inlinesmall_1_alt section=include.section %}
             </div>
         </div>
 	</div>
@@ -16,11 +16,11 @@
 {% if page[section_inlineimg_1] or page[section_inlineimgcontain_1] %}
 <div data-aos="fade-up" class="inlineimg-streamfield {% if page[section_inlineimgcontain_1] %}contain {% endif %}project-streamfield wrapper">
 	{% if page[section_inlineimg_1] %}
-		<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_inlineimg_1] }}" alt="{{ page[section_inlineimg_1_alt] }}">
+		{% include portfolio-image.html project=page filename_key=section_inlineimg_1 alt_key=section_inlineimg_1_alt section=include.section %}
 	{% endif %}
 	{% if page[section_inlineimgcontain_1] %}
 		<div class="containimg" style="background:#{{ page.hex-2 }};">
-			<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_inlineimgcontain_1] }}" alt="{{ page[section_inlineimgcontain_1_alt] }}">
+			{% include portfolio-image.html project=page filename_key=section_inlineimgcontain_1 alt_key=section_inlineimgcontain_1_alt section=include.section %}
 		</div>
 	{% endif %}
 </div>

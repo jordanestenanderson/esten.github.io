@@ -22,7 +22,7 @@ meta-img: meta.jpg
         <div class="project-grid wrapper">
             {% assign site_projects = site.projects | sort:"order" %}
             {% for project in site_projects %}
-                {% include project-card.html %}
+                {% include project-card.html eager=forloop.first %}
             {% endfor %}
         </div>
         <div class="wrapper">

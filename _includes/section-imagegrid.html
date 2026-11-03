@@ -15,16 +15,16 @@
         <div class="imagegrid-wrapper flex-container">
             {% if page[section_imagegrid_1] %}
                 <div class="imagegrid-image wide image-fit">
-                    <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegrid_1] }}" alt="{{ page[section_imagegrid_1_alt] }}">
+                    {% include portfolio-image.html project=page filename_key=section_imagegrid_1 alt_key=section_imagegrid_1_alt section=include.section %}
                 </div>
             {% endif %}
             {% if page[section_imagegrid_2] and page[section_imagegrid_3] %}
                 <div class="imagegrid-row flex-container">
                     <div class="imagegrid-image image-fit">
-                        <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegrid_2] }}" alt="{{ page[section_imagegrid_2_alt] }}">
+                        {% include portfolio-image.html project=page filename_key=section_imagegrid_2 alt_key=section_imagegrid_2_alt section=include.section %}
                     </div>
                     <div class="imagegrid-image image-fit">
-                        <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegrid_3] }}" alt="{{ page[section_imagegrid_3_alt] }}">
+                        {% include portfolio-image.html project=page filename_key=section_imagegrid_3 alt_key=section_imagegrid_3_alt section=include.section %}
                     </div>
                 </div>
             {% endif %}
@@ -36,16 +36,16 @@
         <div class="imagegrid-wrapper flex-container">
             {% if page[section_imagegridrev_1] %}
                 <div class="imagegrid-image wide image-fit">
-                    <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegridrev_1] }}" alt="{{ page[section_imagegridrev_1_alt] }}">
+                    {% include portfolio-image.html project=page filename_key=section_imagegridrev_1 alt_key=section_imagegridrev_1_alt section=include.section %}
                 </div>
             {% endif %}
             {% if page[section_imagegridrev_2] and page[section_imagegridrev_3] %}
                 <div class="imagegrid-row flex-container">
                     <div class="imagegrid-image image-fit">
-                        <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegridrev_2] }}" alt="{{ page[section_imagegridrev_2_alt] }}">
+                        {% include portfolio-image.html project=page filename_key=section_imagegridrev_2 alt_key=section_imagegridrev_2_alt section=include.section %}
                     </div>
                     <div class="imagegrid-image image-fit">
-                        <img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_imagegridrev_3] }}" alt="{{ page[section_imagegridrev_3_alt] }}">
+                        {% include portfolio-image.html project=page filename_key=section_imagegridrev_3 alt_key=section_imagegridrev_3_alt section=include.section %}
                     </div>
                 </div>
             {% endif %}

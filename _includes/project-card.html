@@ -4,7 +4,7 @@
             <div class="project-graphic desktop-app" style="background-color:#{{ project.hex-2 }};">
                 <div class="project-graphic-overlay"></div>
                 <div class="project-graphic-inner">
-                    <img src="{{ site.baseurl }}/assets/portfolio/{{ project.title | slugify }}/{{ project.hero-desktop }}" alt="{{ project.hero-desktop-alt }}">
+                    {% include portfolio-image.html project=project filename=project.hero-desktop alt=project.hero-desktop-alt eager=include.eager %}
                 </div>
             </div>
         {% endif %}
@@ -14,9 +14,9 @@
             <div class="project-graphic mobile-app" style="background-color:#{{ project.hex-2 }};">
                 <div class="project-graphic-overlay"></div>
                 <div class="project-graphic-inner">
-                    <img src="{{ site.baseurl }}/assets/portfolio/{{ project.title | slugify }}/{{ project.hero-mobile-1 }}" alt="{{ project.hero-mobile-1-alt }}">
-                    <img src="{{ site.baseurl }}/assets/portfolio/{{ project.title | slugify }}/{{ project.hero-mobile-2 }}" alt="{{ project.hero-mobile-2-alt }}">
-                    <img src="{{ site.baseurl }}/assets/portfolio/{{ project.title | slugify }}/{{ project.hero-mobile-3 }}" alt="{{ project.hero-mobile-3-alt }}">
+                    {% include portfolio-image.html project=project filename=project.hero-mobile-1 alt=project.hero-mobile-1-alt eager=include.eager %}
+                    {% include portfolio-image.html project=project filename=project.hero-mobile-2 alt=project.hero-mobile-2-alt eager=include.eager %}
+                    {% include portfolio-image.html project=project filename=project.hero-mobile-3 alt=project.hero-mobile-3-alt eager=include.eager %}
                 </div>
             </div>
         {% endif %}

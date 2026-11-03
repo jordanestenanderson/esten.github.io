@@ -3,7 +3,7 @@
 {% if page[section_bustoutimage] %}
 	<div data-aos="fade-up" class="bigimage-streamfield project-streamfield">
 		<div class="image-bleed image-fit">
-			<img src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_bustoutimage] }}" alt="{{ page[section_bustoutimage_alt] }}">
+			{% include portfolio-image.html project=page filename_key=section_bustoutimage alt_key=section_bustoutimage_alt section=include.section %}
 		</div>
 	</div>
 {% endif %}

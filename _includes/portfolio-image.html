@@ -1,0 +1,7 @@
+{% assign image_folder = include.project.title | slugify %}
+{% assign image_filename = include.filename %}
+{% assign image_alt = include.alt %}
+{% if include.filename_key %}{% assign image_filename = include.project[include.filename_key] %}{% endif %}
+{% if include.alt_key %}{% assign image_alt = include.project[include.alt_key] %}{% endif %}
+{% assign image_dimensions = site.data.image_dimensions[image_folder][image_filename] %}
+<img src="{{ site.baseurl }}/assets/portfolio/{{ image_folder }}/{{ image_filename }}" alt="{{ image_alt }}"{% if include.class %} class="{{ include.class }}"{% endif %}{% if image_dimensions %} width="{{ image_dimensions[0] }}" height="{{ image_dimensions[1] }}"{% endif %}{% if include.eager or include.section == 'section-1' %} loading="eager"{% else %} loading="lazy" decoding="async"{% endif %}>

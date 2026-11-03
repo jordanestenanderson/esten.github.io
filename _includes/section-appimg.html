@@ -50,62 +50,62 @@
 	<div data-aos="fade-up" class="desktopapp-streamfield project-streamfield wrapper flex-container flex-between align-center">
 		{% if page[section_desktopimg_1] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_1] }}" alt="{{ page[section_desktopimg_1_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_1 alt_key=section_desktopimg_1_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_2] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_2] }}" alt="{{ page[section_desktopimg_2_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_2 alt_key=section_desktopimg_2_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_3] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_3] }}" alt="{{ page[section_desktopimg_3_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_3 alt_key=section_desktopimg_3_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_4] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_4] }}" alt="{{ page[section_desktopimg_4_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_4 alt_key=section_desktopimg_4_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_5] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_5] }}" alt="{{ page[section_desktopimg_5_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_5 alt_key=section_desktopimg_5_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_6] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_6] }}" alt="{{ page[section_desktopimg_6_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_6 alt_key=section_desktopimg_6_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_7] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_7] }}" alt="{{ page[section_desktopimg_7_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_7 alt_key=section_desktopimg_7_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_8] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_8] }}" alt="{{ page[section_desktopimg_8_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_8 alt_key=section_desktopimg_8_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_9] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_9] }}" alt="{{ page[section_desktopimg_9_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_9 alt_key=section_desktopimg_9_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_10] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_10] }}" alt="{{ page[section_desktopimg_10_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_10 alt_key=section_desktopimg_10_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_11] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_11] }}" alt="{{ page[section_desktopimg_11_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_11 alt_key=section_desktopimg_11_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_desktopimg_12] %}
 			<div class="desktopapp-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_desktopimg_12] }}" alt="{{ page[section_desktopimg_12_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_desktopimg_12 alt_key=section_desktopimg_12_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 	</div>
@@ -114,65 +114,65 @@
 	<div data-aos="fade-up" class="app-streamfield project-streamfield wrapper flex-container flex-between align-center">
 		{% if page[section_mobileimg_1] %}
 			<div class="app-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_1] }}" alt="{{ page[section_mobileimg_1_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_mobileimg_1 alt_key=section_mobileimg_1_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_mobileimg_2] %}
 			<div class="app-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_2] }}" alt="{{ page[section_mobileimg_2_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_mobileimg_2 alt_key=section_mobileimg_2_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_mobileimg_3] %}
 			<div class="app-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_3] }}" alt="{{ page[section_mobileimg_3_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_mobileimg_3 alt_key=section_mobileimg_3_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_mobileimg_4] %}
 			<div class="app-image">
-				<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_4] }}" alt="{{ page[section_mobileimg_4_alt] }}">
+				{% include portfolio-image.html project=page filename_key=section_mobileimg_4 alt_key=section_mobileimg_4_alt class="shadow" section=include.section %}
 			</div>
 		{% endif %}
 		{% if page[section_mobileimg_5] and page[section_mobileimg_6] and page[section_mobileimg_7] and page[section_mobileimg_8] %}
 			{% if page[section_mobileimg_5] %}
 				<div class="app-image">
-					<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_5] }}" alt="{{ page[section_mobileimg_5_alt] }}">
+					{% include portfolio-image.html project=page filename_key=section_mobileimg_5 alt_key=section_mobileimg_5_alt class="shadow" section=include.section %}
 				</div>
 			{% endif %}
 			{% if page[section_mobileimg_6] %}
 				<div class="app-image">
-					<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_6] }}" alt="{{ page[section_mobileimg_6_alt] }}">
+					{% include portfolio-image.html project=page filename_key=section_mobileimg_6 alt_key=section_mobileimg_6_alt class="shadow" section=include.section %}
 				</div>
 			{% endif %}
 			{% if page[section_mobileimg_7] %}
 				<div class="app-image">
-					<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_7] }}" alt="{{ page[section_mobileimg_7_alt] }}">
+					{% include portfolio-image.html project=page filename_key=section_mobileimg_7 alt_key=section_mobileimg_7_alt class="shadow" section=include.section %}
 				</div>
 			{% endif %}
 			{% if page[section_mobileimg_8] %}
 				<div class="app-image">
-					<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_8] }}" alt="{{ page[section_mobileimg_8_alt] }}">
+					{% include portfolio-image.html project=page filename_key=section_mobileimg_8 alt_key=section_mobileimg_8_alt class="shadow" section=include.section %}
 				</div>
 			{% endif %}
 		{% endif %}
 		{% if page[section_mobileimg_9] and page[section_mobileimg_10] and page[section_mobileimg_11] and page[section_mobileimg_12] %}
 			{% if page[section_mobileimg_9] %}
 				<div class="app-image">
-					<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_9] }}" alt="{{ page[section_mobileimg_9_alt] }}">
+					{% include portfolio-image.html project=page filename_key=section_mobileimg_9 alt_key=section_mobileimg_9_alt class="shadow" section=include.section %}
 				</div>
 			{% endif %}
 			{% if page[section_mobileimg_10] %}
 				<div class="app-image">
-					<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_10] }}" alt="{{ page[section_mobileimg_10_alt] }}">
+					{% include portfolio-image.html project=page filename_key=section_mobileimg_10 alt_key=section_mobileimg_10_alt class="shadow" section=include.section %}
 				</div>
 			{% endif %}
 			{% if page[section_mobileimg_11] %}
 				<div class="app-image">
-					<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_11] }}" alt="{{ page[section_mobileimg_11_alt] }}">
+					{% include portfolio-image.html project=page filename_key=section_mobileimg_11 alt_key=section_mobileimg_11_alt class="shadow" section=include.section %}
 				</div>
 			{% endif %}
 			{% if page[section_mobileimg_12] %}
 				<div class="app-image">
-					<img class="shadow" src="{{ site.baseurl }}/assets/portfolio/{{ page.title | slugify }}/{{ page[section_mobileimg_12] }}" alt="{{ page[section_mobileimg_12_alt] }}">
+					{% include portfolio-image.html project=page filename_key=section_mobileimg_12 alt_key=section_mobileimg_12_alt class="shadow" section=include.section %}
 				</div>
 			{% endif %}
 		{% endif %}
