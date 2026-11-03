@@ -77,7 +77,7 @@ Barba.Pjax.getTransition = function() {
 
 Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, container) {
     BaseJS();
-    $("html, .overlay, .burger").removeClass("open");
+    setOverlayOpen(false, false);
 });
 
 Barba.Dispatcher.on('initStateChange', function(currentStatus) {

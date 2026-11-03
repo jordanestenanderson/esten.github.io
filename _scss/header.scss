@@ -29,6 +29,25 @@ header {
   display: none;
 }
 html.js .burger-wrap {
+  appearance: none;
+  display: block;
+  width: 20px + (2 * variables.$space-xxxs);
+  height: variables.$header-height;
+  margin-left: auto;
+  margin-right: -(variables.$space-xxxs);
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  &:focus-visible {
+    outline: 2px solid variables.$black;
+    outline-offset: 4px;
+  }
+
   .burger {
     background:variables.$white;
     width: 20px;
@@ -36,8 +55,8 @@ html.js .burger-wrap {
     display: block;
     position: relative;
     padding: variables.$space-xxxs;
-    margin-left: auto;
-    margin-right:-(variables.$space-xxxs);
+    margin-left: 0;
+    margin-right: 0;
     line-height: 0;
     margin-top:-1px;
     svg {
@@ -72,8 +91,6 @@ html.js .burger-wrap {
     }
 	}
   html.js .burger-wrap {
-    .burger {
-      margin-right: 0px;
-    }
+    margin-right: 0;
   }
 }

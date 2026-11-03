@@ -23,10 +23,14 @@ html.open {
   left: 0;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   opacity: 0;
   pointer-events: none;
   z-index: 2;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
   @include mixin.scale(1.1);
   -webkit-transition: all 450ms ease-out, background 0s 600ms;
   -moz-transition: all 450ms ease-out, background 0s 600ms;

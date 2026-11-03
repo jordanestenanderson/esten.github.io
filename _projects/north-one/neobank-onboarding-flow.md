@@ -19,7 +19,7 @@ hero-banner-alt: A collage of two app screenshots and a North One debit card. Th
 
 section-1-1-nav: Overview
 section-1-1-title: Overview
-section-1-1-description-1: 'As covered in the <a href="/projects/north-one/sign-up-flow/" class="loader-link hyperlink" data-hue="#55CE98" style="text-decoration:underline;">sign up flow</a> — once we removed the funding requirement, we needed to find a way to activate users further downstream. At that point, we had a passive sequence of in-app notifications, but users were left with little guidance once those were dismissed.'
+section-1-1-description-1: 'As covered in the <a href="/projects/north-one/neobank-sign-up-flow/" class="loader-link hyperlink" data-hue="#09C080" style="text-decoration:underline;">sign up flow</a> — once we removed the funding requirement, we needed to find a way to activate users further downstream. At that point, we had a passive sequence of in-app notifications, but users were left with little guidance once those were dismissed.'
 section-1-1-description-2: Our data showed that activating users early reduced the risk of churn. So with that in mind, a small team and I spent a week together in Toronto ideating, designing, and releasing a solution aimed at improving activation rates.
 employer: North One
 role: Senior Product Designer — Research, Ideation, Prototyping, User Testing, UI Design, Interaction Design  

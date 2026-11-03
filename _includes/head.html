@@ -6,11 +6,13 @@
 	<meta name="description" content="{{ page.meta-description }}" />
 	<meta name="keywords" content="Esten.co, Jordan Anderson, product design, UI, UX, Portfolio" />
 	<meta name="author" content="Esten.co" />
-	<meta property="og:url" content="http://esten.co/" />
+	<link rel="canonical" href="{{ page.url | absolute_url }}" />
+	<meta property="og:url" content="{{ page.url | absolute_url }}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="{{ page.meta-title }}" />
 	<meta property="og:description" content="{{ page.meta-description }}" />
-	<meta property="og:image" content="{{ site.baseurl }}/assets/main/{{ page.meta-img }}" />
+	<meta property="og:image" content="{{ '/assets/main/' | append: page.meta-img | absolute_url }}" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/assets/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/assets/favicon/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/assets/favicon/apple-icon-72x72.png">

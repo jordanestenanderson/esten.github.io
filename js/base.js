@@ -1,13 +1,58 @@
-$(".burger-wrap").click(function() {
-  $("html, .overlay, .burger").toggleClass("open");
+const menuButton = document.getElementById('burgerWrap');
+const pageContent = document.getElementById('content-container');
+const menuIcon = document.getElementById('togglemenu');
+
+function setOverlayOpen(isOpen, restoreFocus) {
+  const overlay = document.getElementById('overlayTrigger');
+  const returnToMenu = !isOpen && (restoreFocus || overlay.contains(document.activeElement));
+  if (returnToMenu) menuButton.focus({ preventScroll: true });
+
+  document.documentElement.classList.toggle('open', isOpen);
+  overlay.classList.toggle('open', isOpen);
+  menuIcon.classList.toggle('open', isOpen);
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+  menuButton.setAttribute('aria-label', isOpen ? 'Close about menu' : 'Open about menu');
+  overlay.setAttribute('aria-hidden', String(!isOpen));
+  overlay.toggleAttribute('inert', !isOpen);
+  pageContent.toggleAttribute('inert', isOpen);
+
+  if (isOpen) {
+    overlay.scrollTop = 0;
+    overlay.querySelector('.overlay-title').focus({ preventScroll: true });
+  }
+}
+
+menuButton.addEventListener('click', function() {
+  setOverlayOpen(menuButton.getAttribute('aria-expanded') !== 'true', true);
 });
 
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+    event.preventDefault();
+    setOverlayOpen(false, true);
+  }
+});
+
+let pageBindings;
+let scrollSpyObserver;
+let aosInitialized = false;
+
 function BaseJS() {
-  AOS.init({
-    duration: 1000,
-    easing: 'ease-out-quad',
-    once: true,
-  });
+  if (pageBindings) pageBindings.abort();
+  if (scrollSpyObserver) scrollSpyObserver.disconnect();
+  pageBindings = new AbortController();
+  const signal = pageBindings.signal;
+
+  if (!aosInitialized) {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-out-quad',
+      once: true,
+    });
+    aosInitialized = true;
+  } else {
+    AOS.refreshHard();
+  }
 
   const year = document.getElementById("year");
 
@@ -21,7 +66,7 @@ function BaseJS() {
 
     if (!sections.length || !navLinks.length) return;
 
-    const observer = new IntersectionObserver(
+    scrollSpyObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const id = entry.target.getAttribute("id");
@@ -40,7 +85,7 @@ function BaseJS() {
       }
     );
 
-    sections.forEach((section) => observer.observe(section));
+    sections.forEach((section) => scrollSpyObserver.observe(section));
   }
 
   initScrollSpy();
@@ -61,7 +106,7 @@ function BaseJS() {
         behavior: 'smooth',
         block: 'start'
       });
-    });
+    }, { signal });
   });
 
   const relatedProjects = document.querySelector('.related-projects-grid');
@@ -77,7 +122,7 @@ function BaseJS() {
       hasDragged = false;
       startX = e.pageX;
       scrollLeft = relatedProjects.scrollLeft;
-    });
+    }, { signal });
 
     document.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
@@ -93,14 +138,14 @@ function BaseJS() {
         e.preventDefault();
         relatedProjects.scrollLeft = scrollLeft - (distance * 1.5);
       }
-    });
+    }, { signal });
 
     document.addEventListener('mouseup', () => {
       if (!isDragging) return;
 
       isDragging = false;
       relatedProjects.classList.remove('is-dragging');
-    });
+    }, { signal });
 
     relatedProjects.addEventListener('click', (e) => {
       if (hasDragged) {
@@ -108,11 +153,11 @@ function BaseJS() {
         e.stopPropagation();
         hasDragged = false;
       }
-    }, true);
+    }, { capture: true, signal });
 
     relatedProjects.addEventListener('dragstart', (e) => {
       e.preventDefault();
-    });
+    }, { signal });
   }
 }
 
