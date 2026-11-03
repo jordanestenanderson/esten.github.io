@@ -10,64 +10,65 @@ disableScrollRestoration();
 window.addEventListener('popstate', disableScrollRestoration);
 
 Barba.Pjax.start();
-Barba.Prefetch.init()
+Barba.Prefetch.init();
 
-var wipeColors = JSON.parse(document.getElementById('wipe-colors').textContent);
-var hueHistory = [];
+const wipeColors = JSON.parse(document.getElementById('wipe-colors').textContent);
+const hueHistory = [];
 
 function setWipeColor(url) {
-  var path = new URL(url, window.location.href).pathname;
-  var color = wipeColors[path] || wipeColors[path.replace(/\/$/, '') + '/'] || '#0E0D0B';
-  $("#wipe, .loader").css({ background: color });
+  const path = new URL(url, window.location.href).pathname;
+  const color = wipeColors[path] || wipeColors[path.replace(/\/$/, '') + '/'] || '#0E0D0B';
+
+  document.querySelectorAll('#wipe, .loader').forEach(function(element) {
+    element.style.background = color;
+  });
+
   hueHistory.push({ url: path, color: color });
   console.log('Wipe colors:', hueHistory.slice());
 }
 
-var transitionAnimation = Barba.BaseTransition.extend({
-      
- start: function() {
-    Promise
-      .all([this.newContainerLoading, this.startTransition()])
+const transitionAnimation = Barba.BaseTransition.extend({
+  start: function() {
+    Promise.all([this.newContainerLoading, this.startTransition()])
       .then(this.fadeIn.bind(this));
   },
 
   startTransition: function() {
-    var transitionPromise = new Promise(function(resolve) {
-     var outTransition = new TimelineMax();
-      
-        outTransition
-                .set(".color-wipe", {display:"block", y: "100%"})
-                
-                .to(".color-wipe", 0.7, {y:"-100%", ease: Expo.easeOut}, 0)
-        
-                .fromTo(".loader", 0.4, { autoAlpha:0}, {delay:0.3, autoAlpha:1, ease: Expo.easeOut, onComplete: function() { resolve(); }}, 0)
-        
-                .to(".color-wipe", 0.7, {delay:0.2, y: "-200%", ease: Expo.easeIn})
-                .set(".color-wipe", {delay:0.2, display:'none'})
+    return new Promise(function(resolve) {
+      gsap.timeline()
+        .set('.color-wipe', { display: 'block', y: '100%' }, 0)
+        .to('.color-wipe', { duration: 0.7, y: '-100%', ease: 'expo.out' }, 0)
+        .fromTo('.loader', { autoAlpha: 0 }, {
+          duration: 0.4,
+          autoAlpha: 1,
+          ease: 'expo.out',
+          onComplete: resolve
+        }, 0.3)
+        .to('.color-wipe', { duration: 0.7, y: '-200%', ease: 'expo.in' }, 0.9)
+        .set('.color-wipe', { display: 'none' }, 1.8);
     });
-    return transitionPromise;
   },
 
-    
- fadeIn: function() {
-     $(window).scrollTop(0);
-     
-      var _this = this;
-      var $el = $(this.newContainer);
+  fadeIn: function() {
+    window.scrollTo(0, 0);
 
-      TweenMax.set($(this.oldContainer), { display: "none" });
-      TweenMax.set($el, { visibility: "visible", opacity: 0 });
-     
-     
-      TweenMax.fromTo(".loader", 0.7, { autoAlpha: 1}, { autoAlpha: 0, ease: Expo.easeIn});
+    const transition = this;
+    const newContainer = this.newContainer;
 
-      TweenMax.to($el, 0.1, {
-          opacity: 1,
-          onComplete: function() {
-              _this.done();
-              console.log("done");
-          }
-      }, 0);
+    gsap.set(this.oldContainer, { display: 'none' });
+    gsap.set(newContainer, { visibility: 'visible', opacity: 0 });
+    gsap.fromTo('.loader', { autoAlpha: 1 }, {
+      duration: 0.7,
+      autoAlpha: 0,
+      ease: 'expo.in'
+    });
+    gsap.to(newContainer, {
+      duration: 0.1,
+      opacity: 1,
+      onComplete: function() {
+        transition.done();
+      }
+    });
   }
 });
 
@@ -75,9 +76,9 @@ Barba.Pjax.getTransition = function() {
   return transitionAnimation;
 };
 
-Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus, container) {
-    BaseJS();
-    setOverlayOpen(false, false);
+Barba.Dispatcher.on('transitionCompleted', function() {
+  BaseJS();
+  setOverlayOpen(false, false);
 });
 
 Barba.Dispatcher.on('initStateChange', function(currentStatus) {
