@@ -15,6 +15,10 @@ Barba.Prefetch.init();
 const wipeColors = JSON.parse(document.getElementById('wipe-colors').textContent);
 const hueHistory = [];
 
+function prefersReducedMotion() {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
 function setWipeColor(url) {
   const path = new URL(url, window.location.href).pathname;
   const color = wipeColors[path] || wipeColors[path.replace(/\/$/, '') + '/'] || '#0E0D0B';
@@ -29,8 +33,23 @@ function setWipeColor(url) {
 
 const transitionAnimation = Barba.BaseTransition.extend({
   start: function() {
+    if (prefersReducedMotion()) {
+      this.newContainerLoading.then(this.showWithoutAnimation.bind(this));
+      return;
+    }
+
     Promise.all([this.newContainerLoading, this.startTransition()])
       .then(this.fadeIn.bind(this));
+  },
+
+  showWithoutAnimation: function() {
+    gsap.killTweensOf('.color-wipe, .loader');
+    gsap.set('.color-wipe', { display: 'none' });
+    gsap.set('.loader', { autoAlpha: 0 });
+    window.scrollTo(0, 0);
+    gsap.set(this.oldContainer, { display: 'none' });
+    gsap.set(this.newContainer, { visibility: 'visible', opacity: 1 });
+    this.done();
   },
 
   startTransition: function() {

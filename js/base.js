@@ -103,7 +103,7 @@ function BaseJS() {
       e.preventDefault();
 
       target.scrollIntoView({
-        behavior: 'smooth',
+        behavior: prefersReducedMotion() ? 'auto' : 'smooth',
         block: 'start'
       });
     }, { signal });

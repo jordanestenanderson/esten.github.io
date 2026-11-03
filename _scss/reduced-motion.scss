@@ -1,0 +1,33 @@
+@use "variables";
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  // AOS hides elements until they animate in; keep them visible when motion is reduced.
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .overlay {
+    transform: none !important;
+  }
+
+  .color-wipe {
+    display: none !important;
+  }
+
+  .project-grid .project-card:hover .project-graphic-inner {
+    transform: scale(0.75) !important;
+  }
+
+  .icon-link:hover {
+    gap: variables.$spaceplus;
+  }
+}
