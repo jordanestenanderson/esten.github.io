@@ -8,16 +8,19 @@
             </a>
         </div>
         <div class="menutrigger flex-grow">
-            <button id="burgerWrap" class="burger-wrap" type="button" aria-label="Open about menu" aria-controls="overlayTrigger" aria-expanded="false">
-            <span class="burger" id="togglemenu">
-              <span class="burger-wrapper">
-                <svg width="100%" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false">
-                  <line x1="0" y1="37.140625" x2="74" y2="37.140625"></line>
-                  <line x1="37" y1="0" x2="37" y2="74"></line>
-                </svg>
-              </span>
-            </span>
-            </button>
+            <div class="header-actions">
+              <button id="burgerWrap" class="burger-wrap" type="button" aria-label="Open about menu" aria-controls="overlayTrigger" aria-expanded="false">
+                <span class="header-about" aria-hidden="true"><img src="{{ site.baseurl }}/assets/main/about.svg" alt="" width="266" height="71"></span>
+                <span class="burger" id="togglemenu">
+                  <span class="burger-wrapper">
+                    <svg width="100%" viewBox="0 0 74 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false">
+                      <line x1="0" y1="37.140625" x2="74" y2="37.140625"></line>
+                      <line x1="37" y1="0" x2="37" y2="74"></line>
+                    </svg>
+                  </span>
+                </span>
+              </button>
+            </div>
         </div>
     </nav>
 </header>
