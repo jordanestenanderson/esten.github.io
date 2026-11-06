@@ -1,6 +1,43 @@
 const menuButton = document.getElementById('burgerWrap');
 const pageContent = document.getElementById('content-container');
 const menuIcon = document.getElementById('togglemenu');
+let toolPointerType;
+function closeTooltips() {
+  document.querySelectorAll('#overlayTrigger .tool-button').forEach(button => {
+    button.setAttribute('aria-pressed', 'false');
+    button.style.removeProperty('--tooltip-offset');
+  });
+}
+
+document.addEventListener('click', event => {
+  const button = event.target.closest('.tool-button');
+  if (!button) return;
+  if (toolPointerType === 'mouse' && event.detail > 0) {
+    closeTooltips();
+    return;
+  }
+  const shouldOpen = button.getAttribute('aria-pressed') !== 'true';
+  closeTooltips();
+  button.setAttribute('aria-pressed', String(shouldOpen));
+  if (shouldOpen) {
+    const tooltipBounds = button.querySelector('.tool-tooltip').getBoundingClientRect();
+    const startingOffset = parseFloat(getComputedStyle(button).getPropertyValue('--tooltip-offset')) || 0;
+    const edgePadding = 8;
+    const offset = tooltipBounds.left < edgePadding
+      ? edgePadding - tooltipBounds.left
+      : Math.min(0, window.innerWidth - edgePadding - tooltipBounds.right);
+    button.style.setProperty('--tooltip-offset', `${startingOffset + offset}px`);
+  }
+});
+
+document.addEventListener('pointerdown', event => {
+  if (event.target.closest('.tool-button')) {
+    toolPointerType = event.pointerType;
+  } else {
+    toolPointerType = undefined;
+    closeTooltips();
+  }
+});
 
 function setOverlayOpen(isOpen, restoreFocus) {
   const overlay = document.getElementById('overlayTrigger');
@@ -15,6 +52,8 @@ function setOverlayOpen(isOpen, restoreFocus) {
   overlay.setAttribute('aria-hidden', String(!isOpen));
   overlay.toggleAttribute('inert', !isOpen);
   pageContent.toggleAttribute('inert', isOpen);
+
+  if (!isOpen) closeTooltips();
 
   if (isOpen) {
     overlay.scrollTop = 0;

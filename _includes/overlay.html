@@ -1,18 +1,49 @@
 <div class="overlay-container">
 	<div class="overlay-content">
 			<div class="overlay-intro overlay-section">
-				<div class="overlay-intro-container flex-container">
-					<div class ="overlay-intro-images image-fit">
-						<img src="{{ site.baseurl }}/assets/main/profile-desktop.jpg" alt="A portrait photo of Jordan and his cat Ava" class="overlay-intro-image desktop" width="600" height="596" loading="eager">
-						<img src="{{ site.baseurl }}/assets/main/profile-mobile.jpg" alt="A landscape photo of Jordan and his cat Ava" class="overlay-intro-image mobile" width="600" height="417" loading="eager">
-					</div>
+				<div class="overlay-intro-container">
+					<img src="{{ site.baseurl }}/assets/main/profile-desktop.jpg" alt="Jordan holding his cat Ava" class="overlay-intro-image desktop" width="600" height="596" loading="eager">
+					<img src="{{ site.baseurl }}/assets/main/profile-mobile.jpg" alt="Jordan holding his cat Ava" class="overlay-intro-image mobile" width="600" height="417" loading="eager">
 					<div class="overlay-intro-content">
-						<p class="meta-title space-xsd">About me</p>
 						<h2 class="overlay-title" tabindex="-1">I'm Jordan, a product designer based out of Vancouver</h2>
-						<p class="spaced">With over a decade of experience across fintech, e-commerce, and consumer apps, I've developed a passion for simplifying complexity.</p>
-						<p class="spaced">My work is rooted in data-informed decisions that not only accomplish user goals, but drive measurable business growth.</p>
+						<p class="spaced">With over a decade of experience across fintech, e-commerce, and consumer apps, I've developed a passion for simplifying complex experiences. I combine thoughtful design, user research, and experimentation to create intuitive products that solve real problems and drive measurable business growth.</p>
+						<p class="inline-btn no-bottom-margin">
+							<a href="mailto:jordan@esten.co" class="icon-link black">
+								jordan@esten.co
+								{% include arrow.html %}
+							</a>
+						</p>
 					</div>
 				</div>
+			</div>
+			<div class="overlay-skills overlay-section spaced">
+				<p class="meta-title spaced">Skills</p>
+				<ul class="skill-list">
+					<li class="skill-item"><span class="skill-icon" style="--skill-icon-image: url('{{ site.baseurl }}/assets/skill-icons/product-strategy.svg')" aria-hidden="true"></span><span>Product strategy</span></li>
+					<li class="skill-item"><span class="skill-icon" style="--skill-icon-image: url('{{ site.baseurl }}/assets/skill-icons/user-research.svg')" aria-hidden="true"></span><span>User research</span></li>
+					<li class="skill-item"><span class="skill-icon" style="--skill-icon-image: url('{{ site.baseurl }}/assets/skill-icons/design-systems.svg')" aria-hidden="true"></span><span>Design systems</span></li>
+					<li class="skill-item"><span class="skill-icon" style="--skill-icon-image: url('{{ site.baseurl }}/assets/skill-icons/rapid-prototyping.svg')" aria-hidden="true"></span><span>Rapid prototyping</span></li>
+					<li class="skill-item"><span class="skill-icon" style="--skill-icon-image: url('{{ site.baseurl }}/assets/skill-icons/interaction-design.svg')" aria-hidden="true"></span><span>Interaction design</span></li>
+					<li class="skill-item"><span class="skill-icon" style="--skill-icon-image: url('{{ site.baseurl }}/assets/skill-icons/usability-testing.svg')" aria-hidden="true"></span><span>Usability testing</span></li>
+					<li class="skill-item"><span class="skill-icon" style="--skill-icon-image: url('{{ site.baseurl }}/assets/skill-icons/collaboration.svg')" aria-hidden="true"></span><span>Collaboration</span></li>
+					<li class="skill-item"><span class="skill-icon" style="--skill-icon-image: url('{{ site.baseurl }}/assets/skill-icons/mentorship.svg')" aria-hidden="true"></span><span>Mentorship</span></li>
+				</ul>
+			</div>
+			<div class="overlay-tools overlay-section spaced">
+				<p class="meta-title spaced">Tools</p>
+				<ul class="tool-list">
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="Figma" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/figma.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">Figma</span></button></li>
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="Miro" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/miro.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">Miro</span></button></li>
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="Claude" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/claude.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">Claude</span></button></li>
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="Cursor" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/cursor.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">Cursor</span></button></li>
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="Codex" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/codex.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">Codex</span></button></li>
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="Grok" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/grok.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">Grok</span></button></li>
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="Antigravity" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/antigravity.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">Antigravity</span></button></li>
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="UserTesting" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/usertesting.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">UserTesting</span></button></li>
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="Loom" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/loom.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">Loom</span></button></li>
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="Hotjar" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/hotjar.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">Hotjar</span></button></li>
+					<li class="tool-item"><button class="tool-button" type="button" aria-label="Mixpanel" aria-pressed="false"><img src="{{ site.baseurl }}/assets/tool-icons/mixpanel.svg" alt="" width="32" height="32" loading="lazy"><span class="tool-tooltip" aria-hidden="true">Mixpanel</span></button></li>
+				</ul>
 			</div>
 			<div class="overlay-history overlay-section spaced">
 				<p class="meta-title spaced">Experience</p>
@@ -119,12 +150,6 @@
 					<p class="no-margin data-date">2012-2015</p>
 				</div>
 				<div class="inline-btn-container flex-container">
-					<p class="inline-btn no-bottom-margin spaced-m first">
-						<a href="mailto:jordan@esten.co" class="icon-link black">
-							Get in touch
-							{% include arrow.html %}
-						</a>
-					</p>
 					<p class="inline-btn no-bottom-margin spaced-m">
 						<a href="{{ site.baseurl }}/assets/main/JordanAnderson-Resume.pdf" target="_blank" class="icon-link black">
 							View full resume
