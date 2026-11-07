@@ -6,6 +6,26 @@
 	padding-top: calc(#{variables.$space-xxxl} - #{variables.$header-height});
 	padding-bottom: variables.$space-xxxl;
 	max-width: 700px;
+	.hero-intro {
+		display: flex;
+		align-items: center;
+		gap: variables.$spaceplus;
+		img {
+			width: variables.$space-xs;
+			height: variables.$space-xs;
+			border-radius: 50%;
+			object-fit: cover;
+			flex: none;
+		}
+		p {
+			margin: 0;
+			font-family: "SFUIDisplay", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+			font-size: 1.5rem;
+			font-weight: 600;
+			line-height: 1.2;
+			color: variables.$black;
+		}
+	}
 }
 .project-grid {
 	.project-card {
@@ -120,6 +140,11 @@
 	.hero-messaging {
 		padding-top: calc(#{variables.$space-l} - #{variables.$header-height});
 		padding-bottom: variables.$space-m;
+		.hero-intro {
+			p {
+				font-size: 1rem;
+			}
+		}
 	}
 	.project-grid {
 		.project-card {
