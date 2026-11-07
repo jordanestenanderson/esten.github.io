@@ -99,6 +99,66 @@ function BaseJS() {
     year.innerHTML = new Date().getFullYear();
   }
 
+  const vancouverTime = document.getElementById('vancouver-time');
+  const vancouverWeather = document.getElementById('vancouver-weather');
+
+  if (vancouverTime && vancouverWeather) {
+    const temperatureText = document.getElementById('vancouver-temperature');
+    const weatherIcon = vancouverWeather.querySelector('use');
+    const timeFormatter = new Intl.DateTimeFormat('en-US', {
+      // B.C. uses year-round Pacific Time (UTC−7), abbreviated PCT.
+      timeZone: 'Etc/GMT+7',
+      hour: 'numeric',
+      minute: '2-digit',
+      hour12: true
+    });
+
+    function updateVancouverTime() {
+      const now = new Date();
+      vancouverTime.textContent = `${timeFormatter.format(now)} PCT`;
+      vancouverTime.dateTime = now.toISOString();
+    }
+
+    function weatherIconFor(condition) {
+      if (/thunder|storm/i.test(condition)) return 'storm';
+      if (/snow|flurr|ice|sleet/i.test(condition)) return 'snow';
+      if (/rain|shower|drizzle/i.test(condition)) return 'rain';
+      if (/sunny|clear/i.test(condition) && !/cloud/i.test(condition)) return 'sun';
+      return 'cloud';
+    }
+
+    async function updateVancouverWeather() {
+      try {
+        const response = await fetch('https://api.weather.gc.ca/collections/citypageweather-realtime/items/bc-74?f=json', { signal });
+        if (!response.ok) throw new Error('Weather data unavailable');
+        const data = await response.json();
+        const conditions = data.properties && data.properties.currentConditions;
+        const temperatureValue = conditions && conditions.temperature && conditions.temperature.value && conditions.temperature.value.en;
+        const temperature = Number(temperatureValue);
+        if (temperatureValue == null || !Number.isFinite(temperature)) throw new Error('Temperature unavailable');
+        if (signal.aborted) return;
+
+        const condition = conditions.condition && conditions.condition.en || 'Current conditions';
+        const roundedTemperature = Math.round(temperature);
+        temperatureText.textContent = `${roundedTemperature}°C`;
+        weatherIcon.setAttribute('href', `#hero-weather-${weatherIconFor(condition)}`);
+        vancouverWeather.setAttribute('aria-label', `${condition}, ${roundedTemperature} degrees Celsius in Vancouver`);
+        vancouverWeather.title = condition;
+      } catch (error) {
+        // Keep the placeholder (or last reading) if the service is temporarily unavailable.
+      }
+    }
+
+    updateVancouverTime();
+    updateVancouverWeather();
+    const timeInterval = window.setInterval(updateVancouverTime, 15000);
+    const weatherInterval = window.setInterval(updateVancouverWeather, 30 * 60 * 1000);
+    signal.addEventListener('abort', () => {
+      window.clearInterval(timeInterval);
+      window.clearInterval(weatherInterval);
+    }, { once: true });
+  }
+
   function initScrollSpy() {
     const sections = document.querySelectorAll("#project-content .active-section");
     const navLinks = document.querySelectorAll(".project-navigation-link");

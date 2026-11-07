@@ -21,6 +21,30 @@ meta-img: meta.jpg
                     <p>Hi, I’m Jordan</p>
                 </div>
                 <h1 class="title">I design intuitive experiences backed by data</h1>
+                <div class="hero-status" aria-label="Vancouver location, local time, and weather">
+                    <div class="hero-status-items">
+                        <span class="hero-status-item">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10c0 5.25-7 11-7 11S5 15.25 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                            <span>Vancouver, BC</span>
+                        </span>
+                        <span class="hero-status-item">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                            <time id="vancouver-time">--:--</time>
+                        </span>
+                        <span class="hero-status-item" id="vancouver-weather" role="img" aria-label="Vancouver weather unavailable">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#hero-weather-cloud"></use></svg>
+                            <span id="vancouver-temperature">—°C</span>
+                        </span>
+                        <span><a class="hero-weather-credit" href="https://eccc-msc.github.io/open-data/licence/readme_en/" target="_blank" rel="noopener noreferrer" title="Weather data: Environment and Climate Change Canada" aria-label="Weather data: Environment and Climate Change Canada">Weather by: ECCC</a></span>
+                    </div>
+                    <svg class="hero-weather-symbols" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                        <symbol id="hero-weather-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1.5v2M12 20.5v2M1.5 12h2M20.5 12h2M4.6 4.6 6 6M18 18l1.4 1.4M19.4 4.6 18 6M6 18l-1.4 1.4"/></symbol>
+                        <symbol id="hero-weather-cloud" viewBox="0 0 24 24"><path d="M7 18h11a4 4 0 0 0 .1-8A6 6 0 0 0 6.5 9 4.5 4.5 0 0 0 7 18Z"/></symbol>
+                        <symbol id="hero-weather-rain" viewBox="0 0 24 24"><path d="M7 15h11a4 4 0 0 0 .1-8A6 6 0 0 0 6.5 6 4.5 4.5 0 0 0 7 15ZM8 18l-1 2M13 18l-1 2M18 18l-1 2"/></symbol>
+                        <symbol id="hero-weather-snow" viewBox="0 0 24 24"><path d="M7 15h11a4 4 0 0 0 .1-8A6 6 0 0 0 6.5 6 4.5 4.5 0 0 0 7 15ZM8 19h.01M13 19h.01M18 19h.01"/></symbol>
+                        <symbol id="hero-weather-storm" viewBox="0 0 24 24"><path d="M7 15h11a4 4 0 0 0 .1-8A6 6 0 0 0 6.5 6 4.5 4.5 0 0 0 7 15ZM13 16l-2 3h2l-2 3"/></symbol>
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="project-grid wrapper">
