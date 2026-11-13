@@ -7,7 +7,7 @@ meta-img: signup-meta.jpg
 device: desktop
 product: North One
 title: Neobank sign up flow
-card-description: Improving how customers apply a bank account
+card-description: Improving how customers apply for a bank account
 hex-1: "09C080"
 hex-2: "EEFEE4"
 type: Web + Mobile App
