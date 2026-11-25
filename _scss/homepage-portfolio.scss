@@ -41,6 +41,9 @@
 			white-space: nowrap;
 			font-size: 1rem;
 			line-height: 1.4;
+			&.hero-status-location {
+				gap: 6px;
+			}
 			svg {
 				width: 20px;
 				height: 20px;
